@@ -5,7 +5,7 @@ $id = $_GET['id'];
 
 $dsn = "mysql:host=localhost;dbname=lantc_cinetrip;charset=utf8mb4";
 $dbusername = "lantc";
-$dbpassword = " ";
+$dbpassword = "NkXHus3h!6V";
 
 $pdo = new PDO($dsn, $dbusername, $dbpassword);
 
