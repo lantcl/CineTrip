@@ -1,3 +1,11 @@
+<?php
+
+$dsn = "mysql:host=localhost;dbname=lantc_cinetrip;charset=utf8mb4";
+$dbusername = "lantc";
+$dbpassword = "NkXHus3h!6V";
+
+?>
+
 <!doctype html>
 <html>
     <head>
