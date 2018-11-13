@@ -5,7 +5,7 @@ $id = $_GET['id'];
 
 $dsn = "mysql:host=localhost;dbname=lantc_cinetrip;charset=utf8mb4";
 $dbusername = "lantc";
-$dbpassword = " ";
+$dbpassword = "NkXHus3h!6V";
 
 $pdo = new PDO($dsn, $dbusername, $dbpassword);
 
@@ -54,8 +54,8 @@ $row4 = $stmt4->fetch();
 				<p><?php echo($row2["trivia"]); ?></p>
 			<?php } ?> 
 		</main>
-		<section class="comments">
-			<h2>Comments</h2>
+		<section class="tips">
+			<h2>Tips</h2>
 			<div>
 				<img id="comment-thumbnail" src="images/<?php echo($row4["profilepic"]); ?>" />
 				<h3><?php echo($row4["username"]); ?></h3>
