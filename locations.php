@@ -37,7 +37,6 @@ $row4 = $stmt4->fetch();
 		<nav>
 			<ul>
 				<li><a href="profile.php">My Profile</a></li>
-				<li><a href="posts.php">My Posts</a></li>
 				<li><a href="settings.php">Settings</a></li>
 				<li><a href="about.php">About</a></li>
 				<li><a href="logout.php">Logout</a></li>
