@@ -37,7 +37,6 @@ $row4 = $stmt4->fetch();
 		<nav>
 			<ul>
 				<li><a href="profile.php">My Profile</a></li>
-				<li><a href="posts.php">My Posts</a></li>
 				<li><a href="settings.php">Settings</a></li>
 				<li><a href="about.php">About</a></li>
 				<li><a href="logout.php">Logout</a></li>
@@ -54,8 +53,8 @@ $row4 = $stmt4->fetch();
 				<p><?php echo($row2["trivia"]); ?></p>
 			<?php } ?> 
 		</main>
-		<section class="comments">
-			<h2>Comments</h2>
+		<section class="tips">
+			<h2>Tips</h2>
 			<div>
 				<img id="comment-thumbnail" src="images/<?php echo($row4["profilepic"]); ?>" />
 				<h3><?php echo($row4["username"]); ?></h3>
