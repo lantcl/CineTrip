@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 15, 2018 at 01:21 PM
+-- Generation Time: Nov 16, 2018 at 12:31 PM
 -- Server version: 5.5.61-cll
 -- PHP Version: 7.2.7
 
@@ -369,18 +369,22 @@ CREATE TABLE `users` (
   `firstname` varchar(50) NOT NULL,
   `lastname` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `birthday` year(4) NOT NULL,
+  `birthday` date NOT NULL,
   `gender` varchar(50) NOT NULL,
   `profilepic` varchar(100) NOT NULL,
-  `location` varchar(100) NOT NULL
+  `location` varchar(100) NOT NULL,
+  `reason` varchar(50) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`, `firstname`, `lastname`, `email`, `birthday`, `gender`, `profilepic`, `location`) VALUES
-(1, 'user', 'user', 'user', 'user', 'user@user.com', 1995, 'female', '', '');
+INSERT INTO `users` (`id`, `username`, `password`, `firstname`, `lastname`, `email`, `birthday`, `gender`, `profilepic`, `location`, `reason`) VALUES
+(1, 'user', 'user', 'user', 'user', 'user@user.com', '0000-00-00', 'female', '', '', ''),
+(2, 'test', 'test', 'Cleo', '', 'lantc@sheridancollege.ca', '2018-11-22', 'female', '', 'gta', 'casual'),
+(3, 'test', 'test', 'test', 'test', 'lantc@sheridancollege.ca', '2018-11-14', 'male', 'andrew.jpg', 'toronto', 'other'),
+(4, 'user', 'user', 'test', 'test', 'lantc@sheridancollege.ca', '0000-00-00', 'male', 'andrew.jpg', 'toronto', 'professional');
 
 -- --------------------------------------------------------
 
@@ -434,7 +438,8 @@ CREATE TABLE `users-interests` (
 
 INSERT INTO `users-interests` (`id`, `userid`, `genreid`) VALUES
 (1, 1, 4),
-(2, 1, 6);
+(2, 1, 6),
+(4, 1, 6);
 
 -- --------------------------------------------------------
 
@@ -646,7 +651,7 @@ ALTER TABLE `locations`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users-badges`
@@ -664,7 +669,7 @@ ALTER TABLE `users-checkins`
 -- AUTO_INCREMENT for table `users-interests`
 --
 ALTER TABLE `users-interests`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users-savedlocations`
