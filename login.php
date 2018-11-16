@@ -14,7 +14,7 @@ $dbpassword = "NkXHus3h!6V";
     </head>
     <body>
         <header>        
-            <a href = "#"><img src="#" alt="CineTrip Logo" style="width:100px"></a>
+            <a href = "main.html"><img src="assets/logo-01.png" alt="CineTrip Logo" style="width:100px"></a>
             <nav>
                 <ul>
                 <li><a href = "main.html">Home</a></li>
@@ -26,7 +26,7 @@ $dbpassword = "NkXHus3h!6V";
         </header>
         <section>
             <h1>Welcome back</h1>
-                <form action="#" method="POST"> 
+                <form action="login-process.php" method="POST"> 
                 Username: <input type="text" name="username" />
                 Password: <input type="text" name="userpassword" />
                 <input type="submit" />
@@ -34,6 +34,7 @@ $dbpassword = "NkXHus3h!6V";
         </section>
         <footer>
             <nav>
+                <a href = "main.html"><img src="assets/footer-logo1.png" alt="CineTrip Logo" style="width:50px"></a>
                 <ul>
                 <li><a href = "#">About Cinetrip</a></li> 
                 <li><a href = "#">Contribute</a></li>
