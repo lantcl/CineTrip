@@ -29,11 +29,11 @@ $dbpassword = "NkXHus3h!6V";
             <h1>Welcome to CineTrip</h1>
                 <form action="signup-process.php" method="POST" enctype="multipart/form-data"> 
                 <h2>Make an Account</h2>
-                First Name: <input type="text" name="firstname" required/>
-                Last Name: <input type="text" name="lastname" required/>
-                Email: <input type="email" name="lastname" required/>
-                Username: <input type="text" name="username" required/>
-                Password: <input type="text" name="userpassword" required/>
+                First Name: <input type="text" name="firstname"/>
+                Last Name: <input type="text" name="lastname"/>
+                Email: <input type="email" name="email"/>
+                Username: <input type="text" name="username"/>
+                Password: <input type="text" name="password"/>
                 Birthday: <input type="date" name="birthday" min="1909-12-31" max="2018-12-31" />
                 Gender:<select name="gender">
                         <option value="male">Male</option>
@@ -58,31 +58,14 @@ $dbpassword = "NkXHus3h!6V";
                         <option value="gta">Within the GTA</option>
                         <option value="outsidegta">Outside the GTA</option>
                         <option value="none">Prefer not to say</option>
-                    </select>
-
-                I enjoy the genres:
-                    Horror <input type="checkbox" name="genreid" value="4"/>
-                    Science Fiction <input type="checkbox" name="genreid" value="6"/>
-                    Fantasy <input type="checkbox" name="genreid" value="7"/>
-                    Action <input type="checkbox" name="genreid" value="1"/>
-                    Comedy <input type="checkbox" name="genreid" value="2"/>
-                    Romance <input type="checkbox" name="genreid" value="3"/>
-                    Adventure <input type="checkbox" name="genreid" value="8"/>
-                    Action <input type="checkbox" name="genreid" value="1"/>
-                    Drama <input type="checkbox" name="genreid" value="5"/>
-                    War <input type="checkbox" name="genreid" value="9"/>
-                    Western <input type="checkbox" name="genreid" value="10"/>
-                    Musical <input type="checkbox" name="genreid" value="11"/>
-                    Crime <input type="checkbox" name="genreid" value="12"/>
-                    Documentary <input type="checkbox" name="genreid" value="13"/>
-                    Historical <input type="checkbox" name="genreid" value="14"/>                                                            
+                    </select>                                                            
 
                 <input type="submit" />
                 </form>
         </section>
         <footer>
             <nav>
-                <a href = "main.html"><img src="assets/footer-logo1.png" alt="CineTrip Logo" style="width:50px"></a>
+                <a href = "home.php"><img src="assets/footer-logo1.png" alt="CineTrip Logo" style="width:50px"></a>
                 <ul>
                 <li><a href = "#">About Cinetrip</a></li> 
                 <li><a href = "#">Contribute</a></li>
