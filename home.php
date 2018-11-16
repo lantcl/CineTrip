@@ -1,5 +1,7 @@
 <?php
 
+session_start(); 
+
 $dsn = "mysql:host=localhost;dbname=lantc_cinetrip;charset=utf8mb4";
 $dbusername = "lantc";
 $dbpassword = "NkXHus3h!6V";
@@ -15,10 +17,10 @@ $dbpassword = "NkXHus3h!6V";
             <a href = "#"><img src="#" alt="CineTrip Logo" style="width:100px"></a>
             <nav>
                 <ul>
-                <li><a href = "main.html">Home</a></li>
+                <li><a href = "main.php">Home</a></li>
                 <li><a href = "#">Search</a></li>
-                <li><a href = "login.html">Log in</a></li>
-                <li><a href = "signup.html">Sign up</a></li>
+                <li><a href = "login.php">Log in</a></li>
+                <li><a href = "signup.php">Sign up</a></li>
                 </ul>
             </nav>
         </header>
