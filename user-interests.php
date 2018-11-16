@@ -1,11 +1,12 @@
 <?php
 
+session_start();
+
 $dsn = "mysql:host=localhost;dbname=lantc_cinetrip;charset=utf8mb4";
 $dbusername = "lantc";
 $dbpassword = "NkXHus3h!6V";
 
 ?>
-
 
 <!doctype html>
 <html>
@@ -26,7 +27,8 @@ $dbpassword = "NkXHus3h!6V";
             </nav>
         </header>
         <section>
-            <h1>Welcome to CineTrip</h1>
+            <h1>Thanks for signing up!</h1>
+            <h1>Tell us about your interests</h1>
                 <form action="user-interests-process.php" method="POST"> 
 
                 I enjoy the genres:
@@ -48,10 +50,12 @@ $dbpassword = "NkXHus3h!6V";
 
                 <input type="submit" />
                 </form>
+
+                <p><a href="home.php">Skip this for now</a></p>
         </section>
         <footer>
             <nav>
-                <a href = "main.html"><img src="assets/footer-logo1.png" alt="CineTrip Logo" style="width:50px"></a>
+                <a href = "home.php"><img src="assets/footer-logo1.png" alt="CineTrip Logo" style="width:50px"></a>
                 <ul>
                 <li><a href = "#">About Cinetrip</a></li> 
                 <li><a href = "#">Contribute</a></li>
