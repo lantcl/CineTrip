@@ -16,7 +16,7 @@
     </div>
     
     <div class=>
-      <img src="images-profile/Profile_carly.jpg" alt="Carly" width="120" height="120" border="1"></a><br>
+      <img src="images-profile/Profile_Carly.jpg" alt="Carly" width="120" height="120" border="1"></a><br>
         <h2>Carly Wysocki</h2>
         <p>Title</p>
         <a href="https://www.google.com/"><p>My Website</p>
@@ -32,7 +32,7 @@
     </div>
 
       <div class=>
-      <img src="images-profile/Profile_vinay.jpg" alt="vinay" width="120" height="120" border="1"></a><br>
+      <img src="images-profile/Profile_Vinay.jpg" alt="vinay" width="120" height="120" border="1"></a><br>
         <h2>B. Vinay Kumar</h2>
         <p>Title</p>
         <a href="https://www.google.com/"><p>My Website</p>

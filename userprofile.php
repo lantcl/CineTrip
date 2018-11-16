@@ -13,7 +13,7 @@ $dbpassword = "NkXHus3h!6V";
 	</head>
 <body>
 	<h1> User Profile</h1>
-			<a href=""images-profile/profile_01.png"/><img src="images-profile/profile_01.png" alt="Profile Photo" width="120" height="120" border="1"></a><br>
+			<a href="images-profile/profile_01.png"/><img src="images-profile/profile_01.png" alt="Profile Photo" width="120" height="120" border="1"></a><br>
 
 <div class=>
 Username<br><br>
