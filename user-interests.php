@@ -27,38 +27,7 @@ $dbpassword = "NkXHus3h!6V";
         </header>
         <section>
             <h1>Welcome to CineTrip</h1>
-                <form action="signup-process.php" method="POST" enctype="multipart/form-data"> 
-                <h2>Make an Account</h2>
-                First Name: <input type="text" name="firstname" required/>
-                Last Name: <input type="text" name="lastname" required/>
-                Email: <input type="email" name="lastname" required/>
-                Username: <input type="text" name="username" required/>
-                Password: <input type="text" name="userpassword" required/>
-                Birthday: <input type="date" name="birthday" min="1909-12-31" max="2018-12-31" />
-                Gender:<select name="gender">
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="nonbinary">Non-Binary</option>
-                        <option value="none">Prefer not to say</option>
-                    </select>
-                Choose a profile picture:<input type="file" name="profilepic">
-                <h2>Tell us about yourself</h2>
-                Why you are interested in using CineTrip:
-                    <select name="reason">
-                        <option value="professional">I work in the film industry</option>
-                        <option value="casual">I enjoy movie trivia</option>
-                        <option value="tourist">I am visiting Toronto</option>
-                        <option value="fan">I am a fan of a particular film or genre</option>
-                        <option value="other">other</option>
-                    </select>
-                
-                Where do you live: 
-                    <select name="location">
-                        <option value="toronto">Toronto</option>
-                        <option value="gta">Within the GTA</option>
-                        <option value="outsidegta">Outside the GTA</option>
-                        <option value="none">Prefer not to say</option>
-                    </select>
+                <form action="user-interests-process.php" method="POST"> 
 
                 I enjoy the genres:
                     Horror <input type="checkbox" name="genreid" value="4"/>
