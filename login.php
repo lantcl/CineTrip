@@ -26,7 +26,7 @@ $dbpassword = "NkXHus3h!6V";
         </header>
         <section>
             <h1>Welcome back</h1>
-                <form action="#" method="POST"> 
+                <form action="login-process.php" method="POST"> 
                 Username: <input type="text" name="username" />
                 Password: <input type="text" name="userpassword" />
                 <input type="submit" />
