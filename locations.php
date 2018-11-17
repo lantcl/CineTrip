@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 $id = $_GET['id'];
@@ -32,11 +33,13 @@ $row4 = $stmt4->fetch();
 	<head>
 		<title>Cinetrip - Locations</title>
 		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="css/main.css" />
 	</head>
 	<body>
 		<nav>
+		    <a href = "homepage.php"><img src="assets/logo-01.png" alt="CineTrip Logo" style="width:100px"></a>
 			<ul>
-				<li><a href="profile.php">My Profile</a></li>
+				<li><a href="userprofile.php">My Profile</a></li>
 				<li><a href="settings.php">Settings</a></li>
 				<li><a href="about.php">About</a></li>
 				<li><a href="logout.php">Logout</a></li>
@@ -65,5 +68,18 @@ $row4 = $stmt4->fetch();
 				</ul>
 			</div>
 		</section>
+                <footer id="footer">
+                    <div id="footer_logo">
+                     <a href="homepage.php"><img src="assets/footer-logo.png" style="width:77px;height:28px"></a>
+                     </div>
+                    <ul class="icons">
+                        <li><a href="about.php" ><span class="label">About CineTrip</span></a></li>
+                        <li><a href="#" ><span class="label">Contribute</span></a></li>
+                        <li><a href="#" ><span class="label">Privacy policy</span></a></li>
+                    </ul>
+                    <ul class="copyright">
+                        <li>&copy; CineTrip. All rights reserved.</li>
+                    </ul>
+                </footer>
 	</body>
 </html>

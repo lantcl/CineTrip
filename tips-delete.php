@@ -1,6 +1,11 @@
 <?php 
 session_start();
 
+if($_SESSION['logged-in'] == false){
+	echo("You are not allowed to view this page");
+	?><a href="login.php">Go to login</a><?php
+}else{
+
 $id = $_GET['id'];
 
 $dsn = "mysql:host=localhost;dbname=lantc_cinetrip;charset=utf8mb4";
@@ -17,8 +22,9 @@ $stmt->execute();
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Cinetrip - My Tips</title>
+		<title>Cinetrip - Delete Tip</title>
 		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="css/main.css" />
 	</head>
 	<body>
 		<nav>
@@ -39,6 +45,19 @@ $stmt->execute();
 			</form>
 			<a href="mytips.php">Cancel</a>
 		</main>
+                <footer id="footer">
+                    <div id="footer_logo">
+                     <a href="homepage.php"><img src="assets/footer-logo.png" style="width:77px;height:28px"></a>
+                     </div>
+                    <ul class="icons">
+                        <li><a href="about.php" ><span class="label">About CineTrip</span></a></li>
+                        <li><a href="#" ><span class="label">Contribute</span></a></li>
+                        <li><a href="#" ><span class="label">Privacy policy</span></a></li>
+                    </ul>
+                    <ul class="copyright">
+                        <li>&copy; CineTrip. All rights reserved.</li>
+                    </ul>
+                </footer>
 	</body>
 </html>
 

@@ -11,19 +11,27 @@ $dbpassword = "NkXHus3h!6V";
     <head>
         <title>CineTrip Login</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="css/main.css" />
     </head>
     <body>
-        <header>        
-            <a href = "main.html"><img src="assets/logo-01.png" alt="CineTrip Logo" style="width:100px"></a>
-            <nav>
-                <ul>
-                <li><a href = "main.html">Home</a></li>
-                <li><a href = "#">Search</a></li>
-                <li><a href = "login.html">Log in</a></li>
-                <li><a href = "signup.html">Sign up</a></li>
-                </ul>
-            </nav>
-        </header>
+        <header id="header" class="alt">
+              <a href = "homepage.php"><img src="assets/logo-01.png" alt="CineTrip Logo" style="width:100px"></a>
+              <nav id="nav">
+                  <ul>
+                      <li><a href="homepage.php">Home</a></li>
+                      <li><a href="search.php" class="icon fa-angle-down">Search</a></li>
+                      <li><a href="locations.php">Locations</a></li>
+                      <li><a href="about.php">About</a></li>
+                      <?php if($_SESSION['logged-in'] == true){?>
+                          <li><a href="userprofile.php" class="button">Profile</a></li>
+                          <li><a href="logout.php" class="button">Logout</a></li>
+                      <?php } else {?>
+                          <li><a href="login.php" class="button">Log in</a></li>
+                          <li><a href="signup.php" class="button">Sign up</a></li>
+                      <?php } ?>
+                  </ul>
+              </nav>
+          </header> 
         <section>
             <h1>Welcome back</h1>
                 <form action="login-process.php" method="POST"> 
@@ -32,15 +40,18 @@ $dbpassword = "NkXHus3h!6V";
                 <input type="submit" />
             	</form>
         </section>
-        <footer>
-            <nav>
-                <a href = "main.html"><img src="assets/footer-logo1.png" alt="CineTrip Logo" style="width:50px"></a>
-                <ul>
-                <li><a href = "#">About Cinetrip</a></li> 
-                <li><a href = "#">Contribute</a></li>
-                <li><a href = "#">Privacy Policy</a></li>  
-                </ul>
-            </nav>
-        </footer>        
+                <footer id="footer">
+                    <div id="footer_logo">
+                     <a href="homepage.php"><img src="assets/footer-logo.png" style="width:77px;height:28px"></a>
+                     </div>
+                    <ul class="icons">
+                        <li><a href="about.php" ><span class="label">About CineTrip</span></a></li>
+                        <li><a href="#" ><span class="label">Contribute</span></a></li>
+                        <li><a href="#" ><span class="label">Privacy policy</span></a></li>
+                    </ul>
+                    <ul class="copyright">
+                        <li>&copy; CineTrip. All rights reserved.</li>
+                    </ul>
+                </footer>       
     </body>
 </html>

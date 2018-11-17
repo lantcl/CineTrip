@@ -21,7 +21,7 @@ if($row = $stmt->fetch()){
 	$_SESSION['userpassword'] = $row['userpassword'];
 	$_SESSION['userid'] = $row['userid'];
 
-	header("Location: home.php"); 
+	header("Location: homepage.php"); 
 }else{
 	header("Location: login.php");	
 }

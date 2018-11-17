@@ -11,8 +11,9 @@ $dbpassword = "NkXHus3h!6V";
 <!doctype html>
 <html>
     <head>
-        <title>CineTrip Sign Up</title>
+        <title>CineTrip Sign Up - Interests</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="css/main.css" />
     </head>
     <body>
         <header>        
@@ -53,15 +54,18 @@ $dbpassword = "NkXHus3h!6V";
 
                 <p><a href="home.php">Skip this for now</a></p>
         </section>
-        <footer>
-            <nav>
-                <a href = "home.php"><img src="assets/footer-logo1.png" alt="CineTrip Logo" style="width:50px"></a>
-                <ul>
-                <li><a href = "#">About Cinetrip</a></li> 
-                <li><a href = "#">Contribute</a></li>
-                <li><a href = "#">Privacy Policy</a></li>  
-                </ul>
-            </nav>
-        </footer>        
+                <footer id="footer">
+                    <div id="footer_logo">
+                     <a href="homepage.php"><img src="assets/footer-logo.png" style="width:77px;height:28px"></a>
+                     </div>
+                    <ul class="icons">
+                        <li><a href="about.php" ><span class="label">About CineTrip</span></a></li>
+                        <li><a href="#" ><span class="label">Contribute</span></a></li>
+                        <li><a href="#" ><span class="label">Privacy policy</span></a></li>
+                    </ul>
+                    <ul class="copyright">
+                        <li>&copy; CineTrip. All rights reserved.</li>
+                    </ul>
+                </footer>        
     </body>
 </html>
