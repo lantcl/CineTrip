@@ -11,7 +11,7 @@ $gender = $_POST['gender'];
 $location = $_POST['location'];
 $reason = $_POST['reason'];
 
-$uploaddir = 'userprofilepics/';
+$uploaddir = 'images-profile/';
 $uploadfile = $uploaddir . basename($_FILES['profilepic']['name']);
 $filename = $_FILES['profilepic']['name'];
 
