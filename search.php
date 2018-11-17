@@ -1,9 +1,30 @@
 <?php
 
+session_start();
+
 $dsn = "mysql:host=localhost;dbname=lantc_cinetrip;charset=utf8mb4";
 $dbusername = "lantc";
 $dbpassword = "NkXHus3h!6V";
 
+// $pdo = new PDO($dsn, $dbusername, $dbpassword); 
+
+// $genre = $pdo->prepare("SELECT * FROM `locations-genres` WHERE `genreid` = '$genreid'");
+// $genre->execute();
+// $row1 = $genre->fetch();
+
+// $actor = $pdo->prepare("SELECT * FROM `locations-actors` WHERE `actorid` = '$actorid'");
+// $actor->execute();
+// $row2 = $actor->fetch();
+
+// $director = $pdo->prepare("SELECT * FROM `locations-directors` WHERE `directorid` = '$directorid'");
+// $director->execute();
+// $row3 = $director->fetch();
+
+// $film = $pdo->prepare("SELECT * FROM `films-locations` WHERE `filmid` = '$filmid'");
+// $film->execute();
+// $row4 = $film->fetch();
+
+//some javascript necessary for this part?
 ?>
 
 <!doctype html>
@@ -39,6 +60,8 @@ $dbpassword = "NkXHus3h!6V";
                   <li>Search by Genre</li>
                   <li>Search by Movie</li>
                   <li>Search by Location</li>
+                  <li>Search by Actor</li>
+                  <li>Search by Director</li>
                 </ul>
               </nav>
         </section>
