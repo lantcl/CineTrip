@@ -5,7 +5,6 @@ $dsn = "mysql:host=localhost;dbname=lantc_cinetrip;charset=utf8mb4";
 $dbusername = "lantc";
 $dbpassword = "NkXHus3h!6V";
  
-
 ?>
 
 <!doctype html>
@@ -15,6 +14,7 @@ $dbpassword = "NkXHus3h!6V";
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="css/main.css" />
+        
 	</head>
 	<body class="landing is-preload">
 		<section id="page-wrapper">		
@@ -22,10 +22,10 @@ $dbpassword = "NkXHus3h!6V";
                     <a href = "homepage.php"><img src="assets/logo-01.png" alt="CineTrip Logo" style="width:100px"></a>
                     <nav id="nav">
                         <ul>
-                            <li><a href="homepage.php">Home</a></li>
-                            <li><a href="search.php" class="icon fa-angle-down">Search</a></li>
-                            <li><a href="locations.php">Locations</a></li>
-                            <li><a href="about.php">About</a></li>
+                            <li><a id="cntShow" href="homepage.php">Home</a></li>
+                            <li><a id="#" href="search.php" class="icon fa-angle-down">Search</a></li>
+                            <li><a id="#" href="locations.php">Locations</a></li>
+                            <li><a id="#" href="about.php">About</a></li>
                             <?php if($_SESSION['logged-in'] == true){?>
                                 <li><a href="userprofile.php" class="button">Profile</a></li>
                                 <li><a href="logout.php" class="button">Logout</a></li>
@@ -75,6 +75,7 @@ $dbpassword = "NkXHus3h!6V";
                         <li>&copy; CineTrip. All rights reserved.</li>
                     </ul>
                 </footer>
-		</section>
+                <script src="js/main.js"></script>
+	</section>	
 	</body>
 </html>
