@@ -10,7 +10,8 @@ if($_SESSION['logged-in'] == false){
 $dsn = "mysql:host=localhost;dbname=lantc_cinetrip;charset=utf8mb4";
 $dbusername = "lantc";
 $dbpassword = "NkXHus3h!6V";
-
+// $dbusername = "vinay";
+// $dbpassword = "11111";
 ?>
 
 <!DOCTYPE html>
@@ -41,27 +42,30 @@ $dbpassword = "NkXHus3h!6V";
 	<h1> Edit Profile</h1>
 			<a href="images-profile/profile_01.png"/><img src="images-profile/profile_01.png" alt="Profile Photo" width="120" height="120" border="1">
 </a><br>
+<form action="profile-input.php" method="POST" enctype="multipart/form-data"> 
 <p3>Tap on image to change</p3><br>
-		<input type="file" name="pic" accept="image/*">
+		<input type="file" name="profilepic" accept="image/*">
   		<input type="submit"><br><br>
 
 
-<form action="profile-input.php" method="POST">
-	<fieldset>
-		<label>Username</label>	<input type="text" name="username" placeholder="Username"  /><br>
-			<label>Email Address</label><input type="email" name="email" placeholder="Email" /><br>
-			<label>Phone Number</label><input type="text" name="Phone"/><br>
-			<label>Date of Birth</label><input type="date" name="dateofbirth"/><br>
-			<label>Hide my age in public profile	&nbsp;	&nbsp;	&nbsp;</label><input type="checkbox" name="hideAge" value ="1"/><br>
-			<label>Favourite Genres </label>
-          <input type="checkbox" name="genreid[]" value="One">One 
-          <input type="checkbox" name="genreid[]" value="Two">Two 
-          <input type="checkbox" name="genreid[]" value="Three">Three 
-          <input type="checkbox" name="genreid[]" value="Four">Four 
-          <br><br>
-        <input type="submit" value="Save Changes" />
-	</fieldset>
-</form><br>
+                
+                <label>Username</label> <input type="text" name="username" placeholder="Username"  /><br>
+                <label>First Name</label> <input type="text" name="firstname" placeholder="First Name"  /><br>
+                <label>Last Name</label> <input type="text" name="lastname" placeholder="Last Name"  /><br>
+                <label>Email Address</label><input type="email" name="email" placeholder="Email Address" /><br>
+                <label>Date of Birth</label><input type="date" name="birthday" /><br>
+                <label>Hide my age in public profile </label><input type="checkbox" name="hideAge" value ="1"><br>
+                <label>Location</label> 
+                    <select name="location">
+                        <option value="toronto">Toronto</option>
+                        <option value="gta">Within the GTA</option>
+                        <option value="outsidegta">Outside the GTA</option>
+                        <option value="none">Prefer not to say</option>
+                    </select>                                                            
+
+                <input type="submit" />
+                </form>
+
 
 <h2>Badges earned</h2><br>
 	<label>Hide my badges in public profile	&nbsp;	&nbsp;	&nbsp;</label><input type="checkbox" name="hideBadge" value ="1"/><br><br>
