@@ -1,81 +1,63 @@
 <?php
-session_start(); 
+
+session_start();
+
 
 $dsn = "mysql:host=localhost;dbname=lantc_cinetrip;charset=utf8mb4";
 $dbusername = "lantc";
 $dbpassword = "NkXHus3h!6V";
- 
+
 ?>
 
-<!doctype html>
+<!DOCTYPE HTML>
 <html>
-	<head>
-		<title>CineTrip</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="css/main.css" />
-        
-	</head>
-	<body class="landing is-preload">
-		<section id="page-wrapper">		
-                <header id="header" class="alt">
-                    <a href = "homepage.php"><img src="assets/logo-01.png" alt="CineTrip Logo" style="width:100px"></a>
-                    <nav id="nav">
-                        <ul>
-                            <li><a id="cntShow" href="homepage.php">Home</a></li>
-                            <li><a id="#" href="search.php" class="icon fa-angle-down">Search</a></li>
-                            <li><a id="#" href="locations.php">Locations</a></li>
-                            <li><a id="#" href="about.php">About</a></li>
-                            <?php if($_SESSION['logged-in'] == true){?>
-                                <li><a href="userprofile.php" class="button">Profile</a></li>
-                                <li><a href="logout.php" class="button">Logout</a></li>
-                            <?php } else {?>
-                                <li><a href="login.php" class="button">Log in</a></li>
-                                <li><a href="signup.php" class="button">Sign up</a></li>
-                            <?php } ?>
-                        </ul>
-                    </nav>
-                </header>			
-				<section id="main" class="container">
+<head>
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" media="screen and (max-width: 768px)" href="css/small.css">
 
-					 <div class="mapouter">
-                     <div class="gmap_canvas">
-                       <iframe width="1080" height="811" id="gmap_canvas" src="https://maps.google.com/maps?q=toronto%20union%20station&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-                       </iframe>
-                     </div>
+<script src="http://css3-mediaqueries-js.googlecode.com/files/css3-mediaqueries.js"></script>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 
-                     <style>
-                      .mapouter{
-                         text-align:right;
-                         height:1080px;
-                         width:811px;
-                      }
-                      .gmap_canvas {
-                         overflow:hidden;
-                         background:none!important;
-                         height:1080px;
-                         width:811px;
-                     }
-                     </style>
-                 </div>     
+<title>CineTrip</title>
+<div class="container">
+   <header>
+   	<div class="logo">
+   		<img src="images/logo-01.png" href="homepage.php">
+   	</div>
 
-				</section>
+   	<nav>
+   		<ul>
+            <div class="menu"></div>
+   			<li class="current"><a href="homepage.php">HOME</a></li>
+   			<li><a href="search.php">SEARCH</a></li>
+   			<li><a href="locations.php">LOCATIONS</a></li>
+   			<li><a href="about.php">ABOUT</a></li>
+   			<li><a href="login.php">LOG IN</a></li>
+   			<li><a href="signup.php">SIGN UP</a></li>
+        </ul>
+   	</nav>
+   </header>
 
-
-                <footer id="footer">
-                    <div id="footer_logo">
-                     <a href="homepage.php"><img src="assets/footer-logo.png" style="width:77px;height:28px"></a>
-                     </div>
-                    <ul class="icons">
-                        <li><a href="about.php" ><span class="label">About CineTrip</span></a></li>
-                        <li><a href="#" ><span class="label">Contribute</span></a></li>
-                        <li><a href="#" ><span class="label">Privacy policy</span></a></li>
-                    </ul>
-                    <ul class="copyright">
-                        <li>&copy; CineTrip. All rights reserved.</li>
-                    </ul>
-                </footer>
-                <script src="js/main.js"></script>
-	</section>	
-	</body>
+   
+</div>
+</head>
+<body>
+   <section>
+      <div id="map">
+         <iframe width="100%" height="1000px" src="https://maps.google.com/maps?q=toronto%20union%20station&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0""></iframe>
+      </div>
+      <style type="text/css">
+      #map{
+         padding:0;
+         margin:0;
+         width:100%;
+         height:100%;
+      }
+         
+      </style>
+      
+   </section>
+</body>
 </html>
