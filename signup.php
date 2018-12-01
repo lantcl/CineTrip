@@ -13,6 +13,7 @@ $dbpassword = "NkXHus3h!6V";
         <title>CineTrip Sign Up</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/small.css" />
     </head>
     <body>
         <header id="header" class="alt">
