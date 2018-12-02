@@ -6,7 +6,7 @@ $dsn = "mysql:host=localhost;dbname=lantc_cinetrip;charset=utf8mb4";
 $dbusername = "lantc";
 $dbpassword = "NkXHus3h!6V";
 
-// $pdo = new PDO($dsn, $dbusername, $dbpassword); 
+$pdo = new PDO($dsn, $dbusername, $dbpassword); 
 
 // $genre = $pdo->prepare("SELECT * FROM `locations-genres` WHERE `genreid` = '$genreid'");
 // $genre->execute();
@@ -20,11 +20,51 @@ $dbpassword = "NkXHus3h!6V";
 // $director->execute();
 // $row3 = $director->fetch();
 
-// $film = $pdo->prepare("SELECT * FROM `films-locations` WHERE `filmid` = '$filmid'");
-// $film->execute();
-// $row4 = $film->fetch();
 
-//some javascript necessary for this part?
+
+//search by film
+
+$filmid = 1; //$_POST['filmid'];
+
+$filmSearch = $pdo->prepare("SELECT `locations`.`name`,`locations`.`id`, `films`.`title`, `films`.`id` FROM `films` INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id` INNER JOIN `locations` ON `films-locations`.`locationid` = `locations`.`id` WHERE `films`.`id` = '$filmid'");
+
+$filmSearch->execute();
+
+while($row1 = $filmSearch->fetch()) 
+  { 
+    echo($row1["name"]);
+  }
+
+//search by genre
+
+$genreid = 1; //$_POST['genreid'];
+
+$filmSearch = $pdo->prepare("SELECT `locations`.`name`,`locations`.`id`, `genres`.`name`, `genres`.`genreid` FROM `genres` INNER JOIN `location-genres` ON `location-genres`.`genreid` = `genres`.`genreid` INNER JOIN `locations` ON `location-genres`.`locationid` = `locations`.`id` WHERE `genres`.`genreid` = 1");
+
+$filmSearch->execute();
+
+while($row1 = $filmSearch->fetch()) 
+  { 
+    echo($row1["name"]);
+  }
+
+
+
+
+// $genre = $_POST['genreid'];
+// $actor = $_POST['actorid'];
+// $director = $_POST['directorid'];
+
+
+// $testing = $pdo->prepare("SELECT `locations`.`name`,`locations`.`id`, `films`.`title`, `films`.`id` FROM `films` INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id` INNER JOIN `locations` ON `films-locations`.`locationid` = `locations`.`id` WHERE `films`.`title` = 'Hannibal'");
+
+// $testing = $pdo->prepare("SELECT `locations`.`name`,`locations`.`id`,`films`.`id`, `films`.`title` FROM `films` INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id` INNER JOIN `locations` ON `films-locations`.`locationid` = `locations`.`id` WHERE `films`.`title` LIKE '%Han%'");
+
+
+// $testing->execute();
+// arsort($test);
+
+
 ?>
 
 <!doctype html>
@@ -60,8 +100,6 @@ $dbpassword = "NkXHus3h!6V";
                   <li>Search by Genre</li>
                   <li>Search by Movie</li>
                   <li>Search by Location</li>
-                  <li>Search by Actor</li>
-                  <li>Search by Director</li>
                 </ul>
               </nav>
         </section>
