@@ -20,28 +20,11 @@ $pdo = new PDO($dsn, $dbusername, $dbpassword);
 // $director->execute();
 // $row3 = $director->fetch();
 
+// $search = $_POST['filmsearch']
 
+// //search by film
 
-//search by film
-
-$filmid = 1; //$_POST['filmid'];
-
-$filmSearch = $pdo->prepare("SELECT `locations`.`name`,`locations`.`id`, `films`.`title`, `films`.`id` FROM `films` INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id` INNER JOIN `locations` ON `films-locations`.`locationid` = `locations`.`id` WHERE `films`.`id` = '$filmid'");
-
-$filmSearch->execute();
-
-while($row1 = $filmSearch->fetch()) 
-  { 
-    echo($row1["name"]);
-  }
-
-$row1 = $filmSearch->fetch();
-echo($row1["title"]);
-//search by genre
-
-// $genreid = 1; //$_POST['genreid'];
-
-// $filmSearch = $pdo->prepare("SELECT `locations`.`name`,`locations`.`id`, `genres`.`name`, `genres`.`genreid` FROM `genres` INNER JOIN `location-genres` ON `location-genres`.`genreid` = `genres`.`genreid` INNER JOIN `locations` ON `location-genres`.`locationid` = `locations`.`id` WHERE `genres`.`genreid` = 1");
+// $filmSearch = $pdo->prepare("SELECT `locations`.`name`,`locations`.`id`, `films`.`title`, `films`.`id` FROM `films` INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id` INNER JOIN `locations` ON `films-locations`.`locationid` = `locations`.`id` WHERE `films`.`title` LIKE %$search%");
 
 // $filmSearch->execute();
 
@@ -50,22 +33,22 @@ echo($row1["title"]);
 //     echo($row1["name"]);
 //   }
 
+// $row2 = $filmSearch->fetch();
+// echo($row2["title"]);
 
 
+//search by genre
 
+// $genreid = 1; //$_POST['genreid'];
 
-// $genre = $_POST['genreid'];
-// $actor = $_POST['actorid'];
-// $director = $_POST['directorid'];
+// $filmSearch = $pdo->prepare("SELECT `locations`.`name`,`locations`.`id`, `genres`.`name`, `genres`.`genreid` FROM `genres` INNER JOIN `location-genres` ON `location-genres`.`genreid` = `genres`.`genreid` INNER JOIN `locations` ON `location-genres`.`locationid` = `locations`.`id` WHERE `genres`.`genreid` = 2");
 
+// $filmSearch->execute();
 
-// $testing = $pdo->prepare("SELECT `locations`.`name`,`locations`.`id`, `films`.`title`, `films`.`id` FROM `films` INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id` INNER JOIN `locations` ON `films-locations`.`locationid` = `locations`.`id` WHERE `films`.`title` = 'Hannibal'");
-
-// $testing = $pdo->prepare("SELECT `locations`.`name`,`locations`.`id`,`films`.`id`, `films`.`title` FROM `films` INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id` INNER JOIN `locations` ON `films-locations`.`locationid` = `locations`.`id` WHERE `films`.`title` LIKE '%Han%'");
-
-
-// $testing->execute();
-// arsort($test);
+// while($row1 = $filmSearch->fetch()) 
+//   { 
+//     echo($row1["name"]);
+//   }
 
 
 ?>
@@ -100,18 +83,20 @@ echo($row1["title"]);
             <h1>Search for a Location</h1>
                   <div>
                     <h2>Search by Movie/Show name</h2>
-                    <form action="search-process.php" method="POST">
-                      <input type = "text" name="search">
+                    <form action="search-results.php" method="POST">
+                      <input type = "text" name="filmsearch">
                       <input type = "submit" text="search">
                     </form>
                   </div>
                   <div>
                     <h2>Search by Genre</h2>
-                    <img id="icon-comedy" src="assets/genre-comedy.jpg" alt="genre icon comedy" >
-                    <img id="icon-horror" src="assets/genre-horror.jpg" alt="genre icon horror" >
-                    <img id="icon-drama" src="assets/genre-drama.jpg" alt="genre icon drama" >
-                    <img id="icon-scifi" src="assets/genre-scifi.jpg" alt="genre icon sci-fi" >
-                    <img id="icon-romance" src="assets/genre-romance.jpg" alt="genre icon romance" >
+
+                    <a href= "search-results.php?name=comedy"><img id="icon-comedy" src="assets/genre-comedy.jpg" alt="genre icon comedy" ></a>
+                    <a href= "search-results.php?name=horror"><img id="icon-horror" src="assets/genre-horror.jpg" alt="genre icon horror" ></a>
+                    <a href= "search-results.php?name=drama"><img id="icon-drama" src="assets/genre-drama.jpg" alt="genre icon drama" ></a>
+                    <a href= "search-results.php?name=  
+Science Fiction"><img id="icon-scifi" src="assets/genre-scifi.jpg" alt="genre icon sci-fi" ></a>
+                    <a href= "search-results.php?name=romance"><img id="icon-romance" src="assets/genre-romance.jpg" alt="genre icon romance" ></a>
                   </div>
                   <div>
                   <h2>Search by Location</h2>
