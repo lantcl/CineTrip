@@ -9,7 +9,8 @@ $dbpassword = "NkXHus3h!6V";
 $pdo = new PDO($dsn, $dbusername, $dbpassword); 
 
 //search by film
-if (isset($_POST['filmsearch'])){
+if (isset($_POST['filmsearch']))
+{
 $search = $_POST['filmsearch'];
 
 $filmSearch = $pdo->prepare("SELECT `locations`.`locationname`,`locations`.`id`, `films`.`title`, `films`.`id` FROM `films` INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id` INNER JOIN `locations` ON `films-locations`.`locationid` = `locations`.`id` WHERE `films`.`title` LIKE '%$search%'");
@@ -17,15 +18,28 @@ $filmSearch = $pdo->prepare("SELECT `locations`.`locationname`,`locations`.`id`,
 $filmSearch->execute();
 
 }
+
 //search by genre
-if (isset($_GET['name'])){
+if (isset($_GET['name']))
+{
 $genre = $_GET['name'];
 
 $genreSearch = $pdo->prepare("SELECT `locations`.`locationname`,`locations`.`id`,`films`.`id`, `films`.`title`, `films-genres`.`genreid`, `genres`.`name` FROM ((`films` INNER JOIN `films-genres` ON `films`.`id` = `films-genres`.`filmid`) INNER JOIN `genres` ON `genres`.`genreid` = `films-genres`.`genreid`) INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id` INNER JOIN `locations` ON `films-locations`.`locationid` = `locations`.`id` WHERE `genres`.`name` = '$genre'");
 
 $genreSearch->execute();
 }
+
 //search by director
+if (isset($_GET['directorid']))
+{
+$director = $_GET['directorid'];
+
+$directorSearch = $pdo->prepare("SELECT `directors`.`firstname`, `directors`.`lastname`,`directors`.`directorid`, `films`.`title`, `films`.`id` FROM `films` INNER JOIN `films-directors` ON `films-directors`.`filmid` = `films`.`id` INNER JOIN `directors` ON `films-directors`.`directorid` = `directors`.`directorid` WHERE `directors`.`directorid` = $director");
+
+//seems weird to give a list of locations based on this so the result will be films and users can find locations from there
+
+$directorSearch->execute();
+}
 
 ?>
 
@@ -56,18 +70,29 @@ $genreSearch->execute();
               </nav>
           </header> 
         <section>
-            <?php if (isset($_POST['filmsearch'])){ ?>
+            <?php 
+        if (isset($_POST['filmsearch'])){ ?>
               <div>
-            <h1>Search Results for '<?php echo($search);?>'</h1>
+            <h1>Location Results for '<?php echo($search);?>'</h1>
             <?php while($row2 = $filmSearch->fetch()) 
             { ?><p><?php echo($row2["locationname"]);?></p> 
           <?php } ?>
-          </div> <?php 
-        } if (isset($_GET['name'])){ ?>
+          </div> <?php }
+        
+        if (isset($_GET['name'])){ ?>
           <div>
-            <h1>Search Results for '<?php echo($genre);?>'</h1>
+            <h1>Location Results for '<?php echo($genre);?>'</h1>
             <?php while($row3 = $genreSearch->fetch()) 
             { ?><p><?php echo($row3["locationname"]);?></p> 
+          <?php } ?>            
+          </div>
+        <?php } 
+        
+        if (isset($_GET['directorid'])){ ?>
+          <div>
+            <h1>Location Results for '<?php echo($row4["firstname"]. ' ' .["lastname"]);?>'</h1>
+            <?php while($row4 = $directorSearch->fetch()) 
+            { ?><p><?php echo($row4["title"]);?></p> 
           <?php } ?>            
           </div>
         <?php } ?>

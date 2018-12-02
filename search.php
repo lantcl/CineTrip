@@ -8,47 +8,8 @@ $dbpassword = "NkXHus3h!6V";
 
 $pdo = new PDO($dsn, $dbusername, $dbpassword); 
 
-// $genre = $pdo->prepare("SELECT * FROM `locations-genres` WHERE `genreid` = '$genreid'");
-// $genre->execute();
-// $row1 = $genre->fetch();
-
-// $actor = $pdo->prepare("SELECT * FROM `locations-actors` WHERE `actorid` = '$actorid'");
-// $actor->execute();
-// $row2 = $actor->fetch();
-
-// $director = $pdo->prepare("SELECT * FROM `locations-directors` WHERE `directorid` = '$directorid'");
-// $director->execute();
-// $row3 = $director->fetch();
-
-// $search = $_POST['filmsearch']
-
-// //search by film
-
-// $filmSearch = $pdo->prepare("SELECT `locations`.`name`,`locations`.`id`, `films`.`title`, `films`.`id` FROM `films` INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id` INNER JOIN `locations` ON `films-locations`.`locationid` = `locations`.`id` WHERE `films`.`title` LIKE %$search%");
-
-// $filmSearch->execute();
-
-// while($row1 = $filmSearch->fetch()) 
-//   { 
-//     echo($row1["name"]);
-//   }
-
-// $row2 = $filmSearch->fetch();
-// echo($row2["title"]);
-
-
-//search by genre
-
-// $genreid = 1; //$_POST['genreid'];
-
-// $filmSearch = $pdo->prepare("SELECT `locations`.`name`,`locations`.`id`, `genres`.`name`, `genres`.`genreid` FROM `genres` INNER JOIN `location-genres` ON `location-genres`.`genreid` = `genres`.`genreid` INNER JOIN `locations` ON `location-genres`.`locationid` = `locations`.`id` WHERE `genres`.`genreid` = 2");
-
-// $filmSearch->execute();
-
-// while($row1 = $filmSearch->fetch()) 
-//   { 
-//     echo($row1["name"]);
-//   }
+$director = $pdo->prepare("SELECT * FROM `directors`");
+$director->execute();
 
 
 ?>
@@ -80,6 +41,7 @@ $pdo = new PDO($dsn, $dbusername, $dbpassword);
               </nav>
           </header> 
         <section>
+<!--             <h1>Featured Locations this week</h1> -->
             <h1>Search for a Location</h1>
                   <div>
                     <h2>Search by Movie/Show name</h2>
@@ -99,8 +61,16 @@ Science Fiction"><img id="icon-scifi" src="assets/genre-scifi.jpg" alt="genre ic
                     <a href= "search-results.php?name=romance"><img id="icon-romance" src="assets/genre-romance.jpg" alt="genre icon romance" ></a>
                   </div>
                   <div>
-                  <h2>Search by Location</h2>
-                  <h3>Show list</h3>
+                  <h2>Search by Director</h2>
+                  <form action='search-results.php' method='GET'>
+                    <select name="directorid"><?php while($row = $director->fetch(PDO::FETCH_ASSOC)) { ?>
+                      <option value="<?php echo($row["id"]);?>">
+                        <?php echo($row["firstname"]. ' ' .$row["lastname"]); ?>
+                  </option> 
+                <?php } ?> 
+                  </select>
+                  <input type = "submit" text="search">
+                  </form>
                   </div>
         </section>
                 <footer id="footer">
