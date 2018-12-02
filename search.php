@@ -35,18 +35,21 @@ while($row1 = $filmSearch->fetch())
     echo($row1["name"]);
   }
 
+$row1 = $filmSearch->fetch();
+echo($row1["title"]);
 //search by genre
 
-$genreid = 1; //$_POST['genreid'];
+// $genreid = 1; //$_POST['genreid'];
 
-$filmSearch = $pdo->prepare("SELECT `locations`.`name`,`locations`.`id`, `genres`.`name`, `genres`.`genreid` FROM `genres` INNER JOIN `location-genres` ON `location-genres`.`genreid` = `genres`.`genreid` INNER JOIN `locations` ON `location-genres`.`locationid` = `locations`.`id` WHERE `genres`.`genreid` = 1");
+// $filmSearch = $pdo->prepare("SELECT `locations`.`name`,`locations`.`id`, `genres`.`name`, `genres`.`genreid` FROM `genres` INNER JOIN `location-genres` ON `location-genres`.`genreid` = `genres`.`genreid` INNER JOIN `locations` ON `location-genres`.`locationid` = `locations`.`id` WHERE `genres`.`genreid` = 1");
 
-$filmSearch->execute();
+// $filmSearch->execute();
 
-while($row1 = $filmSearch->fetch()) 
-  { 
-    echo($row1["name"]);
-  }
+// while($row1 = $filmSearch->fetch()) 
+//   { 
+//     echo($row1["name"]);
+//   }
+
 
 
 
@@ -95,13 +98,25 @@ while($row1 = $filmSearch->fetch())
           </header> 
         <section>
             <h1>Search for a Location</h1>
-            	<nav>
-                <ul>
-                  <li>Search by Genre</li>
-                  <li>Search by Movie</li>
-                  <li>Search by Location</li>
-                </ul>
-              </nav>
+                  <div>
+                    <h2>Search by Movie/Show name</h2>
+                    <form action="search-process.php" method="POST">
+                      <input type = "text" name="search">
+                      <input type = "submit" text="search">
+                    </form>
+                  </div>
+                  <div>
+                    <h2>Search by Genre</h2>
+                    <img id="icon-comedy" src="assets/genre-comedy.jpg" alt="genre icon comedy" >
+                    <img id="icon-horror" src="assets/genre-horror.jpg" alt="genre icon horror" >
+                    <img id="icon-drama" src="assets/genre-drama.jpg" alt="genre icon drama" >
+                    <img id="icon-scifi" src="assets/genre-scifi.jpg" alt="genre icon sci-fi" >
+                    <img id="icon-romance" src="assets/genre-romance.jpg" alt="genre icon romance" >
+                  </div>
+                  <div>
+                  <h2>Search by Location</h2>
+                  <h3>Show list</h3>
+                  </div>
         </section>
                 <footer id="footer">
                     <div id="footer_logo">
