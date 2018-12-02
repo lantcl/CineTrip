@@ -14,6 +14,7 @@ $search = $_POST['filmsearch'];
 
 $filmSearch = $pdo->prepare("SELECT `locations`.`locationname`,`locations`.`id`, `films`.`title`, `films`.`id` FROM `films` INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id` INNER JOIN `locations` ON `films-locations`.`locationid` = `locations`.`id` WHERE `films`.`title` LIKE '%$search%'");
 
+$filmSearch->execute();
 
 }
 //search by genre
