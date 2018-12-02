@@ -1,5 +1,11 @@
 /*Define the page container sample. In order to fit all mobile phones, app has no scroll bar*/
-html,body{padding:0;margin:0;width:100%;height:100%;overflow:hidden; font-family:Arial, Helvetica, sans-serif;}
+html,body{
+	padding:0;
+	margin:0;
+	width:100%;
+	height:100%;
+	overflow:hidden; 
+	font-family:Arial, Helvetica, sans-serif;}
 
 /*Clean up tags with attributes*/
 ul,li{ list-style:none; padding:0; margin:0;}
@@ -15,12 +21,13 @@ header{
     
 }
 
-header .logo{
-    width:30%;
+.logo{
+    width:10%;
     margin-top: 1%;
-    margin-left: 5%;
     float: left;
+    margin-left: 5%;
 }
+
 
 
 header nav{
@@ -66,4 +73,11 @@ header nav ul .selected{
 /* center nav */
 .nav.center ul {
 	text-align: center;
+}
+
+footer{
+	width: 100%;
+	height: 200px;
+	background: #d0d0d0;
+	overflow: hidden;
 }
