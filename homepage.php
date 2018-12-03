@@ -1,52 +1,81 @@
 <?php
 
-session_start();
-
-
 $dsn = "mysql:host=localhost;dbname=lantc_cinetrip;charset=utf8mb4";
 $dbusername = "lantc";
 $dbpassword = "NkXHus3h!6V";
 
+$db1 = $pdo = new PDO($dsn, $dbusername, $dbpassword);
+$db2 = $pdo = new PDO($dsn, $dbusername, $dbpassword);
+$db3 = $pdo = new PDO($dsn, $dbusername, $dbpassword);
+
+
+
+$stmt1 = $db1= $pdo->prepare("SELECT * FROM `locations` WHERE `id`='1'");
+$stmt2 = $db2= $pdo->prepare("SELECT * FROM `locations` WHERE `id`='5'");
+$stmt3 = $db3= $pdo->prepare("SELECT * FROM `locations` WHERE `id`='8'");
+
+
+$stmt1->execute();
+$stmt2->execute();
+$stmt3->execute();
+
 ?>
 
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link rel="stylesheet" type="text/css" href="css/main.css">
-<link rel="stylesheet" type="text/css" media="screen and (max-width: 768px)" href="css/small.css">
-
-<script src="http://css3-mediaqueries-js.googlecode.com/files/css3-mediaqueries.js"></script>
-<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-
-<title>CineTrip</title>
-<div class="container">
-   <header>
-   	<div class="logo">
-   		<img src="images/logo-01.png" href="homepage.php">
-   	</div>
-
-   	<nav>
-   		<ul>
-            <div class="menu"></div>
-   			<li class="current"><a href="homepage.php">HOME</a></li>
-   			<li><a href="search.php">SEARCH</a></li>
-   			<li><a href="locations.php">LOCATIONS</a></li>
-   			<li><a href="about.php">ABOUT</a></li>
-   			<li><a href="login.php">LOG IN</a></li>
-   			<li><a href="signup.php">SIGN UP</a></li>
-        </ul>
-   	</nav>
-   </header>
-
-   
-</div>
+	<title>Homepage</title>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--	<link rel="stylesheet" type="text/css" href="css/small.css">-->
+	
 </head>
 <body>
+	<div class="top">
+		<a href="homepage.php" class="logo">
+      		<img src="assets/logo-03.png" />
+    	</a>
+		<div class="userImage">
+			<a href="signin.php">
+			<img src="assets/userimage.png" />
+			</a>
+		</div>
+		<div class="topnav">
+		<ul>
+			<li><a href="signin.php">Sign in</a></li>
+        	<li><a href="signup.php">Sign up</a></li>
+		</ul>
+		</div>
+		<div class="searchBar">  
+        	<form>  
+            <input type="text" placeholder="Search...">  
+            <button type="submit">
+			<img src="assets/search.png" href="locations.php"/>
+			</button>  
+        	</form>  
+    	</div>  
+</div>
+	<header>
+		
+		<a href="homepage.php">
+			<img src="assets/logo-01.png" />
+		</a>
+		
+    	<nav>
+     	 <ul>
+        	<div></div>
+       		 <li class="current"><a href="homepage.php">Home</a></li>
+        	 <li><a href="locations.php">Locations</a></li>
+        	 <li><a href="search.php">Search</a></li>
+        	 <li><a href="about.php">About</a></li>
+        	 <li><a href="contact.php">Contact</a></li>
+        </ul>
+    </nav>
+	</header>
+
    <section>
       <div id="map">
-         <iframe width="100%" height="1000px" src="https://maps.google.com/maps?q=toronto%20union%20station&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0""></iframe>
+         <iframe width="100%" height="680px" src="https://maps.google.com/maps?q=toronto%20union%20station&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
       </div>
       <style type="text/css">
       #map{
@@ -59,5 +88,71 @@ $dbpassword = "NkXHus3h!6V";
       </style>
       
    </section>
+	
+<!--Recommend Locations-->
+	<div class="rls">
+		<div class="container">
+		<h1>Film Shooting Locations Near You</h1>
+		<div id="box1" class="grid">
+		<?php while($row = $stmt1->fetch()) {
+                   //echo($row["email"]); //or $row[0];
+        ?>
+		<div class="inner">
+		<img src="" />
+		<p><?php echo($row["locationname"]); ?></p>
+        
+        <p><?php echo($row["address"]); ?></p>
+        </div>
+        <?php }?>
+		</div>
+		
+		<div id="box2" class="grid">
+		<?php while($row = $stmt2->fetch()) {
+                   //echo($row["email"]); //or $row[0];
+        ?>
+		<div class="inner">
+		<img src="" />
+		<p><?php echo($row["locationname"]); ?></p>
+        
+        <p><?php echo($row["address"]); ?></p>
+        </div>
+        <?php }?>
+		</div>
+		
+		<div id="box3" class="grid">
+		<?php while($row = $stmt3->fetch()) {
+                   //echo($row["email"]); //or $row[0];
+        ?>
+		<div class="inner">
+		<img src="" />
+		<p><?php echo($row["locationname"]); ?></p>
+        
+        <p><?php echo($row["address"]); ?></p>
+		<button type="button" class="buttonView">
+		<a href="locations.php">View More</a>
+		</button>
+        </div>
+        <?php }?>
+		</div>
+		</div>
+	</div>
+
+   <footer id="footer">
+        <a href="homepage.php">
+          <img src="assets/footer-logo.png" />
+        </a>
+                     
+    <ul class="icons">
+        <li><a href="about.php" ><span class="label">About CineTrip</span></a></li>
+        <li><a href="#" ><span class="label">Contribute</span></a></li>
+        <li><a href="#" ><span class="label">Privacy policy</span></a></li>
+    </ul>
+        <ul class="copyright">
+        <li>&copy; CineTrip. All rights reserved.</li>
+    </ul>
+    </footer>
+       
+    
+    
 </body>
 </html>
