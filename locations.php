@@ -14,17 +14,35 @@ $stmt = $pdo->prepare("SELECT * FROM `locations` WHERE `id` = '$id'");
 $stmt->execute();
 $row = $stmt->fetch();
 
-$stmt2 = $pdo->prepare("SELECT * FROM `films-locations` WHERE `id` = '$id'");
+$stmt2 = $pdo->prepare("SELECT * FROM `users` WHERE `id` = '$id'");
 $stmt2->execute();
 $row2 = $stmt2->fetch();
 
-$stmt3 = $pdo->prepare("SELECT * FROM `location-user-tips` WHERE `id` = '$id'");
+$stmt3 = $pdo->prepare("SELECT `users`.`id`, `users`.`username`, `location-user-tips`.`id`, `location-user-tips`.`locationid`, `location-user-tips`.`userid`, `location-user-tips`.`tip`, `location-user-tips`.`dateadded` FROM `users` INNER JOIN `location-user-tips` ON `location-user-tips`.`userid` = `users`.`id` WHERE ");
 $stmt3->execute();
 $row3 = $stmt3->fetch();
 
-$stmt4 = $pdo->prepare("SELECT * FROM `users` WHERE `id` = '$id'");
+$stmt4 = $pdo->prepare("SELECT `locations`.`id`, `locations`.`locationname`, `films`.`id`, `films`.`title`, `films-locations`.`id`, `films-locations`.`filmid`, `films-locations`.`locationid`, `films-locations`.`trivia` FROM `locations` INNER JOIN `films-locations` ON `films-locations`.`locationid` = `locations`.`id` FROM `films` INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id` WHERE ");
 $stmt4->execute();
 $row4 = $stmt4->fetch();
+
+$stmt5 = $pdo->prepare("SELECT `locations`.`id`, `locations`.`locationname`, `films`.`id`, `films`.`title`, `location-photos`.`id`, `location-photos`.`filmid`, `location-photos`.`locationid`, `location-photos`.`imagename` FROM `locations` INNER JOIN `location-photos` ON `location-photos`.`locationid` = `locations`.`id` FROM `films` INNER JOIN `location-photos` ON `location-photos`.`filmid` = `films`.`id` WHERE ");
+$stmt5->execute();
+$row5 = $stmt5->fetch();
+
+// $stmt2 = $pdo->prepare("SELECT * FROM `films-locations` WHERE `id` = '$id'");
+// $stmt2->execute();
+// $row2 = $stmt2->fetch();
+
+// $stmt3 = $pdo->prepare("SELECT * FROM `location-user-tips` WHERE `id` = '$id'");
+// $stmt3->execute();
+// $row3 = $stmt3->fetch();
+
+// $stmt4 = $pdo->prepare("SELECT * FROM `users` WHERE `id` = '$id'");
+// $stmt4->execute();
+// $row4 = $stmt4->fetch();
+
+// $stmt5 = $pdo->prepare("SELECT * FROM `location-photos` WHERE ")
 
 ?>
 
@@ -46,21 +64,24 @@ $row4 = $stmt4->fetch();
 			</ul>
 		</nav>
 		<main>
-			<h1><?php echo($row["name"]); ?></h1>
+			<div id="map">
+				<iframe width="100%" height="300px" src="<?php echo($row["mapurl"]); ?>" frameborder="0" scrolling="no" marginheight="0" marginwidth="0""></iframe>
+			</div>
+			<h1><?php echo($row["locationname"]); ?></h1>
 			<p><?php echo($row["address"]); ?></p>
-			<img src="images/<?php echo($row["photo"]); ?>" />
+			<img src="imageslocations/<?php echo($row["photo"]); ?>" />
 			<h2>Description</h2>
 			<p><?php echo($row["description"]); ?></p>
 			<h2>Trivia</h2>
-			<?php while($row2 = $stmt2->fetch()){ ?>
-				<p><?php echo($row2["trivia"]); ?></p>
+			<?php while($ = $->fetch()){ ?>
+				<p><?php echo($["trivia"]); ?></p>
 			<?php } ?> 
 		</main>
 		<section class="tips">
 			<h2>Tips</h2>
 			<div>
-				<img id="comment-thumbnail" src="images/<?php echo($row4["profilepic"]); ?>" />
-				<h3><?php echo($row4["username"]); ?></h3>
+				<img id="comment-thumbnail" src="images-profile/<?php echo($row2["profilepic"]); ?>" />
+				<h3><?php echo($row2["username"]); ?></h3>
 				<p><?php echo($row3["tip"]); ?></p>
 				<ul>
 					<li><a href="">Like</a></li>
