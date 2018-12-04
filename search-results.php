@@ -13,7 +13,7 @@ if (isset($_POST['filmsearch']))
 {
 $search = $_POST['filmsearch'];
 
-$filmSearch = $pdo->prepare("SELECT `locations`.`locationname`,`locations`.`id`, `films`.`title`, `films`.`id` FROM `films` INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id` INNER JOIN `locations` ON `films-locations`.`locationid` = `locations`.`id` WHERE `films`.`title` LIKE '%$search%'");
+$filmSearch = $pdo->prepare("SELECT `locations`.`locationname`,`locations`.`id`, `films`.`title`, `films`.`id` FROM `films` INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id` INNER JOIN `locations` ON `films-locations`.`locationid` = `locations`.`id` WHERE `films`.`title` LIKE '%$search%' OR `locations`.`locationname` LIKE '%$search%'");
 
 $filmSearch->execute();
 
@@ -34,6 +34,7 @@ if (isset($_GET['directorid']))
 {
 $director = $_GET['directorid'];
 
+//$directorName = $directorSearch = $pdo->prepare
 $directorSearch = $pdo->prepare("SELECT `directors`.`firstname`, `directors`.`lastname`,`directors`.`directorid`, `films`.`title`, `films`.`id` FROM `films` INNER JOIN `films-directors` ON `films-directors`.`filmid` = `films`.`id` INNER JOIN `directors` ON `films-directors`.`directorid` = `directors`.`directorid` WHERE `directors`.`directorid` = $director");
 
 //seems weird to give a list of locations based on this so the result will be films and users can find locations from there
@@ -46,34 +47,62 @@ $directorSearch->execute();
 <!doctype html>
 <html>
     <head>
-        <title>CineTrip Search</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="css/main.css" />
+        <title>Search Results</title>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
-    <body>
-        <header id="header" class="alt">
-              <a href = "homepage.php"><img src="assets/logo-01.png" alt="CineTrip Logo" style="width:100px"></a>
-              <nav id="nav">
-                  <ul>
-                      <li><a href="homepage.php">Home</a></li>
-                      <li><a href="search.php" class="icon fa-angle-down">Search</a></li>
-                      <li><a href="locations.php">Locations</a></li>
-                      <li><a href="about.php">About</a></li>
-                      <?php if($_SESSION['logged-in'] == true){?>
-                          <li><a href="userprofile.php" class="button">Profile</a></li>
-                          <li><a href="logout.php" class="button">Logout</a></li>
-                      <?php } else {?>
-                          <li><a href="login.php" class="button">Log in</a></li>
-                          <li><a href="signup.php" class="button">Sign up</a></li>
-                      <?php } ?>
-                  </ul>
-              </nav>
-          </header> 
-        <section>
+<body>
+  <div class="top">
+    <a href="homepage.php" class="logo">
+          <img src="assets/logo-03.png" />
+      </a>
+    <div class="userImage">
+      <a href="signin.php">
+      <img src="assets/userimage.png" />
+      </a>
+    </div>
+    <div class="topnav">
+    <ul>
+        <?php if($_SESSION['logged-in'] == true){?>
+            <li><a href="logout.php" class="button">Log out</a></li>
+            <li><a href="userprofile.php" class="button">Profile</a></li>
+        <?php } else {?>
+            <li><a href="signup.php" class="button">Sign up</a></li>
+            <li><a href="login.php" class="button">Log in</a></li>
+        <?php } ?>      
+    </ul>
+    </div>
+    <div class="searchBar">  
+          <form action="search-results.php" method="POST">
+            <input type = "text" name="filmsearch">
+            <button type="submit">
+      <img src="assets/search.png" href="locations.php"/>
+      </button>  
+          </form>  
+      </div>  
+  </div>
+  <header>
+    
+    <a href="homepage.php">
+      <img src="assets/logo-01.png" />
+    </a>
+    
+      <nav>
+       <ul>
+          <div></div>
+           <li class="current"><a href="homepage.php">Home</a></li>
+           <li><a href="locations.php">Locations</a></li>
+           <li><a href="search.php">Search</a></li>
+           <li><a href="about.php">About</a></li>
+           <li><a href="contact.php">Contact</a></li>
+        </ul>
+    </nav>
+  </header>
+        <div class="rls">
             <?php 
         if (isset($_POST['filmsearch'])){ ?>
               <div>
-            <h1>Location Results for '<?php echo($search);?>'</h1>
+            <h2>Location Results for '<?php echo($search);?>'</h2>
             <?php while($row2 = $filmSearch->fetch()) 
             { ?><p><?php echo($row2["locationname"]);?></p> 
           <?php } ?>
@@ -81,7 +110,7 @@ $directorSearch->execute();
         
         if (isset($_GET['name'])){ ?>
           <div>
-            <h1>Location Results for '<?php echo($genre);?>'</h1>
+            <h2>Location Results for '<?php echo($genre);?>'</h2>
             <?php while($row3 = $genreSearch->fetch()) 
             { ?><p><?php echo($row3["locationname"]);?></p> 
           <?php } ?>            
@@ -90,25 +119,26 @@ $directorSearch->execute();
         
         if (isset($_GET['directorid'])){ ?>
           <div>
-            <h1>Location Results for '<?php echo($row4["firstname"]. ' ' .["lastname"]);?>'</h1>
+            <h2>Location Results for '<?php echo($row5["firstname"]. ' ' .["lastname"]);?>'</h2>
             <?php while($row4 = $directorSearch->fetch()) 
             { ?><p><?php echo($row4["title"]);?></p> 
           <?php } ?>            
           </div>
         <?php } ?>
-        </section>
-                <footer id="footer">
-                    <div id="footer_logo">
-                     <a href="homepage.php"><img src="assets/footer-logo.png" style="width:77px;height:28px"></a>
-                     </div>
-                    <ul class="icons">
-                        <li><a href="about.php" ><span class="label">About CineTrip</span></a></li>
-                        <li><a href="#" ><span class="label">Contribute</span></a></li>
-                        <li><a href="#" ><span class="label">Privacy policy</span></a></li>
-                    </ul>
-                    <ul class="copyright">
-                        <li>&copy; CineTrip. All rights reserved.</li>
-                    </ul>
-                </footer>       
+        </div>
+   <footer id="footer">
+        <a href="homepage.php">
+          <img src="assets/footer-logo.png" />
+        </a>
+                     
+    <ul class="icons">
+        <li><a href="about.php" ><span class="label">About CineTrip</span></a></li>
+        <li><a href="#" ><span class="label">Contribute</span></a></li>
+        <li><a href="#" ><span class="label">Privacy policy</span></a></li>
+    </ul>
+        <ul class="copyright">
+        <li>&copy; CineTrip. All rights reserved.</li>
+        </ul>
+    </footer>     
     </body>
 </html>

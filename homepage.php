@@ -1,5 +1,7 @@
 <?php
 
+session_start(); 
+
 $dsn = "mysql:host=localhost;dbname=lantc_cinetrip;charset=utf8mb4";
 $dbusername = "lantc";
 $dbpassword = "NkXHus3h!6V";
@@ -42,19 +44,24 @@ $stmt3->execute();
 		</div>
 		<div class="topnav">
 		<ul>
-			<li><a href="signin.php">Sign in</a></li>
-        	<li><a href="signup.php">Sign up</a></li>
+        <?php if($_SESSION['logged-in'] == true){?>
+            <li><a href="logout.php" class="button">Log out</a></li>
+            <li><a href="userprofile.php" class="button">Profile</a></li>
+        <?php } else {?>
+            <li><a href="signup.php" class="button">Sign up</a></li>
+            <li><a href="login.php" class="button">Log in</a></li>
+        <?php } ?>			
 		</ul>
 		</div>
 		<div class="searchBar">  
-        	<form>  
-            <input type="text" placeholder="Search...">  
+        	<form action="search-results.php" method="POST">
+            <input type = "text" name="filmsearch">
             <button type="submit">
 			<img src="assets/search.png" href="locations.php"/>
 			</button>  
         	</form>  
     	</div>  
-</div>
+	</div>
 	<header>
 		
 		<a href="homepage.php">
@@ -92,7 +99,7 @@ $stmt3->execute();
 <!--Recommend Locations-->
 	<div class="rls">
 		
-		<h1>Film Shooting Locations Near You</h1>
+		<h1>Popular Locations</h1>
 		<div id="box1" class="grid">
 		<?php while($row = $stmt1->fetch()) {
                    //echo($row["email"]); //or $row[0];
@@ -163,8 +170,6 @@ $stmt3->execute();
         <li>&copy; CineTrip. All rights reserved.</li>
         </ul>
     </footer>
-       
-    
-    
+ 
 </body>
 </html>

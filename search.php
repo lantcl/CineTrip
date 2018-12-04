@@ -18,38 +18,67 @@ $director->execute();
 <html>
     <head>
         <title>CineTrip Search</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="css/main.css" />
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
     <body>
-        <header id="header" class="alt">
-              <a href = "homepage.php"><img src="assets/logo-01.png" alt="CineTrip Logo" style="width:100px"></a>
-              <nav id="nav">
-                  <ul>
-                      <li><a href="homepage.php">Home</a></li>
-                      <li><a href="search.php" class="icon fa-angle-down">Search</a></li>
-                      <li><a href="locations.php">Locations</a></li>
-                      <li><a href="about.php">About</a></li>
-                      <?php if($_SESSION['logged-in'] == true){?>
-                          <li><a href="userprofile.php" class="button">Profile</a></li>
-                          <li><a href="logout.php" class="button">Logout</a></li>
-                      <?php } else {?>
-                          <li><a href="login.php" class="button">Log in</a></li>
-                          <li><a href="signup.php" class="button">Sign up</a></li>
-                      <?php } ?>
-                  </ul>
-              </nav>
-          </header> 
-        <section>
-<!--             <h1>Featured Locations this week</h1> -->
-            <h1>Search for a Location</h1>
-                  <div>
-                    <h2>Search by Movie/Show name</h2>
-                    <form action="search-results.php" method="POST">
-                      <input type = "text" name="filmsearch">
-                      <input type = "submit" text="search">
-                    </form>
-                  </div>
+  <div class="top">
+    <a href="homepage.php" class="logo">
+          <img src="assets/logo-03.png" />
+      </a>
+    <div class="userImage">
+      <a href="signin.php">
+      <img src="assets/userimage.png" />
+      </a>
+    </div>
+    <div class="topnav">
+    <ul>
+        <?php if($_SESSION['logged-in'] == true){?>
+            <li><a href="logout.php" class="button">Log out</a></li>
+            <li><a href="userprofile.php" class="button">Profile</a></li>
+        <?php } else {?>
+            <li><a href="signup.php" class="button">Sign up</a></li>
+            <li><a href="login.php" class="button">Log in</a></li>
+        <?php } ?>      
+    </ul>
+    </div>
+    <div class="searchBar">  
+          <form action="search-results.php" method="POST">
+            <input type = "text" name="filmsearch">
+            <button type="submit">
+      <img src="assets/search.png" href="locations.php"/>
+      </button>  
+          </form>  
+      </div>  
+</div>
+  <header>
+    
+    <a href="homepage.php">
+      <img src="assets/logo-01.png" />
+    </a>
+    
+      <nav>
+       <ul>
+          <div></div>
+           <li class="current"><a href="homepage.php">Home</a></li>
+           <li><a href="locations.php">Locations</a></li>
+           <li><a href="search.php">Search</a></li>
+           <li><a href="about.php">About</a></li>
+           <li><a href="contact.php">Contact</a></li>
+        </ul>
+    </nav>
+  </header>
+        <div class="rls">
+          <h1>Search for a Location</h1>
+              <div class="searchBar">
+                  <h2>Search by Movie/Show name or Location Name</h2> 
+                  <form action="search-results.php" method="POST">
+                    <input type = "text" name="filmsearch">
+                    <button type="submit">
+                      <img src="assets/search.png" href="locations.php"/>
+                    </button>  
+                </form>  
+              </div>
                   <div>
                     <h2>Search by Genre</h2>
 
@@ -72,19 +101,20 @@ Science Fiction"><img id="icon-scifi" src="assets/genre-scifi.jpg" alt="genre ic
                   <input type = "submit" text="search">
                   </form>
                   </div>
-        </section>
-                <footer id="footer">
-                    <div id="footer_logo">
-                     <a href="homepage.php"><img src="assets/footer-logo.png" style="width:77px;height:28px"></a>
-                     </div>
-                    <ul class="icons">
-                        <li><a href="about.php" ><span class="label">About CineTrip</span></a></li>
-                        <li><a href="#" ><span class="label">Contribute</span></a></li>
-                        <li><a href="#" ><span class="label">Privacy policy</span></a></li>
-                    </ul>
-                    <ul class="copyright">
-                        <li>&copy; CineTrip. All rights reserved.</li>
-                    </ul>
-                </footer>       
+        </div>
+   <footer id="footer">
+        <a href="homepage.php">
+          <img src="assets/footer-logo.png" />
+        </a>
+                     
+    <ul class="icons">
+        <li><a href="about.php" ><span class="label">About CineTrip</span></a></li>
+        <li><a href="#" ><span class="label">Contribute</span></a></li>
+        <li><a href="#" ><span class="label">Privacy policy</span></a></li>
+    </ul>
+        <ul class="copyright">
+        <li>&copy; CineTrip. All rights reserved.</li>
+        </ul>
+    </footer>     
     </body>
 </html>
