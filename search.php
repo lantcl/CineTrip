@@ -93,7 +93,7 @@ Science Fiction"><img id="icon-scifi" src="assets/genre-scifi.jpg" alt="genre ic
                   <h2>Search by Director</h2>
                   <form action='search-results.php' method='GET'>
                     <select name="directorid"><?php while($row = $director->fetch(PDO::FETCH_ASSOC)) { ?>
-                      <option value="<?php echo($row["id"]);?>">
+                      <option value="<?php echo($row["directorid"]);?>">
                         <?php echo($row["firstname"]. ' ' .$row["lastname"]); ?>
                   </option> 
                 <?php } ?> 
