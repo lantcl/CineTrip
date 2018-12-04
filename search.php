@@ -85,8 +85,7 @@ $director->execute();
                     <a href= "search-results.php?name=comedy"><img id="icon-comedy" src="assets/genre-comedy.jpg" alt="genre icon comedy" ></a>
                     <a href= "search-results.php?name=horror"><img id="icon-horror" src="assets/genre-horror.jpg" alt="genre icon horror" ></a>
                     <a href= "search-results.php?name=drama"><img id="icon-drama" src="assets/genre-drama.jpg" alt="genre icon drama" ></a>
-                    <a href= "search-results.php?name=  
-Science Fiction"><img id="icon-scifi" src="assets/genre-scifi.jpg" alt="genre icon sci-fi" ></a>
+                    <a href= "search-results.php?name=science-fiction"><img id="icon-scifi" src="assets/genre-scifi.jpg" alt="genre icon sci-fi" ></a>
                     <a href= "search-results.php?name=romance"><img id="icon-romance" src="assets/genre-romance.jpg" alt="genre icon romance" ></a>
                   </div>
                   <div>

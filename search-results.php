@@ -13,7 +13,7 @@ if (isset($_POST['filmsearch']))
 {
 $search = $_POST['filmsearch'];
 
-$filmSearch = $pdo->prepare("SELECT `locations`.`locationname`,`locations`.`id`, `films`.`title`, `films`.`id` FROM `films` INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id` INNER JOIN `locations` ON `films-locations`.`locationid` = `locations`.`id` WHERE `films`.`title` LIKE '%$search%' OR `locations`.`locationname` LIKE '%$search%'");
+$filmSearch = $pdo->prepare("SELECT `locations`.`locationname`, `films`.`title`, `films`.`id`, `locations`.`id` FROM `films` INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id` INNER JOIN `locations` ON `films-locations`.`locationid` = `locations`.`id` WHERE `films`.`title` LIKE '%$search%' OR `locations`.`locationname` LIKE '%$search%'");
 
 $filmSearch->execute();
 
@@ -24,7 +24,7 @@ if (isset($_GET['name']))
 {
 $genre = $_GET['name'];
 
-$genreSearch = $pdo->prepare("SELECT `locations`.`locationname`,`locations`.`id`,`films`.`id`, `films`.`title`, `films-genres`.`genreid`, `genres`.`name` FROM ((`films` INNER JOIN `films-genres` ON `films`.`id` = `films-genres`.`filmid`) INNER JOIN `genres` ON `genres`.`genreid` = `films-genres`.`genreid`) INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id` INNER JOIN `locations` ON `films-locations`.`locationid` = `locations`.`id` WHERE `genres`.`name` = '$genre'");
+$genreSearch = $pdo->prepare("SELECT `locations`.`locationname`,`films`.`id`, `locations`.`id`,`films`.`title`, `films-genres`.`genreid`, `genres`.`name` FROM ((`films` INNER JOIN `films-genres` ON `films`.`id` = `films-genres`.`filmid`) INNER JOIN `genres` ON `genres`.`genreid` = `films-genres`.`genreid`) INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id` INNER JOIN `locations` ON `films-locations`.`locationid` = `locations`.`id` WHERE `genres`.`name` = '$genre'");
 
 $genreSearch->execute();
 }
@@ -104,7 +104,7 @@ $directorSearch->execute();
               <div>
             <h2>Location Results for '<?php echo($search);?>'</h2>
             <?php while($row2 = $filmSearch->fetch()) 
-            { ?><a href="locations.php?id=<?php echo($row2["locationid"]);?>"><p><?php echo($row2["locationname"]);?></p></a> 
+            { ?><a href="locations.php?id=<?php echo($row2["id"]);?>"><p><?php echo($row2["locationname"]);?></p></a> 
           <?php } ?>
           </div> <?php }
         
@@ -112,7 +112,7 @@ $directorSearch->execute();
           <div>
             <h2>Location Results for '<?php echo($genre);?>'</h2>
             <?php while($row3 = $genreSearch->fetch()) 
-            { ?><a href="locations.php?id=<?php echo($row3["locationid"]);?>"><p><?php echo($row3["locationname"]);?></p></a> 
+            { ?><a href="locations.php?id=<?php echo($row3["id"]);?>"><p><?php echo($row3["locationname"]);?></p></a> 
           <?php } ?>            
           </div>
         <?php } 
@@ -120,8 +120,8 @@ $directorSearch->execute();
         if (isset($_GET['directorid'])){ ?>
           <div>
             <h2>Location Results for '<?php echo($row5["firstname"]. ' ' .["lastname"]);?>'</h2>
-            <?php while($row4 = $directorSearch->fetch()) 
-            { ?><p><?php echo($row4["title"]);?></p> 
+            <?php while($row4 = $directorSearch->fetch())
+            { ?><a href="films.php?id=<?php echo($row4["id"]);?>"><p><?php echo($row4["title"]);?></p></a>  
           <?php } ?>            
           </div>
         <?php } ?>
