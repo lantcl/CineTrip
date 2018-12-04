@@ -45,11 +45,11 @@ $stmt3->execute();
 		<div class="topnav">
 		<ul>
         <?php if($_SESSION['logged-in'] == true){?>
-            <li><a href="logout.php" class="button">Log out</a></li>
-            <li><a href="userprofile.php" class="button">Profile</a></li>
+            <li><a href="logout.php">Log out</a></li>
+            <li><a href="userprofile.php">Profile</a></li>
         <?php } else {?>
-            <li><a href="signup.php" class="button">Sign up</a></li>
-            <li><a href="login.php" class="button">Log in</a></li>
+            <li><a href="signup.php">Sign up</a></li>
+            <li><a href="login.php">Log in</a></li>
         <?php } ?>			
 		</ul>
 		</div>
@@ -156,20 +156,20 @@ $stmt3->execute();
 		
 	</div>
 
-   <footer id="footer">
+   <div class="footer">
+   <footer>
         <a href="homepage.php">
           <img src="assets/footer-logo.png" />
-        </a>
-                     
-    <ul class="icons">
-        <li><a href="about.php" ><span class="label">About CineTrip</span></a></li>
-        <li><a href="#" ><span class="label">Contribute</span></a></li>
-        <li><a href="#" ><span class="label">Privacy policy</span></a></li>
+        </a>               
+    <ul class="bottomNav">
+        <li><a href="about.php" >About CineTrip</a></li>
+        <li><a href="#">Contribute</a></li>
+        <li><a href="#">Privacy policy</a></li>
     </ul>
-        <ul class="copyright">
-        <li>&copy; CineTrip. All rights reserved.</li>
-        </ul>
     </footer>
- 
+	</div>
+       
+    
+    
 </body>
 </html>
