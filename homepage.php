@@ -45,11 +45,11 @@ $stmt3->execute();
 		<div class="topnav">
 		<ul>
         <?php if($_SESSION['logged-in'] == true){?>
-            <li><a href="logout.php" class="button">Log out</a></li>
-            <li><a href="userprofile.php" class="button">Profile</a></li>
+            <li><a href="logout.php">Log out</a></li>
+            <li><a href="userprofile.php">Profile</a></li>
         <?php } else {?>
-            <li><a href="signup.php" class="button">Sign up</a></li>
-            <li><a href="login.php" class="button">Log in</a></li>
+            <li><a href="signup.php">Sign up</a></li>
+            <li><a href="login.php">Log in</a></li>
         <?php } ?>			
 		</ul>
 		</div>
