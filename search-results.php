@@ -49,7 +49,7 @@ $directorSearch->execute();
     <head>
         <title>Search Results</title>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <!-- <link rel="stylesheet" type="text/css" href="css/main.css"> -->
     </head>
 <body>
   <div class="top">
@@ -104,7 +104,7 @@ $directorSearch->execute();
               <div>
             <h2>Location Results for '<?php echo($search);?>'</h2>
             <?php while($row2 = $filmSearch->fetch()) 
-            { ?><p><?php echo($row2["locationname"]);?></p> 
+            { ?><a href="locations.php?id=<?php echo($row2["locationid"]);?>"><p><?php echo($row2["locationname"]);?></p></a> 
           <?php } ?>
           </div> <?php }
         
@@ -112,7 +112,7 @@ $directorSearch->execute();
           <div>
             <h2>Location Results for '<?php echo($genre);?>'</h2>
             <?php while($row3 = $genreSearch->fetch()) 
-            { ?><p><?php echo($row3["locationname"]);?></p> 
+            { ?><a href="locations.php?id=<?php echo($row3["locationid"]);?>"><p><?php echo($row3["locationname"]);?></p></a> 
           <?php } ?>            
           </div>
         <?php } 
