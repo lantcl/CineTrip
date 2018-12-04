@@ -53,19 +53,58 @@ $row5 = $stmt5->fetch();
 <html>
 	<head>
 		<title>Cinetrip - Locations</title>
-		<meta charset="UTF-8" />
-		<!-- <link rel="stylesheet" href="css/main.css" /> -->
-	</head>
-	<body>
-		<nav>
-		    <a href = "homepage.php"><img src="assets/logo-01.png" alt="CineTrip Logo" style="width:100px"></a>
-			<ul>
-				<li><a href="userprofile.php">My Profile</a></li>
-				<li><a href="settings.php">Settings</a></li>
-				<li><a href="about.php">About</a></li>
-				<li><a href="logout.php">Logout</a></li>
-			</ul>
-		</nav>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/small.css"> -->
+	
+</head>
+<body>
+	<div class="top">
+		<a href="homepage.php" class="logo">
+      		<img src="assets/logo-03.png" />
+    	</a>
+		<div class="userImage">
+			<a href="signin.php">
+			<img src="assets/userimage.png" />
+			</a>
+		</div>
+		<div class="topnav">
+		<ul>
+        <?php if($_SESSION['logged-in'] == true){?>
+            <li><a href="logout.php">Log out</a></li>
+            <li><a href="userprofile.php">Profile</a></li>
+        <?php } else {?>
+            <li><a href="signup.php">Sign up</a></li>
+            <li><a href="login.php">Log in</a></li>
+        <?php } ?>			
+		</ul>
+		</div>
+		<div class="searchBar">  
+        	<form action="search-results.php" method="POST">
+            <input type = "text" name="filmsearch">
+            <button type="submit">
+			<img src="assets/search.png" href="locations.php"/>
+			</button>  
+        	</form>  
+    	</div>  
+	</div>
+	<header>
+		
+		<a href="homepage.php">
+			<img src="assets/logo-01.png" />
+		</a>
+		
+    	<nav>
+     	 <ul>
+        	<div></div>
+       		 <li class="current"><a href="homepage.php">Home</a></li>
+        	 <li><a href="locations.php">Locations</a></li>
+        	 <li><a href="search.php">Search</a></li>
+        	 <li><a href="about.php">About</a></li>
+        	 <li><a href="contact.php">Contact</a></li>
+        </ul>
+    </nav>
+	</header>
 		<main>
 			<div id="map">
 				<iframe width="100%" height="300px" src="<?php echo($row["mapurl"]); ?>" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0""></iframe>
@@ -87,7 +126,8 @@ $row5 = $stmt5->fetch();
 				<h3><?php echo($row3["username"]); ?></h3>
 				<p><?php echo($row3["tip"]); ?></p>
 				<ul>
-					<li><a href="">Like</a></li>
+					<li><a href="">Bookmark</a></li>
+					<img src="assets/grey-bookmark.png" href="#"/>
 					<li><a href="">Reply</a></li>
 				</ul>
 			</div>
