@@ -1,8 +1,8 @@
 <?php
 
-$dsn = "mysql:host=localhost;dbname=lantc_cinetrip;charset=utf8mb4";
-$dbusername = "lantc";
-$dbpassword = "NkXHus3h!6V";
+$dsn = "mysql:host=localhost;dbname=cinetrip;charset=utf8mb4";
+$dbusername = "huren";
+$dbpassword = "jam19901004";
 
 $db1 = $pdo = new PDO($dsn, $dbusername, $dbpassword);
 $db2 = $pdo = new PDO($dsn, $dbusername, $dbpassword);
@@ -91,17 +91,22 @@ $stmt3->execute();
 	
 <!--Recommend Locations-->
 	<div class="rls">
-		<div class="container">
+		
 		<h1>Film Shooting Locations Near You</h1>
 		<div id="box1" class="grid">
 		<?php while($row = $stmt1->fetch()) {
                    //echo($row["email"]); //or $row[0];
         ?>
 		<div class="inner">
-		<img src="" />
-		<p><?php echo($row["locationname"]); ?></p>
-        
+		<img src="imageslocations/elginoutside.jpg" />
+		<p id="title"><?php echo($row["locationname"]); ?></p>
+        <p id="mv">related movie:The Shape Of Water</p>
         <p><?php echo($row["address"]); ?></p>
+			<a href="locations.php">
+			<button type="button" class="buttonView">
+		    View More
+		</button>
+		</a>
         </div>
         <?php }?>
 		</div>
@@ -111,10 +116,15 @@ $stmt3->execute();
                    //echo($row["email"]); //or $row[0];
         ?>
 		<div class="inner">
-		<img src="" />
-		<p><?php echo($row["locationname"]); ?></p>
-        
+		<img src="imageslocations/graffiti.jpg" />
+		<p id="title"><?php echo($row["locationname"]); ?></p>
+        <p id="mv">related movie:The Shape Of Water</p>
         <p><?php echo($row["address"]); ?></p>
+		<a href="locations.php">
+			<button type="button" class="buttonView">
+		    View More
+		</button>
+		</a>
         </div>
         <?php }?>
 		</div>
@@ -124,17 +134,19 @@ $stmt3->execute();
                    //echo($row["email"]); //or $row[0];
         ?>
 		<div class="inner">
-		<img src="" />
-		<p><?php echo($row["locationname"]); ?></p>
-        
+		<img src="imageslocations/dunlap3.jpg" />
+		<p id="title"><?php echo($row["locationname"]); ?></p>
+        <p id="mv">related TV show:NBC Television series Hannibal</p>
         <p><?php echo($row["address"]); ?></p>
-		<button type="button" class="buttonView">
-		<a href="locations.php">View More</a>
+		<a href="locations.php">
+			<button type="button" class="buttonView">
+		    View More
 		</button>
+		</a>
         </div>
         <?php }?>
 		</div>
-		</div>
+		
 	</div>
 
    <footer id="footer">
@@ -149,7 +161,7 @@ $stmt3->execute();
     </ul>
         <ul class="copyright">
         <li>&copy; CineTrip. All rights reserved.</li>
-    </ul>
+        </ul>
     </footer>
        
     
