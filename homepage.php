@@ -168,8 +168,6 @@ $stmt3->execute();
     </ul>
     </footer>
 	</div>
-       
-    
-    
+   
 </body>
 </html>

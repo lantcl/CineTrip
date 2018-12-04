@@ -118,7 +118,7 @@ $directorSearch->execute();
         <?php } 
         
         if (isset($_GET['directorid'])){ ?>
-          <div>
+          <div id="advanced search">
             <h2>Location Results for '<?php echo($row5["firstname"]. ' ' .["lastname"]);?>'</h2>
             <?php while($row4 = $directorSearch->fetch())
             { ?><a href="films.php?id=<?php echo($row4["id"]);?>"><p><?php echo($row4["title"]);?></p></a>  
@@ -126,19 +126,18 @@ $directorSearch->execute();
           </div>
         <?php } ?>
         </div>
-   <footer id="footer">
+   <div class="footer">
+   <footer>
         <a href="homepage.php">
           <img src="assets/footer-logo.png" />
-        </a>
-                     
-    <ul class="icons">
-        <li><a href="about.php" ><span class="label">About CineTrip</span></a></li>
-        <li><a href="#" ><span class="label">Contribute</span></a></li>
-        <li><a href="#" ><span class="label">Privacy policy</span></a></li>
+        </a>               
+    <ul class="bottomNav">
+        <li><a href="about.php" >About CineTrip</a></li>
+        <li><a href="#">Contribute</a></li>
+        <li><a href="#">Privacy policy</a></li>
     </ul>
-        <ul class="copyright">
-        <li>&copy; CineTrip. All rights reserved.</li>
-        </ul>
-    </footer>     
+    </footer>
+  </div>
+        
     </body>
 </html>
