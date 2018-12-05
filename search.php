@@ -77,14 +77,12 @@ $director->execute();
 			<h1>Search for a Location</h1>
 		  <div class="search">	
           
-              <div class="searchBar1">
+              <div id ="section1" class="searchBar1">
                   <h2>Search by Movie/Show name or Location Name</h2> 
-                  <form action="search-results.php" method="POST">
-                    <input type = "text" name="filmsearch">
-                    <button type="submit">
-                      <img src="assets/search.png" href="locations.php"/>
+                    <input type = "text" name="search" id="input">
+                    <button >
+                      <img id="searchsubmit" src="assets/search.png"/>
                     </button>  
-                </form>  
               </div>
 		  </div>
           
@@ -126,5 +124,6 @@ $director->execute();
     </ul>
     </footer>
 	</div>   
+    <script type="text/javascript" src="javascript/script.js"></script>
     </body>
 </html>
