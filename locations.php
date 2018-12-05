@@ -98,7 +98,7 @@ $row5 = $stmt5->fetch();
      	 <ul>
         	<div></div>
        		 <li class="current"><a href="homepage.php">Home</a></li>
-        	 <li><a href="locations.php">Locations</a></li>
+        	 <li><a href="browse-locations.php">Locations</a></li>
         	 <li><a href="search.php">Search</a></li>
         	 <li><a href="about.php">About</a></li>
         	 <li><a href="contact.php">Contact</a></li>
