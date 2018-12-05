@@ -95,6 +95,7 @@ $director->execute();
            <a href= "search-results.php?name=drama"><img id="icon-drama" src="assets/genre-drama.jpg" alt="genre icon drama" ></a>
            <a href= "search-results.php?name=science-fiction"><img id="icon-scifi" src="assets/genre-scifi.jpg" alt="genre icon sci-fi" ></a>
            <a href= "search-results.php?name=romance"><img id="icon-romance" src="assets/genre-romance.jpg" alt="genre icon romance" ></a>
+           <div id="results2"></div> 
         </div>
 			
         </div>
