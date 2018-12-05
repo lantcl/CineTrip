@@ -115,9 +115,7 @@ $row5 = $stmt5->fetch();
 			<h2>Description</h2>
 			<p><?php echo($row["description"]); ?></p>
 			<h2>Trivia</h2>
-			<?php while($row4 = $stmt4->fetch()){ ?>
 				<p><?php echo($row4["trivia"]); ?></p>
-			<?php } ?> 
 		</main>
 		<section class="tips">
 			<h2>Tips</h2>
