@@ -104,12 +104,12 @@ input,input:focus{
 /*Signup page*/
 .signupForm{
 	width: 100%;
-	height: 900px;
+	hegiht:700px;
+	overflow: auto;
 	background-color: #EBEBEB;
+	display:block; 
 	text-align:center;
-	margin-top: 5%;
-    justify-content: center;
-    align-content: center;	
+	margin-top:8%;
 }
 
 .signupForm h1{
@@ -120,23 +120,38 @@ input,input:focus{
 	margin-top:2%;
 }
 
-.signupForm form{
-	width: 40%;
-	height: 70%;
-    margin: 0 auto;
-	background-color:#ffffff;
-	border-radius:10px;
+.signupForm .part1{
+	background-color:rgba(255,255,255,.8);
+    width:50%;
+	height: 600px;
+	margin-top: 1%;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-bottom: 3%;
+    display:inline-block;
+    vertical-align: top;
 	text-align: center;
-	padding: 5%;
+	border-radius: 5px;
 }
 
-.signupForm form input{
+.signupForm .part2{
+	background-color:rgba(255,255,255,.8);
+    width:50%;
+	height: 250px;
+	margin-top: 3%;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-bottom: 3%;
+    display:inline-block;
+    vertical-align: top;
+	text-align: center;
+	border-radius: 5px;
+}
+.signupForm .part1 input{
 	width: 300px;
     display: block;
     height: 40px;
-    border: 0;
-    outline: 0;
-    margin:3% 20% 3% 27%; 
+    margin:3% 20% 3% 3%; 
 	text-align: center;
 	align-items: center;
     padding: 1%;
@@ -144,7 +159,7 @@ input,input:focus{
     align-content: center;
 }
 
-.signupForm input[type="text"] , .signupForm input[type="password"],.signupForm input[type="email"]  {
+.signupForm .part1 input[type="text"], .signupForm .part1 input[type="firstname"] {
             font-family: "Arial Rounded Mt",arial;
 			background-color: #EBEBEB;
             font-size: 16px;
@@ -152,6 +167,74 @@ input,input:focus{
 	        border-radius: 5px;
 }
 
+.signupForm .part1 input[type="text"], .signupForm .part1 input[type="lastname"] {
+            font-family: "Arial Rounded Mt",arial;
+			background-color: #EBEBEB;
+            font-size: 16px;
+            color: #787878;
+	        border-radius: 5px;
+}
+
+.signupForm .part1 input[type="text"], .signupForm .part1 input[type="username"] {
+            font-family: "Arial Rounded Mt",arial;
+			background-color: #EBEBEB;
+            font-size: 16px;
+            color: #787878;
+	        border-radius: 5px;
+}
+
+.signupForm .part1 input[type="text"], .signupForm .part1 input[type="password"] {
+            font-family: "Arial Rounded Mt",arial;
+			background-color: #EBEBEB;
+            font-size: 16px;
+            color: #787878;
+	        border-radius: 5px;
+}
+
+.signupForm .part1 input[type="email"], .signupForm .part1 input[type="email"] {
+            font-family: "Arial Rounded Mt",arial;
+			background-color: #EBEBEB;
+            font-size: 16px;
+            color: #787878;
+	        border-radius: 5px;
+}
+
+.signupForm .part2 {
+	background-color:rgba(255,255,255,.8);
+    width:50%;
+	height: 340px;
+	margin-top: 1%;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-bottom: 3%;
+    display:inline-block;
+    vertical-align: top;
+	border-radius: 5px;
+	
+}
+
+.signupForm .part2 select{
+	margin:3% 3% 3% 3%; 
+    padding: 1%;
+}
+
+.signupForm .part2 input{
+	width: 30%;
+    display: block;
+    height: 40px;
+    margin:1% 1% 1% 1%; 
+    padding: 1%;
+	
+}
+
+.signupForm .part2 input[type='submit'] {
+	        font-family: "Arial Rounded Mt",arial;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #ffab17;
+	        border-radius: 5px;
+	        margin:0 auto;
+}
 
 /*Search page*/
 .searchSec{
@@ -383,3 +466,4 @@ label input[type="checkbox"]:checked +i{
 	margin-top: 7%;
 }
 
+/*User Profile Page*/
