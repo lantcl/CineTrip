@@ -22,8 +22,8 @@ $stmt2->execute();
 <head>
 	<title>Homepage</title>
 	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- <link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/small.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/small.css">
 	
 </head>
 <body>
