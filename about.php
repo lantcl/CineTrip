@@ -23,15 +23,15 @@ $_SESSION['logged-in'] == true;
 		</div>
 		<div class="topnav">
 		<ul>
-<!--
-        <?php if($_SESSION['logged-in'] == true){?>
-            <li><a href="logout.php">Log out</a></li>
-            <li><a href="userprofile.php">Profile</a></li>
-        <?php } else {?>
-            <li><a href="signup.php">Sign up</a></li>
-            <li><a href="login.php">Log in</a></li>
-        <?php } ?>			
--->
+       <ul>
+        <?php if(isset($_SESSION['logged-in']) && ($_SESSION['logged-in'] == true)){?>
+           <li><a href="logout.php">Log out</a></li>
+           <li><a href="userprofile.php">Profile</a></li>
+       <?php } else {?>
+           <li><a href="signup.php">Sign up</a></li>
+           <li><a href="login.php">Log in</a></li>
+       <?php } ?>		
+		</ul>
 		</ul>
 		</div>
 		<div class="searchBar">  
