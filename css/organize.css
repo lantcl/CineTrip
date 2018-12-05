@@ -155,18 +155,84 @@ input,input:focus{
 
 /*Search page*/
 .searchSec{
-	width: 80%;
-	hegiht:900px;
+	width: 100%;
+	hegiht:700px;
 	overflow: auto;
-	background-color: #ffffff;
-	display:inline-block; 
+	background-color: #EBEBEB;
+	display:block; 
 	text-align:center;
-	margin-top:5%;
+	margin-top:6%;
 	
 }
+
+.searchSec h1{
+	font-family: "Arial Rounded Mt",arial;
+	font-size: 40px;
+	font-color:#2e2e2e;
+	padding-top: 8%;
+	padding-bottom: 1%; 
+	text-align: center;
+	margin:0 auto;
+}
 .searchSec .search{
-	width:50%;
-	height:300px;
+	background-color:rgba(255,255,255,.8);
+    width:50%;
+	height: 250px;
+	margin-top: 3%;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-bottom: 3%;
+    display:inline-block;
+    vertical-align: top;
+	text-align: center;
+	border-radius: 5px;
+	
+}
+
+.searchSec .search .searchBar1{
+    width:60%;
+	margin-top: 5%;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-bottom: 10%;
+    display:inline-block;
+    vertical-align: top;
+	text-align: center;
+	border-radius: 5px;
+	
+}
+
+ .searchBar1 input {
+			width:200px;
+			height: 30px;
+            border: 2px solid #f72e05;  
+            border-radius: 3px;  
+            background: #ffffff;  
+            color: #d9d9d9;
+			font-family: "Arial Rounded Mt",arial;
+			font-size: 16px;
+			padding-left: 5px;
+        }  
+ .searchBar1 button { 
+			width:36px;
+			height:36px;
+			border-radius: 3px;
+            top: 0;  
+            margin-right: 15px;  
+            background: #f72e05;  
+/*          radius: 3px 3px 3px 3px;  */
+        }  
+
+.search h2{
+	font-size: 30px;
+	font-family: "Arial Rounded Mt",arial;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.search a img{
+	width:80px;
+	height:80px;
 }
 
 /*About page*/
@@ -176,7 +242,7 @@ input,input:focus{
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;
-	margin-top: 6%;
+	margin-top: 5%;
 }
 
 .about h1{
@@ -224,4 +290,6 @@ input,input:focus{
 	margin-top: 8%;
 	font-color: #ffffff;
 }
+
+
 
