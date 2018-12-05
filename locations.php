@@ -54,8 +54,8 @@ $row5 = $stmt5->fetch();
 	<head>
 		<title>Cinetrip - Locations</title>
 	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/small.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/small.css">
 	
 </head>
 <body>
@@ -98,7 +98,7 @@ $row5 = $stmt5->fetch();
      	 <ul>
         	<div></div>
        		 <li class="current"><a href="homepage.php">Home</a></li>
-        	 <li><a href="locations.php">Locations</a></li>
+        	 <li><a href="browse-locations.php">Locations</a></li>
         	 <li><a href="search.php">Search</a></li>
         	 <li><a href="about.php">About</a></li>
         	 <li><a href="contact.php">Contact</a></li>

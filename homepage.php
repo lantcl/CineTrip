@@ -6,20 +6,14 @@ $dsn = "mysql:host=localhost;dbname=lantc_cinetrip;charset=utf8mb4";
 $dbusername = "lantc";
 $dbpassword = "NkXHus3h!6V";
 
-$db1 = $pdo = new PDO($dsn, $dbusername, $dbpassword);
-$db2 = $pdo = new PDO($dsn, $dbusername, $dbpassword);
-$db3 = $pdo = new PDO($dsn, $dbusername, $dbpassword);
+$pdo = new PDO($dsn, $dbusername, $dbpassword);
 
+$stmt = $pdo->prepare("SELECT * FROM `locations` WHERE `featured` = '1'");
+$stmt->execute();
+$row = $stmt->fetch();
 
-
-$stmt1 = $db1= $pdo->prepare("SELECT * FROM `locations` WHERE `id`='1'");
-$stmt2 = $db2= $pdo->prepare("SELECT * FROM `locations` WHERE `id`='5'");
-$stmt3 = $db3= $pdo->prepare("SELECT * FROM `locations` WHERE `id`='8'");
-
-
-$stmt1->execute();
+$stmt2 = $pdo->prepare("SELECT `locations`.`id`, `locations`.`locationname`, `locations`.`address`, `locations`.`featuredimg`, `films`.`id`, `films`.`title`, `films-locations`.`locationid`, `films-locations`.`filmid` FROM (`locations` INNER JOIN `films-locations` ON `locations`.`id` = `films-locations`.`id`) INNER JOIN `films`ON `films-locations`.`filmid` = `films`.`id` LIMIT 3;");
 $stmt2->execute();
-$stmt3->execute();
 
 ?>
 
@@ -72,7 +66,7 @@ $stmt3->execute();
      	 <ul>
         	<div></div>
        		 <li class="current"><a href="homepage.php">Home</a></li>
-        	 <li><a href="locations.php">Locations</a></li>
+        	 <li><a href="browse-locations.php">Locations</a></li>
         	 <li><a href="search.php">Search</a></li>
         	 <li><a href="about.php">About</a></li>
         	 <li><a href="contact.php">Contact</a></li>
@@ -82,7 +76,7 @@ $stmt3->execute();
 
    <section>
       <div id="map">
-         <iframe width="100%" height="680px" src="https://maps.google.com/maps?q=toronto%20union%20station&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+         <iframe width="100%" height="680px" src="<?php echo($row["mapurl"]); ?>" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0""></iframe>
       </div>
       <style type="text/css">
       #map{
@@ -100,60 +94,19 @@ $stmt3->execute();
 	<div class="rls">
 		
 		<h1>Popular Locations</h1>
-		<div id="box1" class="grid">
-		<?php while($row = $stmt1->fetch()) {
-                   //echo($row["email"]); //or $row[0];
-        ?>
-		<div class="inner">
-		<img src="imageslocations/elginoutside.jpg" />
-		<p id="title"><?php echo($row["locationname"]); ?></p>
-        <p id="mv">related movie:The Shape Of Water</p>
-        <p><?php echo($row["address"]); ?></p>
-			<a href="locations.php">
+		<?php while($row2 = $stmt2->fetch()){ ?>
+		<div>
+			<img src="imageslocations/<?php echo($row2["featuredimg"]); ?>" />
+			<p id="title"><?php echo($row2["locationname"]); ?></p>
+	    	<p id="mv">Related movie:<?php echo($row2["title"]); ?></p>
+	   		<p><?php echo($row2["address"]); ?></p>
+			<a href="locations.php?id=<?php echo($row2["id"]);?>">
 			<button type="button" class="buttonView">
-		    View More
-		</button>
-		</a>
-        </div>
-        <?php }?>
+		   	 View More
+			</button>
+			</a>
 		</div>
-		
-		<div id="box2" class="grid">
-		<?php while($row = $stmt2->fetch()) {
-                   //echo($row["email"]); //or $row[0];
-        ?>
-		<div class="inner">
-		<img src="imageslocations/graffiti.jpg" />
-		<p id="title"><?php echo($row["locationname"]); ?></p>
-        <p id="mv">related movie:The Shape Of Water</p>
-        <p><?php echo($row["address"]); ?></p>
-		<a href="locations.php">
-			<button type="button" class="buttonView">
-		    View More
-		</button>
-		</a>
-        </div>
-        <?php }?>
-		</div>
-		
-		<div id="box3" class="grid">
-		<?php while($row = $stmt3->fetch()) {
-                   //echo($row["email"]); //or $row[0];
-        ?>
-		<div class="inner">
-		<img src="imageslocations/dunlap3.jpg" />
-		<p id="title"><?php echo($row["locationname"]); ?></p>
-        <p id="mv">related TV show:NBC Television series Hannibal</p>
-        <p><?php echo($row["address"]); ?></p>
-		<a href="locations.php">
-			<button type="button" class="buttonView">
-		    View More
-		</button>
-		</a>
-        </div>
-        <?php }?>
-		</div>
-		
+		<?php } ?>
 	</div>
 
    <div class="footer">
