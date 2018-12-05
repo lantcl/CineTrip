@@ -291,5 +291,95 @@ input,input:focus{
 	font-color: #ffffff;
 }
 
+/*User Interests Page*/
 
+.interestSec{
+	width: 100%;
+	height: 980px;
+	background-color: #EBEBEB;
+	display:block; 
+	margin-top: 8%;
+	align-items: center;
+}
+
+.interestSec h1{
+	font-family: "Arial Rounded Mt",arial;
+	font-size: 40px;
+	font-color:#2e2e2e;
+	padding-top: 1%;
+	padding-bottom: .5%; 
+	text-align: center;
+	margin:0 auto;
+}
+
+.interestSec h2{
+	font-family: "Arial Rounded Mt",arial;
+	font-size: 40px;
+	font-color:#2e2e2e;
+	padding-top: 3%;
+	padding-bottom: 1%; 
+	text-align: center;
+	margin:0 auto;
+}
+
+h4{
+	font-family: "Arial Rounded Mt",arial;
+	font-color:#2e2e2e;
+	padding-top: 1%;
+	padding-bottom: 1%; 
+	
+}
+
+.interestSec .interestForm{
+	background-color:rgba(255,255,255,.8);
+    width:90%;
+	height: 630px;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-bottom: 5%;
+    display:inline-block;
+    vertical-align: top;
+	border-radius: 5px;
+	padding: 5%;
+	line-height: 100%;
+}
+
+.interestForm label i{
+	width: 20px;
+	height: 20px;
+	border:1px solid #999;
+	border-radius: 4px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+	
+}
+
+.interestForm label input{
+	margin: 3%;
+	text-align: center;
+}
+
+label input[type="checkbox"]:checked +i{
+	background-color:#ffab17;
+	background-size: 15px 15px;
+	border:3px #BBA354;
+}
+
+.interestForm #submit{
+	wdith:10%;
+	height: 5%;
+	background-color: #ffab17;
+	font-size: 16px;
+	font-color:#ffffff;
+	text-align: center;
+	border-radius: 5px; 
+}
+
+.interestForm p{
+	text-align: center;
+	font-size: 14px;
+	font-family:"Arial Rounded Mt",arial;
+	margin-top: 7%;
+}
 
