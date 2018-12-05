@@ -16,7 +16,7 @@ $stmt->execute();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Homepage</title>
+	<title>Cinetrip - Browse</title>
 	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/small.css">
