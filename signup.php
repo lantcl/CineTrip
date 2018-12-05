@@ -24,7 +24,7 @@ $dbpassword = "NkXHus3h!6V";
                   <ul>
                       <li><a href="homepage.php">Home</a></li>
                       <li><a href="search.php" class="icon fa-angle-down">Search</a></li>
-                      <li><a href="locations.php">Locations</a></li>
+                      <li><a href="browse-locations.php">Locations</a></li>
                       <li><a href="about.php">About</a></li>
                       <?php if($_SESSION['logged-in'] == true){?>
                           <li><a href="userprofile.php" class="button">Profile</a></li>
