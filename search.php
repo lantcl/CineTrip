@@ -90,11 +90,12 @@ $director->execute();
 		<div class="search">	  
           <h2>Search by Genre</h2>
 
-           <a href= "search-results.php?name=comedy"><img id="icon-comedy" src="assets/genre-comedy.jpg" alt="genre icon comedy" ></a>
-           <a href= "search-results.php?name=horror"><img id="icon-horror" src="assets/genre-horror.jpg" alt="genre icon horror" ></a>
-           <a href= "search-results.php?name=drama"><img id="icon-drama" src="assets/genre-drama.jpg" alt="genre icon drama" ></a>
-           <a href= "search-results.php?name=science-fiction"><img id="icon-scifi" src="assets/genre-scifi.jpg" alt="genre icon sci-fi" ></a>
-           <a href= "search-results.php?name=romance"><img id="icon-romance" src="assets/genre-romance.jpg" alt="genre icon romance" ></a>
+           <img class="genreicon" id="comedy" src="assets/genre-comedy.jpg" alt="genre icon comedy" >
+           <img class="genreicon" id="horror" src="assets/genre-horror.jpg" alt="genre icon horror" >
+           <img class="genreicon" id="drama" src="assets/genre-drama.jpg" alt="genre icon drama" >
+           <img class="genreicon" id="Science-Fiction" src="assets/genre-scifi.jpg" alt="genre icon sci-fi" >
+           <img class="genreicon" id="romance" src="assets/genre-romance.jpg" alt="genre icon romance" >
+<!--            <a href= "search-results.php?name=romance"><img id="icon-romance" src="assets/genre-romance.jpg" alt="genre icon romance" ></a> -->
            <div id="results2"></div> 
         </div>
 			
