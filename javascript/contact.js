@@ -1,10 +1,9 @@
 var contactForm = document.getElementById("contactForm");
-// var sendBtn = document.getElementById("sendBtn");
+var sendBtn = document.getElementById("sendBtn");
 
-contactForm.addEventListener("submit", addMsgFunction, false);
+sendBtn.addEventListener("click", addMsgFunction, false);
 
 function addMsgFunction(e) {
-	e.preventDefault();
 	var myRequest = new XMLHttpRequest; 
 	myRequest.onreadystatechange = function(){     
 	    

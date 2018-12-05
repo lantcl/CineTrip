@@ -72,7 +72,7 @@ $stmt->execute();
 		<h1>Browse Locations</h1>
 		<?php while($row = $stmt->fetch()){ ?>
 		<div>
-			<img src="imageslocations/<?php echo($row["imagename"]); ?>" />
+			<img src="imageslocations/<?php echo($row["featuredimg"]); ?>" />
 			<p id="title"><?php echo($row["locationname"]); ?></p>
 	    	<p id="mv">Related movie:<?php echo($row["title"]); ?></p>
 	   		<p><?php echo($row["address"]); ?></p>

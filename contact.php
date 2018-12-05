@@ -67,7 +67,7 @@ $pdo = new PDO($dsn, $dbusername, $dbpassword);
     </nav>
 	</header>
 	<main id="msgPg">
-		<form id="contactForm" method="POST">
+		<div id="contactForm">
 			<label>Full name:</label>
 			<input type="text" name="name" id="nameInput" required>
 			<label>Email:</label>
@@ -77,7 +77,7 @@ $pdo = new PDO($dsn, $dbusername, $dbpassword);
 			<label>Message:</label>
 			<textarea name="message" id="msgInput" ></textarea>
 			<input type="submit" value="Send" id="sendBtn">
-		</form>
+		</div>
 	</main>
 	<footer id="footer">
         <div id="footer_logo">
