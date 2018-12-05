@@ -3,7 +3,7 @@
 session_start(); 
 
 $username = $_POST['username'];
-$password = $_POST['userpassword'];
+$password = $_POST['password'];
 
 $dsn = "mysql:host=localhost;dbname=lantc_cinetrip;charset=utf8mb4";
 $dbusername = "lantc";
@@ -18,10 +18,11 @@ if($row = $stmt->fetch()){
 
 	$_SESSION['logged-in'] = true;
 	$_SESSION['username'] = $row['username'];
-	$_SESSION['userpassword'] = $row['userpassword'];
-	$_SESSION['userid'] = $row['userid'];
+	$_SESSION['password'] = $row['password'];
+	$_SESSION['id'] = $row['id'];
 
-	header("Location: homepage.php"); 
+	// header("Location: homepage.php"); 
+	var_dump($_SESSION);
 }else{
 	header("Location: login.php");	
 }

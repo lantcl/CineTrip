@@ -68,7 +68,7 @@ $dbpassword = "NkXHus3h!6V";
             <h1>Welcome back</h1>
                 <form action="login-process.php" method="POST"> 
                 <input type="text" placeholder="username" name="username" />
-                <input type="text" placeholder="password" name="userpassword" />
+                <input type="text" placeholder="password" name="password" />
                 <input type="submit" />
             	</form>
         </div>
