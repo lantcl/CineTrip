@@ -19,29 +19,6 @@ $filmSearch->execute();
 
 }
 
-//search by genre
-if (isset($_GET['name']))
-{
-$genre = $_GET['name'];
-
-$genreSearch = $pdo->prepare("SELECT `locations`.`locationname`,`films`.`id`, `locations`.`id`,`films`.`title`, `films-genres`.`genreid`, `genres`.`name` FROM ((`films` INNER JOIN `films-genres` ON `films`.`id` = `films-genres`.`filmid`) INNER JOIN `genres` ON `genres`.`genreid` = `films-genres`.`genreid`) INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id` INNER JOIN `locations` ON `films-locations`.`locationid` = `locations`.`id` WHERE `genres`.`name` = '$genre'");
-
-$genreSearch->execute();
-}
-
-//search by director
-if (isset($_GET['directorid']))
-{
-$director = $_GET['directorid'];
-
-//$directorName = $directorSearch = $pdo->prepare
-$directorSearch = $pdo->prepare("SELECT `directors`.`firstname`, `directors`.`lastname`,`directors`.`directorid`, `films`.`title`, `films`.`id` FROM `films` INNER JOIN `films-directors` ON `films-directors`.`filmid` = `films`.`id` INNER JOIN `directors` ON `films-directors`.`directorid` = `directors`.`directorid` WHERE `directors`.`directorid` = $director");
-
-//seems weird to give a list of locations based on this so the result will be films and users can find locations from there
-
-$directorSearch->execute();
-}
-
 ?>
 
 <!doctype html>
@@ -106,26 +83,8 @@ $directorSearch->execute();
             <?php while($row2 = $filmSearch->fetch()) 
             { ?><a href="locations.php?id=<?php echo($row2["id"]);?>"><p><?php echo($row2["locationname"]);?></p></a> 
           <?php } ?>
-          </div> <?php }
+          </div> <?php } ?>
         
-        if (isset($_GET['name'])){ ?>
-          <div>
-            <h2>Location Results for '<?php echo($genre);?>'</h2>
-            <?php while($row3 = $genreSearch->fetch()) 
-            { ?><a href="locations.php?id=<?php echo($row3["id"]);?>"><p><?php echo($row3["locationname"]);?></p></a> 
-          <?php } ?>            
-          </div>
-        <?php } 
-        
-        if (isset($_GET['directorid'])){ ?>
-          <div id="advanced search">
-            <h2>Location Results for '<?php echo($row5["firstname"]. ' ' .["lastname"]);?>'</h2>
-            <?php while($row4 = $directorSearch->fetch())
-            { ?><a href="films.php?id=<?php echo($row4["id"]);?>"><p><?php echo($row4["title"]);?></p></a>  
-          <?php } ?>            
-          </div>
-        <?php } ?>
-        </div>
    <div class="footer">
    <footer>
         <a href="homepage.php">

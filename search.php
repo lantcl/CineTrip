@@ -46,11 +46,11 @@ $director->execute();
     </ul>
     </div>
     <div class="searchBar">  
-          <form action="#" method="POST">
+          <form action="search-results.php" method="POST">
             <input type = "text" name="filmsearch">
             <button type="submit">
-      <img src="assets/search.png"/>
-      </button>  
+              <img src="assets/search.png"/>
+            </button>  
           </form>  
       </div>  
 </div>
@@ -64,7 +64,7 @@ $director->execute();
        <ul>
           <div></div>
            <li class="current"><a href="homepage.php">Home</a></li>
-           <li><a href="locations.php">Locations</a></li>
+           <li><a href="browse-locations.php">Locations</a></li>
            <li><a href="search.php">Search</a></li>
            <li><a href="about.php">About</a></li>
            <li><a href="contact.php">Contact</a></li>
@@ -95,20 +95,6 @@ $director->execute();
            <a href= "search-results.php?name=drama"><img id="icon-drama" src="assets/genre-drama.jpg" alt="genre icon drama" ></a>
            <a href= "search-results.php?name=science-fiction"><img id="icon-scifi" src="assets/genre-scifi.jpg" alt="genre icon sci-fi" ></a>
            <a href= "search-results.php?name=romance"><img id="icon-romance" src="assets/genre-romance.jpg" alt="genre icon romance" ></a>
-        </div>
-                  
-			
-		<div class="search">
-           <h2>Search by Director</h2>
-           <form action='search-results.php' method='GET'>
-           <select name="directorid"><?php while($row = $director->fetch(PDO::FETCH_ASSOC)) { ?>
-           <option value="<?php echo($row["directorid"]);?>">
-                         <?php echo($row["firstname"]. ' ' .$row["lastname"]); ?>
-                  </option> 
-                <?php } ?> 
-                  </select>
-                  <input type = "submit" text="search">
-                  </form>
         </div>
 			
         </div>

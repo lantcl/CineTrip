@@ -5,35 +5,6 @@ var results = document.getElementById("results");
 
 searchsubmit.addEventListener("click", searchfunction1, false);
 
-// function searchfunction1(e){
-// var myRequest = new XMLHttpRequest; 
-// 	myRequest.onreadystatechange = function(){    
-// 		if(myRequest.readyState === 4){        
-// 		var responseObj = JSON.parse(myRequest.responseText);
-
-// 		for(var i=0; i<responseObj.length; i++){
-// 			console.log(responseObj[i]);
-			
-// 			var newPTag = document.createElement("p");
-
-// 			var textNode = document.createTextNode(responseObj[i].locationname);
-
-// 			newPTag.appendChild(textNode);
-			
-// 			place.appendChild(newPTag);}
-// 		}
-// 	} 
-// 	var input = document.getElementById("input");
-// 	myRequest.open("POST", "search-process.php", true); 
-// 	myRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded")
-// 	myRequest.send("search=" + input.value); 
-    
-    
-// }
-
-
-
-
 function searchfunction1(e){
     var myRequest = new XMLHttpRequest; 
 
