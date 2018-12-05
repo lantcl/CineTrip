@@ -1,7 +1,7 @@
 console.log("connected");
 
 var searchsubmit = document.getElementById("searchsubmit");
-var place = document.getElementById("section1");
+var results = document.getElementById("results");
 
 searchsubmit.addEventListener("click", searchfunction1, false);
 
@@ -35,8 +35,7 @@ searchsubmit.addEventListener("click", searchfunction1, false);
 
 
 function searchfunction1(e){
-	place.innerHTML = '';
-    	var myRequest = new XMLHttpRequest; 
+    var myRequest = new XMLHttpRequest; 
 
 myRequest.onreadystatechange = function(){   
 
@@ -44,11 +43,12 @@ myRequest.onreadystatechange = function(){
 	
 		//console.log(myRequest.responseText);// modify or populate html elements based on response.
 		var locations = JSON.parse(myRequest.responseText);
-		console.log(locations);
 
+		var searchHeading = document.getElementById("searchHeading");
+		searchHeading.innerHTML = "Search results for";
+		results.innerHTML = '';
 		for(var i=0; i<locations.length; i++){
-			console.log(locations[i]);
-			
+
 			var newPTag = document.createElement("p");
 			var newaTag = document.createElement("a");
 			newaTag.setAttribute("href", "locations.php?id="+locations[i].id);
@@ -56,13 +56,16 @@ myRequest.onreadystatechange = function(){
 
 			newPTag.appendChild(textNode);
 			newaTag.appendChild(newPTag);
+
 			
-			place.appendChild(newaTag);
+			results.appendChild(newaTag);
 
 		}
 	} 
 };
 
-myRequest.open("POST", "search-process.php", true); //true means it is asynchronous // Send urls through the url
-myRequest.send(null); 	
+	var searchInput = document.getElementById("searchInput");
+	myRequest.open("POST", "search-process.php", true);
+	myRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded"); 
+	myRequest.send("search=" + searchInput.value); 	
 }

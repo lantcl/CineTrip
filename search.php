@@ -46,10 +46,10 @@ $director->execute();
     </ul>
     </div>
     <div class="searchBar">  
-          <form action="search-results.php" method="POST">
+          <form action="#" method="POST">
             <input type = "text" name="filmsearch">
             <button type="submit">
-      <img src="assets/search.png" href="locations.php"/>
+      <img src="assets/search.png"/>
       </button>  
           </form>  
       </div>  
@@ -78,11 +78,12 @@ $director->execute();
 		  <div class="search">	
           
               <div id ="section1" class="searchBar1">
-                  <h2>Search by Movie/Show name or Location Name</h2> 
-                    <input type = "text" name="search" id="input">
+                  <h2 id="searchHeading">Search by Movie/Show name or Location Name</h2> 
+                    <input type = "text" name="search" id="searchInput">
                     <button >
                       <img id="searchsubmit" src="assets/search.png"/>
-                    </button>  
+                    </button>
+                    <div id="results"></div>  
               </div>
 		  </div>
           
