@@ -1,9 +1,12 @@
 <?php 
 
 session_start();
-// $userid= 1;
-// $locationid=2;
-$id = $_GET['id'];
+var_dump($_GET);
+var_dump($_SESSION);
+
+$id = $_SESSION['userid'];
+echo($id);
+$locationid = $_GET['locationid'];
 
 $dsn = "mysql:host=localhost;dbname=lantc_cinetrip;charset=utf8mb4";
 $dbusername = "lantc";
