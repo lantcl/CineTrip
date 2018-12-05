@@ -1,6 +1,37 @@
 @charset "UTF-8";
 /* CSS Document */
+/*Define the page container sample. In order to fit all mobile phones, app has no scroll bar*/
+html,body{
+	padding:0;
+	margin:0;
+	width:100%;
+	height:auto;
+	overflow-x:hidden; 
+	font-family:"Arial Rounded Mt",arial;
+}
 
+@font-face{
+	font-family: "Arial Rounded Mt";
+	src: url("../fonts/Arial Rounded Mt.Ttf")format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	
+}
+
+/*Clean up tags with attributes*/
+ul,li{ 
+	list-style:none; 
+	padding:0; 
+	margin:0;
+}
+i,em{ 
+	font-style:normal;
+}
+input,input:focus{
+	outline:none;
+}
+
+/*login page*/
 .logForm{
 	width: 100%;
 	height: 768px;
@@ -70,7 +101,56 @@
             width: 300px;
         }
 
+/*Signup page*/
+.signupForm{
+	width: 100%;
+	height: 900px;
+	background-color: #EBEBEB;
+	text-align:center;
+	margin-top: 5%;
+    justify-content: center;
+    align-content: center;	
+}
 
+.signupForm h1{
+	text-align: center;
+    font-family: "Arial Rounded Mt",arial;
+	font-size: 40px;
+	padding-top: 1%;
+	margin-top:2%;
+}
+
+.signupForm form{
+	width: 40%;
+	height: 70%;
+    margin: 0 auto;
+	background-color:#ffffff;
+	border-radius:10px;
+	text-align: center;
+	padding: 5%;
+}
+
+.signupForm form input{
+	width: 300px;
+    display: block;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    margin:3% 20% 3% 27%; 
+	text-align: center;
+	align-items: center;
+    padding: 1%;
+	justify-content: center;
+    align-content: center;
+}
+
+.signupForm input[type="text"] , .signupForm input[type="password"],.signupForm input[type="email"]  {
+            font-family: "Arial Rounded Mt",arial;
+			background-color: #EBEBEB;
+            font-size: 16px;
+            color: #787878;
+	        border-radius: 5px;
+}
 
 
 /*Search page*/
@@ -89,4 +169,59 @@
 	height:300px;
 }
 
+/*About page*/
+.about{
+	width: 100%;
+	height: 768px;
+	background-color: #EBEBEB;
+	display:block; 
+	text-align:center;
+	margin-top: 6%;
+}
+
+.about h1{
+	font-family: "Arial Rounded Mt",arial;
+	font-size: 40px;
+	font-color:#2e2e2e;
+	padding-top: 10%;
+	padding-bottom: 3%; 
+	text-align: center;
+	margin:0 auto;
+}
+
+.about .grid{
+	background-color:rgba(255,255,255,.8);
+    width:20%;
+	height: 330px;
+	margin-top: .5%;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-bottom: 10%;
+    display:inline-block;
+    vertical-align: top;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.aboutInner{
+  border: 2px #303030;
+  margin:5%;
+  padding:4%;
+  display: block;
+}
+
+.about .aboutbutton{
+	display: inline-block;
+	width: 120px;
+	height: 40px;
+	background-color: #ffab17;
+	
+	border-radius: 5%;
+}
+
+.about .aboutbutton p{
+	font-size: 14px;
+	margin-top: 8%;
+	font-color: #ffffff;
+}
 
