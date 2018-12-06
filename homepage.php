@@ -32,7 +32,7 @@ $stmt2->execute();
       		<img src="assets/logo-03.png" />
     	</a>
 		<div class="userImage">
-			<a href="signin.php">
+			<a href="login.php">
 			<img src="assets/userimage.png" />
 			</a>
 		</div>
