@@ -27,55 +27,84 @@ $row2 = $stmt2->fetch();
 <html>
 	<head>
 		<title>Cinetrip - My Tips</title>
-		<meta charset="UTF-8" />
-		<link rel="stylesheet" href="css/main.css" />
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/organize.css" />
 	</head>
 	<body>
-        <header id="header" class="alt">
-              <a href = "homepage.php"><img src="assets/logo-01.png" alt="CineTrip Logo" style="width:100px"></a>
-              <nav id="nav">
-                  <ul>
-                      <li><a href="homepage.php">Home</a></li>
-                      <li><a href="search.php" class="icon fa-angle-down">Search</a></li>
-                      <li><a href="locations.php">Locations</a></li>
-                      <li><a href="about.php">About</a></li>
-                      <?php if($_SESSION['logged-in'] == true){?>
-                          <li><a href="userprofile.php" class="button">Profile</a></li>
-                          <li><a href="logout.php" class="button">Logout</a></li>
-                      <?php } else {?>
-                          <li><a href="login.php" class="button">Log in</a></li>
-                          <li><a href="signup.php" class="button">Sign up</a></li>
-                      <?php } ?>
-                  </ul>
-              </nav>
-          </header>
-		<main>
+       	<div class="top">
+		<a href="homepage.php" class="logo">
+      		<img src="assets/logo-03.png" />
+    	</a>
+		<div class="userImage">
+			<a href="login.php">
+			<img src="assets/userimage.png" />
+			</a>
+		</div>
+		<div class="topnav">
+		<ul>
+        <?php if(isset($_SESSION['logged-in']) && ($_SESSION['logged-in'] == true)){?>
+           <li><a href="logout.php">Log out</a></li>
+           <li><a href="userprofile.php">Profile</a></li>
+       <?php } else {?>
+           <li><a href="signup.php">Sign up</a></li>
+           <li><a href="login.php">Log in</a></li>
+       <?php } ?>		
+		</ul>
+		</div>
+		<div class="searchBar">  
+        	<form action="search-results.php" method="POST">
+            <input type = "text" name="filmsearch">
+            <button type="submit">
+			<img src="assets/search.png" href="locations.php"/>
+			</button>  
+        	</form>  
+    	</div>  
+	</div>
+	<header>
+		
+		<a href="homepage.php">
+			<img src="assets/logo-01.png" />
+		</a>
+		
+    	<nav>
+     	 <ul>
+        	<div></div>
+       		 <li class="current"><a href="homepage.php">Home</a></li>
+        	 <li><a href="browse-locations.php">Locations</a></li>
+        	 <li><a href="search.php">Search</a></li>
+        	 <li><a href="about.php">About</a></li>
+        	 <li><a href="contact.php">Contact</a></li>
+        </ul>
+    </nav>
+	</header>
+		<div class="tips">
 			<h1>My Tips</h1>
 			<?php
 			while($row = $stmt->fetch()) {     
 				?>
-			<div>
-				<h2><?php echo($row2["name"]); ?></h2>
-				<p><?php echo($row["tip"]); ?></p>
+			<div class="tipsInfo">
+				<h2><?php echo($row2["name"]); ?></h2><br>
+				<p><?php echo($row["tip"]); ?></p><br>
 				<span><a href="tip-edit.php?id=<?php echo($row["id"]);?>">Edit</a></span>
 				<span><a href="tip-delete.php?id=<?php echo($row["id"]);?>">Delete</a></span>
 			</div>
 			<?php }
 			?>
-		</main>
-                <footer id="footer">
-                    <div id="footer_logo">
-                     <a href="homepage.php"><img src="assets/footer-logo.png" style="width:77px;height:28px"></a>
-                     </div>
-                    <ul class="icons">
-                        <li><a href="about.php" ><span class="label">About CineTrip</span></a></li>
-                        <li><a href="#" ><span class="label">Contribute</span></a></li>
-                        <li><a href="#" ><span class="label">Privacy policy</span></a></li>
-                    </ul>
-                    <ul class="copyright">
-                        <li>&copy; CineTrip. All rights reserved.</li>
-                    </ul>
-                </footer>
+		</div>
+                <div class="footer">
+   <footer>
+        <a href="homepage.php">
+          <img src="assets/footer-logo.png" />
+        </a>               
+    <ul class="bottomNav">
+        <li><a href="about.php" >About CineTrip</a></li>
+        <li><a href="#">Contribute</a></li>
+        <li><a href="#">Privacy policy</a></li>
+    </ul>
+    </footer>
+	</div>
 	</body>
 </html>
 
