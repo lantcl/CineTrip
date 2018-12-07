@@ -108,7 +108,7 @@ input,input:focus{
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;
-	margin-top:-1%;
+/*	margin-top:-1%;*/
 }
 
 .signupForm h1{
@@ -244,7 +244,7 @@ input,input:focus{
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;
-	margin-top:-1%;
+/*	margin-top:-1%;*/
 	
 }
 
@@ -329,13 +329,13 @@ input,input:focus{
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;
-	margin-top: -1%;
+/*	margin-top: -1%;*/
 }
 .searchRes h2{
 	font-family: "Arial Rounded Mt",arial;
 	font-size: 2.5em;
 	font-color:#2e2e2e;
-	padding-top: 8%;
+	padding-top: 5%;
 	padding-bottom: 5%; 
 	text-align: center;
 	margin:0 auto;
@@ -368,14 +368,14 @@ input,input:focus{
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;
-	margin-top: -1%;
+/*	margin-top: -1%;*/
 }
 
 .about h1{
 	font-family: "Arial Rounded Mt",arial;
 	font-size: 3em;
 	font-color:#2e2e2e;
-	padding-top: 10%;
+	padding-top: 7%;
 	padding-bottom: 3%; 
 	text-align: center;
 	margin:0 auto;
@@ -426,7 +426,7 @@ input,input:focus{
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;
-	margin-top: -1%;
+/*	margin-top: -1%;*/
 	
 }
 
@@ -481,8 +481,6 @@ h4{
 	display: inline-block;
 	vertical-align: middle;
 	margin:2%;
-	
-	
 }
 
 .interestForm label input{
@@ -521,7 +519,7 @@ label input[type="checkbox"]:checked +i{
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;
-	margin-top: -1%;
+/*	margin-top: -1%;*/
 	
 }
 
@@ -589,7 +587,7 @@ label input[type="checkbox"]:checked +i{
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;
-	margin-top: -1%;
+/*	margin-top: -1%;*/
 }
 
 .proEdit h1{
@@ -678,7 +676,7 @@ label input[type="checkbox"]:checked +i{
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;
-	margin-top: -1%;
+/*	margin-top: -1%;*/
 }
 
 .location h1{
@@ -752,7 +750,7 @@ label input[type="checkbox"]:checked +i{
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;	
-	margin-top: -1%;
+/*	margin-top: -1%;*/
 }
 
 .locMap h1{
@@ -829,7 +827,7 @@ label input[type="checkbox"]:checked +i{
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;
-	margin-top: -1%;
+/*	margin-top: -1%;*/
 }
 
 .contact #contactForm{
@@ -894,7 +892,7 @@ label input[type="checkbox"]:checked +i{
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;
-	margin-top: -1%;
+/*	margin-top: -1%;*/
 	
 }
 
@@ -918,7 +916,7 @@ label input[type="checkbox"]:checked +i{
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;
-	margin-top: -1%;
+/*	margin-top: -1%;*/
 }
 
 .tipsDelete p{
@@ -951,8 +949,5 @@ label input[type="checkbox"]:checked +i{
 .deleteInfo a{
 	font-size: .9em;
 }
-
-
-
 
 
