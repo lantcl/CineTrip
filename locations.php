@@ -54,8 +54,9 @@ $row5 = $stmt5->fetch();
 	<head>
 		<title>Cinetrip - Locations</title>
 	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/small.css">
+ 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/organize.css">
+<!--	<link rel="stylesheet" type="text/css" href="css/small.css"> -->
 	
 </head>
 <body>
@@ -105,43 +106,46 @@ $row5 = $stmt5->fetch();
         </ul>
     </nav>
 	</header>
-		<main>
-			<div id="map">
-				<iframe width="100%" height="300px" src="<?php echo($row["mapurl"]); ?>" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0""></iframe>
-			</div>
+		<iframe width="100%" height="300px" src="<?php echo($row["mapurl"]); ?>" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
+	
+			<div class="locMap">
 			<h1><?php echo($row["locationname"]); ?></h1>
 			<p><?php echo($row["address"]); ?></p>
+			<div class="locInfo">
+			
 			<img src="imageslocations/<?php echo($row5["imagename"]); ?>" />
 			<h2>Description</h2>
 			<p><?php echo($row["description"]); ?></p>
 			<h2>Trivia</h2>
 				<p><?php echo($row4["trivia"]); ?></p>
-		</main>
-		<section class="tips">
+	         </div>
+				
+	
+		<div class="locTips">
 			<h2>Tips</h2>
-			<div>
+			<div class="locInfo2">
 				<img id="comment-thumbnail" src="images-profile/<?php echo($row3["profilepic"]); ?>" />
 				<h3><?php echo($row3["username"]); ?></h3>
 				<p><?php echo($row3["tip"]); ?></p>
 				<ul>
-					<li><a href="">Bookmark</a></li>
-					<img src="assets/grey-bookmark.png" href="#"/>
-					<li><a href="">Reply</a></li>
+					<a href=""><img src="assets/grey-bookmark.png" href="#" id="bookmark"/></a>
+					<a href=""><img src="assets/reply.png" href="#" id="reply"/></a>
 				</ul>
 			</div>
-		</section>
-                <footer id="footer">
-                    <div id="footer_logo">
-                     <a href="homepage.php"><img src="assets/footer-logo.png" style="width:77px;height:28px"></a>
-                     </div>
-                    <ul class="icons">
-                        <li><a href="about.php" ><span class="label">About CineTrip</span></a></li>
-                        <li><a href="#" ><span class="label">Contribute</span></a></li>
-                        <li><a href="#" ><span class="label">Privacy policy</span></a></li>
-                    </ul>
-                    <ul class="copyright">
-                        <li>&copy; CineTrip. All rights reserved.</li>
-                    </ul>
-                </footer>
+		</div>
+		</div>
+	
+   <div class="footer">
+   <footer>
+        <a href="homepage.php">
+          <img src="assets/footer-logo.png" />
+        </a>               
+    <ul class="bottomNav">
+        <li><a href="about.php" >About CineTrip</a></li>
+        <li><a href="#">Contribute</a></li>
+        <li><a href="#">Privacy policy</a></li>
+    </ul>
+    </footer>
+	</div>
 	</body>
 </html>

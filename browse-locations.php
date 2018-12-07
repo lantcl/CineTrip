@@ -13,13 +13,14 @@ $stmt->execute();
 
 ?>
 
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Cinetrip - Browse</title>
 	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/small.css">
+	<link rel="stylesheet" type="text/css" href="css/organize.css">
 	
 </head>
 <body>
@@ -34,13 +35,13 @@ $stmt->execute();
 		</div>
 		<div class="topnav">
 		<ul>
-        <?php if($_SESSION['logged-in'] == true){?>
-            <li><a href="logout.php">Log out</a></li>
-            <li><a href="userprofile.php">Profile</a></li>
-        <?php } else {?>
-            <li><a href="signup.php">Sign up</a></li>
-            <li><a href="login.php">Log in</a></li>
-        <?php } ?>			
+        <?php if(isset($_SESSION['logged-in']) && ($_SESSION['logged-in'] == true)){?>
+           <li><a href="logout.php">Log out</a></li>
+           <li><a href="userprofile.php">Profile</a></li>
+       <?php } else {?>
+           <li><a href="signup.php">Sign up</a></li>
+           <li><a href="login.php">Log in</a></li>
+       <?php } ?>		
 		</ul>
 		</div>
 		<div class="searchBar">  
@@ -68,10 +69,12 @@ $stmt->execute();
         </ul>
     </nav>
 	</header>
-	<main>
+	
+	<main class="location">
 		<h1>Browse Locations</h1>
+		<div class="locgrid">
 		<?php while($row = $stmt->fetch()){ ?>
-		<div>
+		<div class="locinner">
 			<img src="imageslocations/<?php echo($row["featuredimg"]); ?>" />
 			<p id="title"><?php echo($row["locationname"]); ?></p>
 	    	<p id="mv">Related movie:<?php echo($row["title"]); ?></p>
@@ -83,8 +86,11 @@ $stmt->execute();
 			</a>
 		</div>
 		<?php } ?>
+			</div>
 	</main>
-	<footer>
+	
+	 <div class="footer">
+   <footer>
         <a href="homepage.php">
           <img src="assets/footer-logo.png" />
         </a>               

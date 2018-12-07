@@ -17,6 +17,6 @@ $stmt = $pdo->prepare("INSERT INTO `users-interests` (`id`, `userid`, `genreid`)
 
 $stmt->execute();
 
-header("Location: home.php");
+header("Location: homepage.php");
 
 ?>

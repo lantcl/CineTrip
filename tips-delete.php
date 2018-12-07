@@ -23,42 +23,85 @@ $stmt->execute();
 <html>
 	<head>
 		<title>Cinetrip - Delete Tip</title>
-		<meta charset="UTF-8" />
-		<link rel="stylesheet" href="css/main.css" />
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/organize.css" />
+	
 	</head>
 	<body>
-		<nav>
-			<ul>
-				<li><a href="profile.php">My Profile</a></li>
-				<li><a href="settings.php">Settings</a></li>
-				<li><a href="about.php">About</a></li>
-				<li><a href="logout.php">Logout</a></li>
-			</ul>
-		</nav>
-		<main>
+		<div class="top">
+		<a href="homepage.php" class="logo">
+      		<img src="assets/logo-03.png" />
+    	</a>
+		<div class="userImage">
+			<a href="signin.php">
+			<img src="assets/userimage.png" />
+			</a>
+		</div>
+		<div class="topnav">
+		<ul>
+        <?php if(isset($_SESSION['logged-in']) && ($_SESSION['logged-in'] == true)){?>
+           <li><a href="logout.php">Log out</a></li>
+           <li><a href="userprofile.php">Profile</a></li>
+       <?php } else {?>
+           <li><a href="signup.php">Sign up</a></li>
+           <li><a href="login.php">Log in</a></li>
+       <?php } ?>		
+		</ul>
+		</div>
+		<div class="searchBar">  
+        	<form action="search-results.php" method="POST">
+            <input type = "text" name="filmsearch">
+            <button type="submit">
+			<img src="assets/search.png" href="locations.php"/>
+			</button>  
+        	</form>  
+    	</div>  
+	</div>
+	<header>
+		
+		<a href="homepage.php">
+			<img src="assets/logo-01.png" />
+		</a>
+		
+    	<nav>
+     	 <ul>
+        	<div></div>
+       		 <li class="current"><a href="homepage.php">Home</a></li>
+        	 <li><a href="browse-locations.php">Locations</a></li>
+        	 <li><a href="search.php">Search</a></li>
+        	 <li><a href="about.php">About</a></li>
+        	 <li><a href="contact.php">Contact</a></li>
+        </ul>
+    </nav>
+	</header>
+		
+		<div class="tipsDelete">
 			<p>Are you sure you want to delete?</p>
 
 			<?php //interface for confirm or cancel ?>
+			<div class="deleteInfo">
 			<form action="confirm-tip-delete.php" method="POST">
 				<input type="hidden" value="<?php echo($row["id"]); ?>" name="id"/>
 				<input type="submit" value="Delete"/>
 			</form>
 			<a href="mytips.php">Cancel</a>
-		</main>
-                <footer id="footer">
-                    <div id="footer_logo">
-                     <a href="homepage.php"><img src="assets/footer-logo.png" style="width:77px;height:28px"></a>
-                     </div>
-                    <ul class="icons">
-                        <li><a href="about.php" ><span class="label">About CineTrip</span></a></li>
-                        <li><a href="#" ><span class="label">Contribute</span></a></li>
-                        <li><a href="#" ><span class="label">Privacy policy</span></a></li>
-                    </ul>
-                    <ul class="copyright">
-                        <li>&copy; CineTrip. All rights reserved.</li>
-                    </ul>
-                </footer>
+		</div>
+		</div>
+	
+   <div class="footer">
+   <footer>
+        <a href="homepage.php">
+          <img src="assets/footer-logo.png" />
+        </a>               
+    <ul class="bottomNav">
+        <li><a href="about.php" >About CineTrip</a></li>
+        <li><a href="#">Contribute</a></li>
+        <li><a href="#">Privacy policy</a></li>
+    </ul>
+    </footer>
+	</div>
 	</body>
 </html>
-
 <? } ?>

@@ -16,7 +16,7 @@ $pdo = new PDO($dsn, $dbusername, $dbpassword);
 		<title>Cinetrip - Contact Us</title>
 	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/small.css">
+	<link rel="stylesheet" type="text/css" href="css/organize.css">
 	
 </head>
 <body>
@@ -66,7 +66,7 @@ $pdo = new PDO($dsn, $dbusername, $dbpassword);
         </ul>
     </nav>
 	</header>
-	<main id="msgPg">
+	<div class="contact">
 		<div id="contactForm">
 			<label>Full name:</label>
 			<input type="text" name="name" id="nameInput" required>
@@ -78,20 +78,21 @@ $pdo = new PDO($dsn, $dbusername, $dbpassword);
 			<textarea name="message" id="msgInput" ></textarea>
 			<input type="submit" value="Send" id="sendBtn">
 		</div>
-	</main>
-	<footer id="footer">
-        <div id="footer_logo">
-         <a href="homepage.php"><img src="assets/footer-logo.png" style="width:77px;height:28px"></a>
-         </div>
-        <ul class="icons">
-            <li><a href="about.php" ><span class="label">About CineTrip</span></a></li>
-            <li><a href="#" ><span class="label">Contribute</span></a></li>
-            <li><a href="#" ><span class="label">Privacy policy</span></a></li>
-        </ul>
-        <ul class="copyright">
-            <li>&copy; CineTrip. All rights reserved.</li>
-        </ul>
+	</div>
+	
+	  <div class="footer">
+   <footer>
+        <a href="homepage.php">
+          <img src="assets/footer-logo.png" />
+        </a>               
+    <ul class="bottomNav">
+        <li><a href="about.php" >About CineTrip</a></li>
+        <li><a href="#">Contribute</a></li>
+        <li><a href="#">Privacy policy</a></li>
+    </ul>
     </footer>
+	</div>
+	
     <script src="javascript/contact.js"></script>
 </body>
 </html>
