@@ -317,9 +317,9 @@ input,input:focus{
 	margin-bottom: 5%;
 }
 
-.search a img{
-	width:80px;
-	height:80px;
+.search img{
+	width:10%;
+	
 }
 
 /*Search Results Page*/
