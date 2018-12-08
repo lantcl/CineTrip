@@ -72,19 +72,60 @@ $stmt2->execute();
 	<div class="rls">
 		
 		<h1>Popular Locations</h1>
-		<?php while($row2 = $stmt2->fetch()){ ?>
-		<div>
-			<img src="imageslocations/<?php echo($row2["featuredimg"]); ?>" />
-			<p id="title"><?php echo($row2["locationname"]); ?></p>
-	    	<p id="mv">Related movie:<?php echo($row2["title"]); ?></p>
-	   		<p><?php echo($row2["address"]); ?></p>
-			<a href="locations.php?id=<?php echo($row2["id"]);?>">
+		<div id="box1" class="grid">
+		<?php while($row = $stmt1->fetch()) {
+                   //echo($row["email"]); //or $row[0];
+        ?>
+		<div class="inner">
+		<img src="imageslocations/elginoutside.jpg" />
+		<p id="title"><?php echo($row["locationname"]); ?></p>
+        <p id="mv">related movie:The Shape Of Water</p>
+        <p><?php echo($row["address"]); ?></p>
+			<a href="locations.php">
 			<button type="button" class="buttonView">
-		   	 View More
-			</button>
-			</a>
+		    View More
+		</button>
+		</a>
+        </div>
+        <?php }?>
 		</div>
-		<?php } ?>
+		
+		<div id="box2" class="grid">
+		<?php while($row = $stmt2->fetch()) {
+                   //echo($row["email"]); //or $row[0];
+        ?>
+		<div class="inner">
+		<img src="imageslocations/graffiti.jpg" />
+		<p id="title"><?php echo($row["locationname"]); ?></p>
+        <p id="mv">related movie:The Shape Of Water</p>
+        <p><?php echo($row["address"]); ?></p>
+		<a href="locations.php">
+			<button type="button" class="buttonView">
+		    View More
+		</button>
+		</a>
+        </div>
+        <?php }?>
+		</div>
+		
+		<div id="box3" class="grid">
+		<?php while($row = $stmt3->fetch()) {
+                   //echo($row["email"]); //or $row[0];
+        ?>
+		<div class="inner">
+		<img src="imageslocations/dunlap3.jpg" />
+		<p id="title"><?php echo($row["locationname"]); ?></p>
+        <p id="mv">related TV show:NBC Television series Hannibal</p>
+        <p><?php echo($row["address"]); ?></p>
+		<a href="locations.php">
+			<button type="button" class="buttonView">
+		    View More
+		</button>
+		</a>
+        </div>
+        <?php }?>
+		</div>
+		
 	</div>
 
    <div class="footer">
