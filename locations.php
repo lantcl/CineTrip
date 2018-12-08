@@ -53,11 +53,90 @@ $row5 = $stmt5->fetch();
 <html>
 	<head>
 		<title>Cinetrip - Locations</title>
-	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
- 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/organize.css">
-<!--	<link rel="stylesheet" type="text/css" href="css/small.css"> -->
+	<meta http-equiv="Cache-Control" content="no-transform" /> 
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	    <link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/organize.css">
 	
+        <style type="text/css">
+			@media screen and (max-width:960px){
+				.locMap{
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: #EBEBEB;
+	display:block; 
+	text-align:center;	
+/*	margin-top: -1%;*/
+}
+
+.locMap h1{
+	font-family: "Arial Rounded Mt",arial;
+	font-size: 2.8em;
+	font-color:#2e2e2e;
+	padding-top: 3%;
+	padding-bottom: 1%; 
+	text-align: center;
+	margin:0 auto;
+}
+
+.locMap .locInfo{
+	background-color:rgba(255,255,255,.8);
+    width:80%;
+	height: 70%;
+	margin-top: 1%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    display:inline-block;
+    vertical-align: top;
+	text-align: center;
+	border-radius: 5px;
+	padding: 4%;
+}
+
+.locMap .locInfo img{
+	width:100%;
+}
+
+.locTips{
+	background-color:rgba(255,255,255,.8);
+    width:80%;
+	height: 50%;
+	margin-top: 1%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    display:inline-block;
+    vertical-align: top;
+	text-align: center;
+	border-radius: 5px;
+	padding: 3%;
+}
+
+.locTips h2{
+	font-family: "Arial Rounded Mt",arial;
+	font-size: 2.2em;
+	font-color:#2e2e2e;
+	padding-top: -2%;
+	padding-bottom: 3%; 
+	text-align: center;
+	margin:0 auto;
+}
+
+.locTips img{
+	width:30%;
+}
+.locTips ul #reply{
+	width: 5%;
+}
+
+.locInfo2 ul #bookmark{
+	width:3%;
+}
+			}
+		</style>
 </head>
 <body>
 	<header>
