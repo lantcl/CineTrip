@@ -27,10 +27,38 @@ $row2 = $stmt2->fetch();
 <html>
 	<head>
 		<title>Cinetrip - My Tips</title>
-		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="Cache-Control" content="no-transform" /> 
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	    <link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/organize.css">
 	
-		<link rel="stylesheet" type="text/css" href="css/main.css" />
-		<link rel="stylesheet" type="text/css" href="css/organize.css" />
+        <style type="text/css">
+			@media screen and (max-width:960px){
+			.tips{
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: #EBEBEB;
+	display:block; 
+	text-align:center;
+/*	margin-top: -1%;*/
+	
+}
+
+.tips h1{
+	font-family: "Arial Rounded Mt",arial;
+	font-size: 2.8em;
+	font-color:#2e2e2e;
+	padding-top: 30%;
+	padding-bottom: 3%; 
+	text-align: center;
+	margin:0 auto;
+}
+	
+				
+			}
+		</style>
 	</head>
 	<body>
        	<header>
