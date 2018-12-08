@@ -25,10 +25,54 @@ $filmSearch->execute();
 <html>
     <head>
         <title>Search Results</title>
-        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-        <link rel="stylesheet" type="text/css" href="css/organize.css">
-        
+        <meta http-equiv="Cache-Control" content="no-transform" /> 
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	    <link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/organize.css">
+	
+        <style type="text/css">
+			@media screen and (max-width:960px){
+				.searchRes{
+	width: 100%;
+	height:100%;
+	background-color: #EBEBEB;
+	display:block; 
+	text-align:center;
+/*	margin-top: -1%;*/
+}
+.searchRes h2{
+	font-family: "Arial Rounded Mt",arial;
+	font-size: 2.8em;
+	font-color:#2e2e2e;
+	padding-top: 30%;
+	padding-bottom: 5%; 
+	text-align: center;
+	margin:0 auto;
+	
+}
+
+.searchRes .resuInfo{
+	background-color:rgba(255,255,255,.8);
+    width:80%;
+	height: 35%;
+	margin-top: .5%;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-bottom: 3%;
+    display:inline-block;
+    vertical-align: top;
+	text-align: center;
+	border-radius: 5px;
+	padding: 5%;
+}
+
+.searchRes .resuInfo a{
+	color: #787878;
+}
+
+			}
+		</style>
     </head>
 <body>
   <header>
