@@ -16,9 +16,100 @@ $dbpassword = "NkXHus3h!6V";
 	<html>
 		<head>
 			<title>CineTrp My Profile</title>
-			<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta http-equiv="Cache-Control" content="no-transform" /> 
+			<meta http-equiv="Cache-Control" content="no-siteapp" />
+			<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 	        <link rel="stylesheet" type="text/css" href="css/main.css">
 			<link rel="stylesheet" type="text/css" href="css/organize.css">
+			
+			
+			
+			<style type="text/css">
+			@media screen and (max-width:960px){
+
+
+					
+					
+					body{
+						font-size: .9em;
+					}
+					h1{
+						font-size: 2.8em;
+					}
+					h2 h3 h4 h5 h6{
+						font-size: 2em;
+					}
+					.profileSec{
+							width: 100%;
+							height: 90%;
+							overflow: auto;
+							background-color: #EBEBEB;
+							display:block; 
+							text-align:center;
+							/*	margin-top: -1%;*/
+	
+					}
+
+					.profileSec h1{
+					font-family: "Arial Rounded Mt",arial;
+					font-size: 2.8em;
+					font-color:#2e2e2e;
+					padding-top: 2%;
+					padding-bottom: 2%; 
+					text-align: center;
+					margin:0 auto;
+					}
+
+    				.profileSec .info{
+					background-color:rgba(255,255,255,.8);
+    				width:80%;
+					height: 50%;
+					margin-top:0;
+    				margin-left: .5%;
+    				margin-right: .5%;
+    				margin-bottom: 3%;
+    				display:inline-block;
+    				vertical-align: top;
+					text-align: center;
+					border-radius: 5px;
+	
+					}
+
+					.profileSec .info img{
+					width: 30%;
+					margin: 5%;
+	
+					}
+
+					.profileSec .info p{
+					font-family:"Arial Rounded Mt",arial;
+					font-size:1.5em;
+					margin:0 auto;
+					line-height: -20%；
+	
+					}
+
+					.profileSec h2{
+					font-family: "Arial Rounded Mt",arial;
+					font-size: 2.8em;
+					font-color:#2e2e2e;
+					padding-top: -2%;
+					padding-bottom:0; 
+					text-align: center;
+					margin:0 auto;
+					}
+
+					.badges img{
+					width:8%;
+					margin-top: 3%;
+					margin-bottom: 2%;
+	 
+					}
+				}
+			
+			
+			</style>
+	
 	
        </head>
 <body>
