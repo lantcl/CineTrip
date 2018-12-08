@@ -18,11 +18,100 @@ $director->execute();
 <html>
     <head>
         <title>CineTrip Search</title>
-		
-        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="css/main.css">
+	<meta http-equiv="Cache-Control" content="no-transform" /> 
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	    <link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/organize.css">
-		
+	
+        <style type="text/css">
+			@media screen and (max-width:960px){
+				.searchSec{
+	width: 100%;
+	height:100%;
+	overflow: auto;
+	background-color: #EBEBEB;
+	display:block; 
+	text-align:center;
+/*	margin-top:-1%;*/
+	
+}
+
+.searchSec h1{
+	font-family: "Arial Rounded Mt",arial;
+	font-size: 2.8em;
+	font-color:#2e2e2e;
+	padding-top: 5%;
+	padding-bottom: 1%; 
+	text-align: center;
+	margin:0 auto;
+}
+.searchSec .search{
+	background-color:rgba(255,255,255,.8);
+    width:80%;
+	height: 25%;
+	margin-top: 3%;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-bottom: 3%;
+    display:inline-block;
+    vertical-align: top;
+	text-align: center;
+	border-radius: .8em;
+	
+}
+
+.searchSec .search .searchBar1{
+    width:80%;
+	margin-top: 1%;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-bottom: 1%;
+    display:inline-block;
+    vertical-align: top;
+	text-align: center;
+	border-radius: 5px;
+	
+}
+
+ .searchBar1 input {
+			width:70%;
+			height: 20%;
+            border: 1px solid #f72e05;  
+            border-radius: 5px;  
+            background: #ffffff;  
+            color: #d9d9d9;
+			font-family: "Arial Rounded Mt",arial;
+			font-size: 2em;
+			padding-left: 5px;
+	        margin-top: -50%;
+        }  
+ .searchBar1 button { 
+			width:42px;
+			height:42px;
+            top: 0;  
+            margin-right: 15px;  
+            background: #f72e05;
+	        border-radius: 5px;
+        }  
+.searchBar1 button img{
+	width: 25px;
+	height: 25px;
+}
+
+.search h2{
+	font-size: 1.5em;
+	font-family: "Arial Rounded Mt",arial;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.search img{
+	width:15%;
+	
+}
+			}
+		</style>
     </head>
     <body>
   <header>
