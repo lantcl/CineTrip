@@ -15,13 +15,14 @@ $dbpassword = "NkXHus3h!6V";
 		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 	    <link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/organize.css">
+	<link rel="stylesheet" media="screen and (max-width:960px)" href="css/small.css">
 	
         <style type="text/css">
 			@media screen and (max-width:960px){
 				
 				.signupForm{
 	width: 100%;
-	hegiht:100%;
+	hegiht:1200px;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
@@ -124,7 +125,7 @@ $dbpassword = "NkXHus3h!6V";
 	margin-top: 1%;
     margin-left: .5%;
     margin-right: .5%;
-    margin-bottom: 3%;
+    margin-bottom: 10%;
     display:inline-block;
     vertical-align: top;
 	border-radius: 5px;
@@ -157,6 +158,7 @@ $dbpassword = "NkXHus3h!6V";
 		</style>
     </head>
     <body>
+	    <div class="mainContainer">
       	<header>
 		
 		<div>
@@ -229,11 +231,12 @@ $dbpassword = "NkXHus3h!6V";
         
 		</div>
 		</div>
+                </div>
 		
                <div class="footer">
    <footer>
         <a href="homepage.php">
-          <img src="assets/footer-logo.png" />
+          <img src="assets/logo-01.png" />
         </a>               
     <ul class="bottomNav">
         <li><a href="about.php" >About CineTrip</a></li>
