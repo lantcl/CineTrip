@@ -81,7 +81,7 @@ $_SESSION['logged-in'] == true;
 
 }
 
-			}
+			
 		</style>
     </head>
     <body>
