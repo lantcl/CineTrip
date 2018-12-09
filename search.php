@@ -23,16 +23,19 @@ $director->execute();
 		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 	    <link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/organize.css">
+<link rel="stylesheet" media="screen and (max-width:960px)" href="css/small.css">
+		
 	
         <style type="text/css">
 			@media screen and (max-width:960px){
 				.searchSec{
 	width: 100%;
-	height:100%;
+	height:800px;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;
+	margin-bottom: 3.5%;
 /*	margin-top:-1%;*/
 	
 }
@@ -114,6 +117,7 @@ $director->execute();
 		</style>
     </head>
     <body>
+	    <div class="mainContainer">
   <header>
 		
 		<div>
@@ -167,11 +171,11 @@ $director->execute();
         </div>
 			
         </div>
-		
+		    </div>
    <div class="footer">
    <footer>
         <a href="homepage.php">
-          <img src="assets/footer-logo.png" />
+          <img src="assets/logo-01.png" />
         </a>               
     <ul class="bottomNav">
         <li><a href="about.php" >About CineTrip</a></li>
