@@ -62,6 +62,7 @@ $row2 = $stmt2->fetch();
 		</style>
 	</head>
 	<body>
+<div class="mainContainer">
        	<header>
 		
 		<div>
@@ -100,10 +101,11 @@ $row2 = $stmt2->fetch();
 			<?php }
 			?>
 		</div>
+</div>
                 <div class="footer">
    <footer>
         <a href="homepage.php">
-          <img src="assets/footer-logo.png" />
+          <img src="assets/logo-01.png" />
         </a>               
     <ul class="bottomNav">
         <li><a href="about.php" >About CineTrip</a></li>
