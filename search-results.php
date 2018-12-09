@@ -30,12 +30,13 @@ $filmSearch->execute();
 		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 	    <link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/organize.css">
+<link rel="stylesheet" media="screen and (max-width:960px)" href="css/small.css">
 	
         <style type="text/css">
 			@media screen and (max-width:960px){
 				.searchRes{
 	width: 100%;
-	height:100%;
+	height:768px;
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;
@@ -45,7 +46,7 @@ $filmSearch->execute();
 	font-family: "Arial Rounded Mt",arial;
 	font-size: 2.8em;
 	font-color:#2e2e2e;
-	padding-top: 30%;
+	padding-top: 15%;
 	padding-bottom: 5%; 
 	text-align: center;
 	margin:0 auto;
@@ -75,6 +76,7 @@ $filmSearch->execute();
 		</style>
     </head>
 <body>
+<div class="mainContainer">
   <header>
 		
 		<div>
@@ -99,20 +101,24 @@ $filmSearch->execute();
         </ul>
     </nav>
 	</header>
-        <div class="rls">
+       <div class="searchRes">
             <?php 
         if (isset($_POST['filmsearch'])){ ?>
-              <div>
-            <h2>Location Results for '<?php echo($search);?>'</h2>
+			 <h2>Location Results for '<?php echo($search);?>'</h2>
+              <div class="resuInfo">
+           
             <?php while($row2 = $filmSearch->fetch()) 
             { ?><a href="locations.php?id=<?php echo($row2["id"]);?>"><p><?php echo($row2["locationname"]);?></p></a> 
           <?php } ?>
-          </div> <?php } ?>
+          </div>
+	<?php } ?>
+	</div>
+</div>
         
    <div class="footer">
    <footer>
         <a href="homepage.php">
-          <img src="assets/footer-logo.png" />
+          <img src="assets/logo-01.png" />
         </a>               
     <ul class="bottomNav">
         <li><a href="about.php" >About CineTrip</a></li>
