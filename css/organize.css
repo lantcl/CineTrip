@@ -364,9 +364,9 @@ input,input:focus{
 /*About page*/
 .about{
 	width: 100%;
-	height: 110%;
+	height: 800px;
 	background-color: #EBEBEB;
-	display:block; 
+	display:inline-block; 
 	text-align:center;
 /*	margin-top: -1%;*/
 }
@@ -384,7 +384,7 @@ input,input:focus{
 .about .grid{
 	background-color:rgba(255,255,255,.8);
     width:20%;
-	height: 35%;
+	height: 400px;
 	margin-top: .5%;
     margin-left: .5%;
     margin-right: .5%;
@@ -402,10 +402,14 @@ input,input:focus{
   display: block;
 }
 
+.aboutInner img{
+	width: 20%;
+}
+
 .about .aboutbutton{
 	display: inline-block;
 	width: 45%;
-	height: 13%;
+	height: 10%;
 	background-color: #ffab17;
 	
 	border-radius: 5%;
@@ -416,6 +420,7 @@ input,input:focus{
 	margin-top: 8%;
 	font-color: #ffffff;
 }
+
 
 /*User Interests Page*/
 
