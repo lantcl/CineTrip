@@ -97,6 +97,7 @@ $dbpassword = "NkXHus3h!6V";
 	
 </head>
 <body>
+<div class="mainContainer">
 <header>
 		
 		<div>
@@ -151,6 +152,7 @@ $dbpassword = "NkXHus3h!6V";
 
                 
         </div>
+</div>
    <div class="footer">
    <footer>
         <a href="homepage.php">
