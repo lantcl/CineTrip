@@ -92,6 +92,7 @@ $dbpassword = "NkXHus3h!6V";
 	
 </head>
 <body>
+<div class="mainContainer">
 	<header>
 		
 		<div>
@@ -124,12 +125,12 @@ $dbpassword = "NkXHus3h!6V";
                 <input type="submit" />
             	</form>
         </div>
-	
+</div>
 	
                 <div class="footer">
    <footer>
         <a href="homepage.php">
-          <img src="assets/footer-logo.png" />
+          <img src="assets/logo-01.png" />
         </a>               
     <ul class="bottomNav">
         <li><a href="about.php" >About CineTrip</a></li>
