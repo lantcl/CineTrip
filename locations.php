@@ -60,11 +60,11 @@ $row5 = $stmt5->fetch();
 		<link rel="stylesheet" type="text/css" href="css/organize.css">
 		<link rel="stylesheet" media="screen and (max-width:960px)" href="css/small.css">
 	
-        <style type="text/css">
+      <style type="text/css">
 			@media screen and (max-width:960px){
 				.locMap{
 	width: 100%;
-	height: 100%;
+	height: 900px;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
