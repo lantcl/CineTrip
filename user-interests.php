@@ -18,106 +18,82 @@ $dbpassword = "NkXHus3h!6V";
 		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 	    <link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/organize.css">
+	    <link rel="stylesheet" media="screen and (max-width:960px)" href="css/small.css">
 		
 		<style type="text/css">
-		
 			@media screen and (max-width:960px){
-	.interestSec{
+				.logForm{
 	width: 100%;
 	height: 100%;
-	overflow: auto;
 	background-color: #EBEBEB;
-	display:block; 
 	text-align:center;
-/*	margin-top: -1%;*/
+	margin-top: -4.5%;
+    justify-content: center;
+    align-content: center;
 	
 }
 
-.interestSec h1{
+.logForm h1{
 	font-family: "Arial Rounded Mt",arial;
 	font-size: 2.8em;
-	font-color:#2e2e2e;
-	padding-top: 1%;
-	padding-bottom: .5%; 
-	text-align: center;
-	margin:0 auto;
+	padding-top: 40%;
+	padding-bottom: 1%;
 }
 
-.interestSec h2{
-	font-family: "Arial Rounded Mt",arial;
-	font-size: 1.8em;
-	font-color:#2e2e2e;
-	padding-top: 3%;
-	padding-bottom: 1%; 
+.logForm form{
+	width: 80%;
+	height:25%;
+    margin: 0 auto;
+	background-color:#ffffff;
+	border-radius:10px;
 	text-align: center;
-	margin:0 auto;
-}
-
-h4{
-	font-family: "Arial Rounded Mt",arial;
-	font-color:#2e2e2e;
-	padding-top: 1%;
-	padding-bottom: 1%; 
+	padding: 2%;
 	
 }
 
-.interestSec .interestForm{
-	background-color:rgba(255,255,255,.8);
-    width:80%;
-	height: 40%;
-	margin-top:0;
-    margin-left: .5%;
-    margin-right: .5%;
-    margin-bottom: 5%;
-    display:inline-block;
-    vertical-align: top;
+.logForm form input{
+	width: 70%;
+    display: block;
+    height: 14%;
+    border: 0;
+    outline: 0;
+    margin:0 auto;
 	text-align: center;
-	border-radius: 5px;
-	
+	align-items: center;
+    padding: 2%;
+	justify-content: center;
+    align-content: center;
 }
 
-.interestForm label i{
-	width: 20px;
-	height: 20px;
-	border:1px solid #999;
-	border-radius: 4px;
-	display: inline-block;
-	vertical-align: middle;
-	margin:2%;
-}
+.logForm input[type="text"] , .logForm input[type="password"]  {
+            font-family: "Arial Rounded Mt",arial;
+			background-color: #EBEBEB;
+            font-size: 1em;
+            color: #787878;
+	        border-radius: 5px;
+	        margin-bottom: 2%;
+        }
+ .logForm input[type='submit'] {
+	        font-family: "Arial Rounded Mt",arial;
+            font-size: 1em;
+            color: #ffffff;
+            background-color: #ffab17;
+	        border-radius: 5px;
+	        margin: 0 auto;
+	        height: 50px;
+        }
 
-.interestForm label input{
-	margin: 10%;
-	float: left;
-	text-align: left;
-}
+.logFrom input:focus {
+            width: 300px;
+        }
+.logForm input[type='submit']:hover {
+            cursor: pointer;
+            width: 300px;
+	        
+        }
 
-label input[type="checkbox"]:checked +i{
-	background-color:#ffab17;
-	background-size: 15px 15px;
-	border:3px #BBA354;
-}
-
-.interestForm #submit{
-	wdith: 15%;
-	height: 8%;
-	background-color: #ffab17;
-	font-size: 1em;
-	font-color:#ffffff;
-	text-align: center;
-	border-radius: 5px; 
-}
-
-.interestForm p{
-	text-align: center;
-	font-size: .8em;
-	font-family:"Arial Rounded Mt",arial;
-	margin-top: 7%;
-}
-
-}
-		
-		</style>
+			}
+	</style>
 	
 </head>
 <body>
@@ -178,7 +154,7 @@ label input[type="checkbox"]:checked +i{
    <div class="footer">
    <footer>
         <a href="homepage.php">
-          <img src="assets/footer-logo.png" />
+          <img src="assets/logo-01.png" />
         </a>               
     <ul class="bottomNav">
         <li><a href="about.php" >About CineTrip</a></li>
