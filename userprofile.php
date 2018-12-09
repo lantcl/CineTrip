@@ -21,6 +21,7 @@ $dbpassword = "NkXHus3h!6V";
 			<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 	        <link rel="stylesheet" type="text/css" href="css/main.css">
 			<link rel="stylesheet" type="text/css" href="css/organize.css">
+			<link rel="stylesheet" media="screen and (max-width:960px)" href="css/small.css">
 			
 			
 			
@@ -113,6 +114,7 @@ $dbpassword = "NkXHus3h!6V";
 	
        </head>
 <body>
+	<div class="mainContainer">
 	<header>
 		
 		<div>
@@ -167,7 +169,8 @@ $dbpassword = "NkXHus3h!6V";
 		<img src="images-profile/10_badge_director.jpg" alt="Director" />
 	</div>
 	
-  </div>	
+  </div>
+  </div>
    <div class="footer">
    <footer>
         <a href="homepage.php">
