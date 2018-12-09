@@ -13,56 +13,135 @@ $dbpassword = "NkXHus3h!6V";
 <html>
     <head>
         <title>CineTrip Sign Up - Interests</title>
-        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Cache-Control" content="no-transform" /> 
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 	    <link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/organize.css">
-<!--	<link rel="stylesheet" type="text/css" href="css/small.css">-->
+		
+		<style type="text/css">
+		
+			@media screen and (max-width:960px){
+	.interestSec{
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: #EBEBEB;
+	display:block; 
+	text-align:center;
+/*	margin-top: -1%;*/
+	
+}
+
+.interestSec h1{
+	font-family: "Arial Rounded Mt",arial;
+	font-size: 2.8em;
+	font-color:#2e2e2e;
+	padding-top: 1%;
+	padding-bottom: .5%; 
+	text-align: center;
+	margin:0 auto;
+}
+
+.interestSec h2{
+	font-family: "Arial Rounded Mt",arial;
+	font-size: 1.8em;
+	font-color:#2e2e2e;
+	padding-top: 3%;
+	padding-bottom: 1%; 
+	text-align: center;
+	margin:0 auto;
+}
+
+h4{
+	font-family: "Arial Rounded Mt",arial;
+	font-color:#2e2e2e;
+	padding-top: 1%;
+	padding-bottom: 1%; 
+	
+}
+
+.interestSec .interestForm{
+	background-color:rgba(255,255,255,.8);
+    width:80%;
+	height: 40%;
+	margin-top:0;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-bottom: 5%;
+    display:inline-block;
+    vertical-align: top;
+	text-align: center;
+	border-radius: 5px;
+	
+}
+
+.interestForm label i{
+	width: 20px;
+	height: 20px;
+	border:1px solid #999;
+	border-radius: 4px;
+	display: inline-block;
+	vertical-align: middle;
+	margin:2%;
+}
+
+.interestForm label input{
+	margin: 10%;
+	float: left;
+	text-align: left;
+}
+
+label input[type="checkbox"]:checked +i{
+	background-color:#ffab17;
+	background-size: 15px 15px;
+	border:3px #BBA354;
+}
+
+.interestForm #submit{
+	wdith: 15%;
+	height: 8%;
+	background-color: #ffab17;
+	font-size: 1em;
+	font-color:#ffffff;
+	text-align: center;
+	border-radius: 5px; 
+}
+
+.interestForm p{
+	text-align: center;
+	font-size: .8em;
+	font-family:"Arial Rounded Mt",arial;
+	margin-top: 7%;
+}
+
+}
+		
+		</style>
 	
 </head>
 <body>
-	<div class="top">
-		<a href="homepage.php" class="logo">
-      		<img src="assets/logo-03.png" />
-    	</a>
-		<div class="userImage">
-			<a href="signin.php">
-			<img src="assets/userimage.png" />
-			</a>
-		</div>
-		<div class="topnav">
-		<ul>
-        <?php if(isset($_SESSION['logged-in']) && ($_SESSION['logged-in'] == true)){?>
-           <li><a href="logout.php">Log out</a></li>
-           <li><a href="userprofile.php">Profile</a></li>
-       <?php } else {?>
-           <li><a href="signup.php">Sign up</a></li>
-           <li><a href="login.php">Log in</a></li>
-       <?php } ?>		
-		</ul>
-		</div>
-		<div class="searchBar">  
-        	<form action="search-results.php" method="POST">
-            <input type = "text" name="filmsearch">
-            <button type="submit">
-			<img src="assets/search.png" href="locations.php"/>
-			</button>  
-        	</form>  
-    	</div>  
-	</div>
-	<header>
+<header>
 		
-		<a href="homepage.php">
-			<img src="assets/logo-01.png" />
-		</a>
+		<div>
+			<img src="assets/logo-01.png" href="homepage.php" class="logo"/>
+		</div>
 		
     	<nav>
      	 <ul>
         	<div></div>
        		 <li class="current"><a href="homepage.php">Home</a></li>
-        	 <li><a href="locations.php">Locations</a></li>
+        	 <li><a href="browse-locations.php">Locations</a></li>
         	 <li><a href="search.php">Search</a></li>
         	 <li><a href="about.php">About</a></li>
         	 <li><a href="contact.php">Contact</a></li>
+		 <?php if($_SESSION['logged-in'] == true){?>
+                 <li><a href="logout.php">Log out</a></li>
+                 <li><a href="userprofile.php">Profile</a></li>
+                 <?php } else {?>
+                 <li><a href="signup.php">Sign up</a></li>
+                 <li><a href="login.php">Log in</a></li>
+                 <?php } ?>	
         </ul>
     </nav>
 	</header>

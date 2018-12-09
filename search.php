@@ -18,59 +18,126 @@ $director->execute();
 <html>
     <head>
         <title>CineTrip Search</title>
-		
-        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="css/main.css">
+	<meta http-equiv="Cache-Control" content="no-transform" /> 
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	    <link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/organize.css">
-		
+	
+        <style type="text/css">
+			@media screen and (max-width:960px){
+				.searchSec{
+	width: 100%;
+	height:100%;
+	overflow: auto;
+	background-color: #EBEBEB;
+	display:block; 
+	text-align:center;
+/*	margin-top:-1%;*/
+	
+}
+
+.searchSec h1{
+	font-family: "Arial Rounded Mt",arial;
+	font-size: 2.8em;
+	font-color:#2e2e2e;
+	padding-top: 5%;
+	padding-bottom: 1%; 
+	text-align: center;
+	margin:0 auto;
+}
+.searchSec .search{
+	background-color:rgba(255,255,255,.8);
+    width:80%;
+	height: 25%;
+	margin-top: 3%;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-bottom: 3%;
+    display:inline-block;
+    vertical-align: top;
+	text-align: center;
+	border-radius: .8em;
+	
+}
+
+.searchSec .search .searchBar1{
+    width:80%;
+	margin-top: 1%;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-bottom: 1%;
+    display:inline-block;
+    vertical-align: top;
+	text-align: center;
+	border-radius: 5px;
+	
+}
+
+ .searchBar1 input {
+			width:70%;
+			height: 20%;
+            border: 1px solid #f72e05;  
+            border-radius: 5px;  
+            background: #ffffff;  
+            color: #d9d9d9;
+			font-family: "Arial Rounded Mt",arial;
+			font-size: 2em;
+			padding-left: 5px;
+	        margin-top: -50%;
+        }  
+ .searchBar1 button { 
+			width:42px;
+			height:42px;
+            top: 0;  
+            margin-right: 15px;  
+            background: #f72e05;
+	        border-radius: 5px;
+        }  
+.searchBar1 button img{
+	width: 25px;
+	height: 25px;
+}
+
+.search h2{
+	font-size: 1.5em;
+	font-family: "Arial Rounded Mt",arial;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.search img{
+	width:15%;
+	
+}
+			}
+		</style>
     </head>
     <body>
-  <div class="top">
-    <a href="homepage.php" class="logo">
-          <img src="assets/logo-03.png" />
-      </a>
-    <div class="userImage">
-      <a href="signin.php">
-      <img src="assets/userimage.png" />
-      </a>
-    </div>
-    <div class="topnav">
-    <ul>
-        <?php if($_SESSION['logged-in'] == true){?>
-            <li><a href="logout.php" class="button">Log out</a></li>
-            <li><a href="userprofile.php" class="button">Profile</a></li>
-        <?php } else {?>
-            <li><a href="signup.php" class="button">Sign up</a></li>
-            <li><a href="login.php" class="button">Log in</a></li>
-        <?php } ?>      
-    </ul>
-    </div>
-    <div class="searchBar">  
-          <form action="search-results.php" method="POST">
-            <input type = "text" name="filmsearch">
-            <button type="submit">
-              <img src="assets/search.png"/>
-            </button>  
-          </form>  
-      </div>  
-</div>
   <header>
-    
-    <a href="homepage.php">
-      <img src="assets/logo-01.png" />
-    </a>
-    
-      <nav>
-       <ul>
-          <div></div>
-           <li class="current"><a href="homepage.php">Home</a></li>
-           <li><a href="browse-locations.php">Locations</a></li>
-           <li><a href="search.php">Search</a></li>
-           <li><a href="about.php">About</a></li>
-           <li><a href="contact.php">Contact</a></li>
+		
+		<div>
+			<img src="assets/logo-01.png" href="homepage.php" class="logo"/>
+		</div>
+		
+    	<nav>
+     	 <ul>
+        	<div></div>
+       		 <li class="current"><a href="homepage.php">Home</a></li>
+        	 <li><a href="browse-locations.php">Locations</a></li>
+        	 <li><a href="search.php">Search</a></li>
+        	 <li><a href="about.php">About</a></li>
+        	 <li><a href="contact.php">Contact</a></li>
+		 <?php if($_SESSION['logged-in'] == true){?>
+                 <li><a href="logout.php">Log out</a></li>
+                 <li><a href="userprofile.php">Profile</a></li>
+                 <?php } else {?>
+                 <li><a href="signup.php">Sign up</a></li>
+                 <li><a href="login.php">Log in</a></li>
+                 <?php } ?>	
         </ul>
     </nav>
-  </header>
+	</header>
 		
 <!--Search Section-->
         <div class="searchSec">

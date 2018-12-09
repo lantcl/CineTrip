@@ -25,56 +25,80 @@ $filmSearch->execute();
 <html>
     <head>
         <title>Search Results</title>
-        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <link rel="stylesheet" type="text/css" href="css/main.css"> -->
+        <meta http-equiv="Cache-Control" content="no-transform" /> 
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	    <link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/organize.css">
+	
+        <style type="text/css">
+			@media screen and (max-width:960px){
+				.searchRes{
+	width: 100%;
+	height:100%;
+	background-color: #EBEBEB;
+	display:block; 
+	text-align:center;
+/*	margin-top: -1%;*/
+}
+.searchRes h2{
+	font-family: "Arial Rounded Mt",arial;
+	font-size: 2.8em;
+	font-color:#2e2e2e;
+	padding-top: 30%;
+	padding-bottom: 5%; 
+	text-align: center;
+	margin:0 auto;
+	
+}
+
+.searchRes .resuInfo{
+	background-color:rgba(255,255,255,.8);
+    width:80%;
+	height: 35%;
+	margin-top: .5%;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-bottom: 3%;
+    display:inline-block;
+    vertical-align: top;
+	text-align: center;
+	border-radius: 5px;
+	padding: 5%;
+}
+
+.searchRes .resuInfo a{
+	color: #787878;
+}
+
+			}
+		</style>
     </head>
 <body>
-  <div class="top">
-    <a href="homepage.php" class="logo">
-          <img src="assets/logo-03.png" />
-      </a>
-    <div class="userImage">
-      <a href="signin.php">
-      <img src="assets/userimage.png" />
-      </a>
-    </div>
-    <div class="topnav">
-    <ul>
-        <?php if($_SESSION['logged-in'] == true){?>
-            <li><a href="logout.php" class="button">Log out</a></li>
-            <li><a href="userprofile.php" class="button">Profile</a></li>
-        <?php } else {?>
-            <li><a href="signup.php" class="button">Sign up</a></li>
-            <li><a href="login.php" class="button">Log in</a></li>
-        <?php } ?>      
-    </ul>
-    </div>
-    <div class="searchBar">  
-          <form action="search-results.php" method="POST">
-            <input type = "text" name="filmsearch">
-            <button type="submit">
-      <img src="assets/search.png" href="locations.php"/>
-      </button>  
-          </form>  
-      </div>  
-  </div>
   <header>
-    
-    <a href="homepage.php">
-      <img src="assets/logo-01.png" />
-    </a>
-    
-      <nav>
-       <ul>
-          <div></div>
-           <li class="current"><a href="homepage.php">Home</a></li>
-           <li><a href="locations.php">Locations</a></li>
-           <li><a href="search.php">Search</a></li>
-           <li><a href="about.php">About</a></li>
-           <li><a href="contact.php">Contact</a></li>
+		
+		<div>
+			<img src="assets/logo-01.png" href="homepage.php" class="logo"/>
+		</div>
+		
+    	<nav>
+     	 <ul>
+        	<div></div>
+       		 <li class="current"><a href="homepage.php">Home</a></li>
+        	 <li><a href="browse-locations.php">Locations</a></li>
+        	 <li><a href="search.php">Search</a></li>
+        	 <li><a href="about.php">About</a></li>
+        	 <li><a href="contact.php">Contact</a></li>
+		 <?php if($_SESSION['logged-in'] == true){?>
+                 <li><a href="logout.php">Log out</a></li>
+                 <li><a href="userprofile.php">Profile</a></li>
+                 <?php } else {?>
+                 <li><a href="signup.php">Sign up</a></li>
+                 <li><a href="login.php">Log in</a></li>
+                 <?php } ?>	
         </ul>
     </nav>
-  </header>
+	</header>
         <div class="rls">
             <?php 
         if (isset($_POST['filmsearch'])){ ?>

@@ -3,9 +3,10 @@ html,body{
 	padding:0;
 	margin:0;
 	width:100%;
-	height:auto;
+	height:100%;
 	overflow-x:hidden; 
 	font-family:"Arial Rounded Mt",arial;
+	background-attachment:fixed;
 }
 
 @font-face{
@@ -29,136 +30,22 @@ input,input:focus{
 	outline:none;
 }
 
-		.top{
-			width: 100%;
-			height:70px;
-			background: rgba(255,255,255,.95);
-			position: fixed; 
-			top: 0px;
-		}
 
-        .top .logo img{
-    		width:5%;
-    		margin-left: 5%;
-    		display: block;
-			margin-top: .5%;
-			
-    	}
 
-		.top .userImage img{
-	        width: 30px;
-			height: 30px;
-			margin-right: 5%;
-			margin-top: -1.6%;
-			float: right;
-		}
-
-		.top .topnav ul{
-	        list-style: none;
-    		float: right;
-    		margin-right: 10px;
-			margin-top: -10px;
-		}
-
-		.top .topnav ul li{
-	       	list-style: none;
-    		float: left;
-    		margin-left: 45px;
-			margin-top: -10px;
-			right:-500px;
-		}
-
-		.top .topnav li a{
-	        text-decoration: none;
-    		color: #f72e05;olor: #f72e05;
-    		font-family: "Arial Rounded Mt",arial;
-			font-style:normal;
-    		font-size: 16px;
-    		letter-spacing: .2px;
-			padding:0px -20px;
-			margin:-5px;
-    		transition:all .2s linear;
-    		-o-transition:all .2s linear;
-    		-moz-transition:all .2s linear;
-    		-webkit-transition:all .2s linear;
-		}
-
-		.top .topnav ul li a:hover,
-		.top .topnav ul li .selected{
-    		color: #d9d9d9;
-    		border-radius: 3px;
-		}
- 
-        form {  
-            position: relative;  
-            width: 300px;  
-            margin: 0 auto;  
-        }  
-        input, button {  
-            border: none;  
-            outline: none;  
-        }  
-        input {  
-            width: 100%;  
-            height: 30px;  
-            padding-left: 13px;  
-            padding-right:50px;  
-        }  
-        button {  
-            height: 30px;  
-            width: 30px;   
-            position: absolute;  
-        }
-		button img{
-			width:15px;
-			height:15px;
-			margin-left: auto;
-			margin-right: auto;
-			vertical-align: middle;
-	
-		}
-
-		.searchBar {
-			background: #ffffff;
-			float: right;
-			margin-right: 200px;
-			margin-top: -1.8%;
-		}  
-        .searchBar input {
-			width:200px;
-			height: 30px;
-            border: 2px solid #f72e05;  
-            border-radius: 3px;  
-            background: #ffffff;  
-            color: #d9d9d9;
-			font-family: "Arial Rounded Mt",arial;
-			font-size: 16px;
-			padding-left: 5px;
-        }  
-        .searchBar button { 
-			width:34px;
-			height:34px;
-			border-radius: 3px;
-            top: 0;  
-            right: 0;  
-            background: #f72e05;  
-/*          radius: 3px 3px 3px 3px;  */
-        }  
-        
 
 		header{
 			width: 100%;
 			height: 90px;
 			background: #f72e05;
-			top: 50px;
-			position: absolute;
+			top:auto;
+			margin:0;
+			padding:0;
 		}
 
-		header img{
-			width:8%;
-    		margin-left: 5%;
-    		display: block;
-			margin-top: 1.6%;
+		header .logo {
+			width:6%;
+            margin-top: 1.7%;
+			margin-left: 5%;
 	
 		}
 
@@ -183,8 +70,7 @@ input,input:focus{
     		text-decoration: none;
     		color: #ffffff;
     		font-family: "Arial Rounded Mt",arial;
-    		font-size: 16px;
-    		letter-spacing: .3px;
+    		font-size: 1em;
     		transition:all .2s linear;
     		-o-transition:all .2s linear;
     		-moz-transition:all .2s linear;
@@ -196,7 +82,7 @@ input,input:focus{
 		header nav ul .selected{
     		color: #ffab17;
     		background: #ffffff;
-			border-radius: 3px;
+			border-radius: 1em;
 		}
 
 		/* right nav */
@@ -211,7 +97,7 @@ input,input:focus{
 
 		.rls{
 		    width: 100%;
-			height: 70%;
+			height: 100%;
 			background-color: #EBEBEB;
 			display:block; 
 			text-align:center;
@@ -221,7 +107,7 @@ input,input:focus{
 .rls h1{
 	   
 	   font-family: "Arial Rounded Mt",arial;
-	   font-size: 40px;
+	   font-size: 2.5em;
 	   font-color:#2e2e2e;
 	   padding-top: 3%;
 	   padding-bottom: 3%; 
@@ -233,7 +119,7 @@ input,input:focus{
 .rls .grid{
     background-color:rgba(255,255,255,.8);
     width:25%;
-	height: 500px;
+	height: 65%;
 	margin-top: .5%;
     margin-left: .5%;
     margin-right: .5%;
@@ -254,7 +140,6 @@ input,input:focus{
 	font-color:#2d2d2d;
 }
 .inner{
-  border: 2px #303030;
   margin:5%;
   padding:4%;
   display: block;
@@ -263,27 +148,28 @@ input,input:focus{
 .inner img{
 	width:100%;
 	height:100%;
-	border-radius: 5px;
+	border-radius: .5em;
 	
 }
 
 .inner .buttonView {
-	width: 8%;
-	height: 4%;
+	width: 50%;
+	height: 20%;
 	background: #ffab17;
-	border-radius: 5px;
+	border-radius: .3em;
 	margin-left: -3%;
 	margin-bottom: 1%;
 	align-items: center;
 	display:inline-block;
 	text-align: center;
 	font-family: "Arial Rounded Mt",arial;
+	font-size: 1em;
 	color:#ffffff;
 }
 
 .footer{
 	width: 100%;
-    height: 80px;
+    height: 8%;
 	background-color: #1035D4;
 	overflow: hidden;
 	margin: 0 auto;
@@ -314,8 +200,7 @@ input,input:focus{
 	text-decoration: none;
     color: #ffffff;
     font-family: "Arial Rounded Mt",arial;
-    font-size: 14px;
-    letter-spacing: .3px;
+    font-size: .8em;
     transition:all .2s linear;
     -o-transition:all .2s linear;
     -moz-transition:all .2s linear;
@@ -325,5 +210,5 @@ input,input:focus{
 .footer .bottomNav li a:hover,
 .footer .bottomNav li .selected{
     		color: #ffab17;
-    		border-radius: 3px;
+    		border-radius: .3em;
 		}

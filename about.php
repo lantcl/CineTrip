@@ -12,42 +12,11 @@ $_SESSION['logged-in'] == true;
 	  <link rel="stylesheet" href="css/organize.css"/>
     </head>
     <body>
-		<div class="top">
-		<a href="homepage.php" class="logo">
-      		<img src="assets/logo-03.png" />
-    	</a>
-		<div class="userImage">
-			<a href="signin.php">
-			<img src="assets/userimage.png" />
-			</a>
-		</div>
-		<div class="topnav">
-		<ul>
-       <ul>
-        <?php if(isset($_SESSION['logged-in']) && ($_SESSION['logged-in'] == true)){?>
-           <li><a href="logout.php">Log out</a></li>
-           <li><a href="userprofile.php">Profile</a></li>
-       <?php } else {?>
-           <li><a href="signup.php">Sign up</a></li>
-           <li><a href="login.php">Log in</a></li>
-       <?php } ?>		
-		</ul>
-		</ul>
-		</div>
-		<div class="searchBar">  
-        	<form action="search-results.php" method="POST">
-            <input type = "text" name="filmsearch">
-            <button type="submit">
-			<img src="assets/search.png" href="locations.php"/>
-			</button>  
-        	</form>  
-    	</div>  
-	</div>
 	<header>
 		
-		<a href="homepage.php"> 
-			<img src="assets/logo-01.png" />
-		</a>
+		<div>
+			<img src="assets/logo-01.png" href="homepage.php" class="logo"/>
+		</div>
 		
     	<nav>
      	 <ul>
@@ -57,6 +26,13 @@ $_SESSION['logged-in'] == true;
         	 <li><a href="search.php">Search</a></li>
         	 <li><a href="about.php">About</a></li>
         	 <li><a href="contact.php">Contact</a></li>
+		 <?php if($_SESSION['logged-in'] == true){?>
+                 <li><a href="logout.php">Log out</a></li>
+                 <li><a href="userprofile.php">Profile</a></li>
+                 <?php } else {?>
+                 <li><a href="signup.php">Sign up</a></li>
+                 <li><a href="login.php">Log in</a></li>
+                 <?php } ?>	
         </ul>
     </nav>
 	</header>

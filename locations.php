@@ -53,47 +53,97 @@ $row5 = $stmt5->fetch();
 <html>
 	<head>
 		<title>Cinetrip - Locations</title>
-	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
- 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/organize.css">
-<!--	<link rel="stylesheet" type="text/css" href="css/small.css"> -->
+	<meta http-equiv="Cache-Control" content="no-transform" /> 
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	    <link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/organize.css">
 	
+        <style type="text/css">
+			@media screen and (max-width:960px){
+				.locMap{
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: #EBEBEB;
+	display:block; 
+	text-align:center;	
+/*	margin-top: -1%;*/
+}
+
+.locMap h1{
+	font-family: "Arial Rounded Mt",arial;
+	font-size: 2.8em;
+	font-color:#2e2e2e;
+	padding-top: 3%;
+	padding-bottom: 1%; 
+	text-align: center;
+	margin:0 auto;
+}
+
+.locMap .locInfo{
+	background-color:rgba(255,255,255,.8);
+    width:80%;
+	height: 70%;
+	margin-top: 1%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    display:inline-block;
+    vertical-align: top;
+	text-align: center;
+	border-radius: 5px;
+	padding: 4%;
+}
+
+.locMap .locInfo img{
+	width:100%;
+}
+
+.locTips{
+	background-color:rgba(255,255,255,.8);
+    width:80%;
+	height: 50%;
+	margin-top: 1%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    display:inline-block;
+    vertical-align: top;
+	text-align: center;
+	border-radius: 5px;
+	padding: 3%;
+}
+
+.locTips h2{
+	font-family: "Arial Rounded Mt",arial;
+	font-size: 2.2em;
+	font-color:#2e2e2e;
+	padding-top: -2%;
+	padding-bottom: 3%; 
+	text-align: center;
+	margin:0 auto;
+}
+
+.locTips img{
+	width:30%;
+}
+.locTips ul #reply{
+	width: 5%;
+}
+
+.locInfo2 ul #bookmark{
+	width:3%;
+}
+			}
+		</style>
 </head>
 <body>
-	<div class="top">
-		<a href="homepage.php" class="logo">
-      		<img src="assets/logo-03.png" />
-    	</a>
-		<div class="userImage">
-			<a href="signin.php">
-			<img src="assets/userimage.png" />
-			</a>
-		</div>
-		<div class="topnav">
-		<ul>
-        <?php if($_SESSION['logged-in'] == true){?>
-            <li><a href="logout.php">Log out</a></li>
-            <li><a href="userprofile.php">Profile</a></li>
-        <?php } else {?>
-            <li><a href="signup.php">Sign up</a></li>
-            <li><a href="login.php">Log in</a></li>
-        <?php } ?>			
-		</ul>
-		</div>
-		<div class="searchBar">  
-        	<form action="search-results.php" method="POST">
-            <input type = "text" name="filmsearch">
-            <button type="submit">
-			<img src="assets/search.png" href="locations.php"/>
-			</button>  
-        	</form>  
-    	</div>  
-	</div>
 	<header>
 		
-		<a href="homepage.php">
-			<img src="assets/logo-01.png" />
-		</a>
+		<div>
+			<img src="assets/logo-01.png" href="homepage.php" class="logo"/>
+		</div>
 		
     	<nav>
      	 <ul>
@@ -103,6 +153,13 @@ $row5 = $stmt5->fetch();
         	 <li><a href="search.php">Search</a></li>
         	 <li><a href="about.php">About</a></li>
         	 <li><a href="contact.php">Contact</a></li>
+		 <?php if($_SESSION['logged-in'] == true){?>
+                 <li><a href="logout.php">Log out</a></li>
+                 <li><a href="userprofile.php">Profile</a></li>
+                 <?php } else {?>
+                 <li><a href="signup.php">Sign up</a></li>
+                 <li><a href="login.php">Log in</a></li>
+                 <?php } ?>	
         </ul>
     </nav>
 	</header>

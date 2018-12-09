@@ -16,46 +16,108 @@ $dbpassword = "NkXHus3h!6V";
 	<html>
 		<head>
 			<title>CineTrp My Profile</title>
-			<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta http-equiv="Cache-Control" content="no-transform" /> 
+			<meta http-equiv="Cache-Control" content="no-siteapp" />
+			<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 	        <link rel="stylesheet" type="text/css" href="css/main.css">
 			<link rel="stylesheet" type="text/css" href="css/organize.css">
+			
+			
+			
+			<style type="text/css">
+			@media screen and (max-width:960px){
+
+
+					
+					
+					body{
+						font-size: .9em;
+					}
+					h1{
+						font-size: 2.8em;
+					}
+					h2 h3 h4 h5 h6{
+						font-size: 2em;
+					}
+					.profileSec{
+							width: 100%;
+							height: 90%;
+							overflow: auto;
+							background-color: #EBEBEB;
+							display:block; 
+							text-align:center;
+							/*	margin-top: -1%;*/
+	
+					}
+
+					.profileSec h1{
+					font-family: "Arial Rounded Mt",arial;
+					font-size: 2.8em;
+					font-color:#2e2e2e;
+					padding-top: 2%;
+					padding-bottom: 2%; 
+					text-align: center;
+					margin:0 auto;
+					}
+
+    				.profileSec .info{
+					background-color:rgba(255,255,255,.8);
+    				width:80%;
+					height: 50%;
+					margin-top:0;
+    				margin-left: .5%;
+    				margin-right: .5%;
+    				margin-bottom: 3%;
+    				display:inline-block;
+    				vertical-align: top;
+					text-align: center;
+					border-radius: 5px;
+	
+					}
+
+					.profileSec .info img{
+					width: 30%;
+					margin: 5%;
+	
+					}
+
+					.profileSec .info p{
+					font-family:"Arial Rounded Mt",arial;
+					font-size:1.5em;
+					margin:0 auto;
+					line-height: -20%；
+	
+					}
+
+					.profileSec h2{
+					font-family: "Arial Rounded Mt",arial;
+					font-size: 2.8em;
+					font-color:#2e2e2e;
+					padding-top: -2%;
+					padding-bottom:0; 
+					text-align: center;
+					margin:0 auto;
+					}
+
+					.badges img{
+					width:8%;
+					margin-top: 3%;
+					margin-bottom: 2%;
+	 
+					}
+				}
+			
+			
+			</style>
+	
 	
        </head>
 <body>
-	<div class="top">
-		<a href="homepage.php" class="logo">
-      		<img src="assets/logo-03.png" />
-    	</a>
-		<div class="userImage">
-			<a href="signin.php">
-			<img src="assets/userimage.png" />
-			</a>
-		</div>
-		<div class="topnav">
-		<ul>
-        <?php if(isset($_SESSION['logged-in']) && ($_SESSION['logged-in'] == true)){?>
-           <li><a href="logout.php">Log out</a></li>
-           <li><a href="userprofile.php">Profile</a></li>
-       <?php } else {?>
-           <li><a href="signup.php">Sign up</a></li>
-           <li><a href="login.php">Log in</a></li>
-       <?php } ?>		
-		</ul>
-		</div>
-		<div class="searchBar">  
-        	<form action="search-results.php" method="POST">
-            <input type = "text" name="filmsearch">
-            <button type="submit">
-			<img src="assets/search.png" href="locations.php"/>
-			</button>  
-        	</form>  
-    	</div>  
-	</div>
 	<header>
 		
-		<a href="homepage.php">
-			<img src="assets/logo-01.png" />
-		</a>
+		<div>
+			<img src="assets/logo-01.png" href="homepage.php" class="logo"/>
+		</div>
 		
     	<nav>
      	 <ul>
@@ -65,6 +127,13 @@ $dbpassword = "NkXHus3h!6V";
         	 <li><a href="search.php">Search</a></li>
         	 <li><a href="about.php">About</a></li>
         	 <li><a href="contact.php">Contact</a></li>
+		 <?php if($_SESSION['logged-in'] == true){?>
+                 <li><a href="logout.php">Log out</a></li>
+                 <li><a href="userprofile.php">Profile</a></li>
+                 <?php } else {?>
+                 <li><a href="signup.php">Sign up</a></li>
+                 <li><a href="login.php">Log in</a></li>
+                 <?php } ?>	
         </ul>
     </nav>
 	</header>

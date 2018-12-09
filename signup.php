@@ -10,57 +10,174 @@ $dbpassword = "NkXHus3h!6V";
 <html>
     <head>
         <title>CineTrip Sign Up</title>
-        <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <link rel="stylesheet" type="text/css" href="css/main.css"/>
-<!--<link rel="stylesheet" type="text/css" media="screen and (max-width: 768px)" href="css/small.css">-->
-		<link rel="stylesheet" type="text/css" href="css/organize.css"/>
-        
+       <meta http-equiv="Cache-Control" content="no-transform" /> 
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	    <link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/organize.css">
+	
+        <style type="text/css">
+			@media screen and (max-width:960px){
+				
+				.signupForm{
+	width: 100%;
+	hegiht:100%;
+	overflow: auto;
+	background-color: #EBEBEB;
+	display:block; 
+	text-align:center;
+/*	margin-top:-1%;*/
+}
+
+.signupForm h1{
+	text-align: center;
+    font-family: "Arial Rounded Mt",arial;
+	font-size: 2.8em;
+	padding-top: 1%;
+	margin-top:2%;
+}
+
+.signupForm .part1{
+	background-color:rgba(255,255,255,.8);
+    width:80%;
+	height: 60%;
+	margin-top: 1%;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-bottom: 3%;
+    display:inline-block;
+    vertical-align: top;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.signupForm .part2{
+	background-color:rgba(255,255,255,.8);
+    width: 80%;
+	height: 25%;
+	margin-top: 3%;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-bottom: 3%;
+    display:inline-block;
+    vertical-align: top;
+	text-align: center;
+	border-radius: 5px;
+}
+.signupForm .part1 input{
+	width: 60%;
+    display: block;
+    height: 13%;
+    margin:0 auto;
+	text-align: center;
+	align-items: center;
+    padding: 1.5%;
+	justify-content: center;
+    align-content: center;
+	
+}
+
+.signupForm .part1 input[type="text"], .signupForm .part1 input[type="firstname"] {
+            font-family: "Arial Rounded Mt",arial;
+			background-color: #EBEBEB;
+            font-size: 1em;
+            color: #787878;
+	        border-radius: 5px;
+}
+
+.signupForm .part1 input[type="text"], .signupForm .part1 input[type="lastname"] {
+            font-family: "Arial Rounded Mt",arial;
+			background-color: #EBEBEB;
+            font-size: 1em;
+            color: #787878;
+	        border-radius: 5px;
+}
+
+.signupForm .part1 input[type="text"], .signupForm .part1 input[type="username"] {
+            font-family: "Arial Rounded Mt",arial;
+			background-color: #EBEBEB;
+            font-size: 1em;
+            color: #787878;
+	        border-radius: 5px;
+}
+
+.signupForm .part1 input[type="text"], .signupForm .part1 input[type="password"] {
+            font-family: "Arial Rounded Mt",arial;
+			background-color: #EBEBEB;
+            font-size: 1em;
+            color: #787878;
+	        border-radius: 5px;
+}
+
+.signupForm .part1 input[type="email"], .signupForm .part1 input[type="email"] {
+            font-family: "Arial Rounded Mt",arial;
+			background-color: #EBEBEB;
+            font-size: 1em;
+            color: #787878;
+	        border-radius: 5px;
+}
+
+.signupForm .part2 {
+	background-color:rgba(255,255,255,.8);
+    width:80%;
+	height: 300px;
+	margin-top: 1%;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-bottom: 3%;
+    display:inline-block;
+    vertical-align: top;
+	border-radius: 5px;
+	
+}
+
+.signupForm .part2 select{
+	margin:3% 3% 3% 3%; 
+    padding: 1%;
+}
+
+.signupForm .part2 input{
+	width: 60%;
+    display: block;
+    height: 40px;
+    margin:1% 1% 1% 1%; 
+    padding: 1%;
+	
+}
+
+.signupForm .part2 input[type='submit'] {
+	        font-family: "Arial Rounded Mt",arial;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #ffab17;
+	        border-radius: 5px;
+	        margin:0 auto;
+}
+			}
+		</style>
     </head>
     <body>
-      	<div class="top">
-		<a href="homepage.php" class="logo">
-      		<img src="assets/logo-03.png" />
-    	</a>
-		<div class="userImage">
-			<a href="signin.php">
-			<img src="assets/userimage.png" />
-			</a>
-		</div>
-		<div class="topnav">
-		<ul>
-       <?php if(isset($_SESSION['logged-in']) && ($_SESSION['logged-in'] == true)){?>
-           <li><a href="logout.php">Log out</a></li>
-           <li><a href="userprofile.php">Profile</a></li>
-       <?php } else {?>
-           <li><a href="signup.php">Sign up</a></li>
-           <li><a href="login.php">Log in</a></li>
-       <?php } ?>	
-		</ul>
-		</div>
-		<div class="searchBar">  
-        	<form action="search-results.php" method="POST">
-            <input type = "text" name="filmsearch">
-            <button type="submit">
-			<img src="assets/search.png" href="locations.php"/>
-			</button>  
-        	</form>  
-    	</div>  
-	</div>
-	<header>
+      	<header>
 		
-		<a href="homepage.php">
-			<img src="assets/logo-01.png" />
-		</a>
+		<div>
+			<img src="assets/logo-01.png" href="homepage.php" class="logo"/>
+		</div>
 		
     	<nav>
      	 <ul>
         	<div></div>
        		 <li class="current"><a href="homepage.php">Home</a></li>
-        	 <li><a href="browse-location.php">Locations</a></li>
+        	 <li><a href="browse-locations.php">Locations</a></li>
         	 <li><a href="search.php">Search</a></li>
         	 <li><a href="about.php">About</a></li>
         	 <li><a href="contact.php">Contact</a></li>
+		 <?php if($_SESSION['logged-in'] == true){?>
+                 <li><a href="logout.php">Log out</a></li>
+                 <li><a href="userprofile.php">Profile</a></li>
+                 <?php } else {?>
+                 <li><a href="signup.php">Sign up</a></li>
+                 <li><a href="login.php">Log in</a></li>
+                 <?php } ?>	
         </ul>
     </nav>
 	</header>

@@ -23,47 +23,68 @@ $stmt->execute();
 <html>
 	<head>
 		<title>Cinetrip - Delete Tip</title>
-		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="Cache-Control" content="no-transform" /> 
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	    <link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/organize.css">
 	
-		<link rel="stylesheet" type="text/css" href="css/main.css" />
-		<link rel="stylesheet" type="text/css" href="css/organize.css" />
+        <style type="text/css">
+			@media screen and (max-width:960px){
+				.tipsDelete{
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: #EBEBEB;
+	display:block; 
+	text-align:center;
+/*	margin-top: -1%;*/
+}
+
+.tipsDelete p{
+	font-family: "Arial Rounded Mt",arial;
+	font-size: 2.8em;
+	font-color:#2e2e2e;
+	padding-top: 50%;
+	padding-bottom: 3%; 
+	text-align: center;
+	margin:0 auto;
+	
+}
+
+.deleteInfo form input{
+	text-align: center;
+	margin-left: 10%;
+	margin-right: 3%;
+	width: 20%;
+	height: 5%;
+}
+.deleteInfo input[type='submit'] {
+	font-family: "Arial Rounded Mt",arial;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #ffab17;
+	border-radius: 5px;
+	margin:0 auto;
+	text-align: center;
+}
+
+.deleteInfo a{
+	font-size: .9em;
+}
+
+			}
+		
+		</style>
+		
 	
 	</head>
 	<body>
-		<div class="top">
-		<a href="homepage.php" class="logo">
-      		<img src="assets/logo-03.png" />
-    	</a>
-		<div class="userImage">
-			<a href="signin.php">
-			<img src="assets/userimage.png" />
-			</a>
-		</div>
-		<div class="topnav">
-		<ul>
-        <?php if(isset($_SESSION['logged-in']) && ($_SESSION['logged-in'] == true)){?>
-           <li><a href="logout.php">Log out</a></li>
-           <li><a href="userprofile.php">Profile</a></li>
-       <?php } else {?>
-           <li><a href="signup.php">Sign up</a></li>
-           <li><a href="login.php">Log in</a></li>
-       <?php } ?>		
-		</ul>
-		</div>
-		<div class="searchBar">  
-        	<form action="search-results.php" method="POST">
-            <input type = "text" name="filmsearch">
-            <button type="submit">
-			<img src="assets/search.png" href="locations.php"/>
-			</button>  
-        	</form>  
-    	</div>  
-	</div>
-	<header>
+		<header>
 		
-		<a href="homepage.php">
-			<img src="assets/logo-01.png" />
-		</a>
+		<div>
+			<img src="assets/logo-01.png" href="homepage.php" class="logo"/>
+		</div>
 		
     	<nav>
      	 <ul>
@@ -73,6 +94,13 @@ $stmt->execute();
         	 <li><a href="search.php">Search</a></li>
         	 <li><a href="about.php">About</a></li>
         	 <li><a href="contact.php">Contact</a></li>
+		 <?php if($_SESSION['logged-in'] == true){?>
+                 <li><a href="logout.php">Log out</a></li>
+                 <li><a href="userprofile.php">Profile</a></li>
+                 <?php } else {?>
+                 <li><a href="signup.php">Sign up</a></li>
+                 <li><a href="login.php">Log in</a></li>
+                 <?php } ?>	
         </ul>
     </nav>
 	</header>

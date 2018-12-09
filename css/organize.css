@@ -5,7 +5,7 @@ html,body{
 	padding:0;
 	margin:0;
 	width:100%;
-	height:auto;
+	height:100%;
 	overflow-x:hidden; 
 	font-family:"Arial Rounded Mt",arial;
 }
@@ -34,10 +34,10 @@ input,input:focus{
 /*login page*/
 .logForm{
 	width: 100%;
-	height: 768px;
+	height: 100%;
 	background-color: #EBEBEB;
 	text-align:center;
-	margin-top: 5%;
+	margin-top: -2%;
     justify-content: center;
     align-content: center;
 	
@@ -45,29 +45,29 @@ input,input:focus{
 
 .logForm h1{
 	font-family: "Arial Rounded Mt",arial;
-	font-size: 40px;
+	font-size: 3em;
 	padding-top: 6%;
 	padding-bottom: 1%;
 }
 
 .logForm form{
 	width: 40%;
-	height:28%;
+	height:30%;
     margin: 0 auto;
 	background-color:#ffffff;
 	border-radius:10px;
 	text-align: center;
-	padding: 5%;
+	padding: 2%;
 	
 }
 
 .logForm form input{
-	width: 300px;
+	width: 40%;
     display: block;
-    height: 40px;
+    height: 14%;
     border: 0;
     outline: 0;
-    margin:3% 20% 3% 27%; 
+    margin:0 auto;
 	text-align: center;
 	align-items: center;
     padding: 1%;
@@ -78,15 +78,14 @@ input,input:focus{
 .logForm input[type="text"] , .logForm input[type="password"]  {
             font-family: "Arial Rounded Mt",arial;
 			background-color: #EBEBEB;
-            font-size: 16px;
+            font-size: 1em;
             color: #787878;
 	        border-radius: 5px;
-	        
-        
+	        margin-bottom: 2%;
         }
  .logForm input[type='submit'] {
 	        font-family: "Arial Rounded Mt",arial;
-            font-size: 16px;
+            font-size: 1em;
             color: #ffffff;
             background-color: #ffab17;
 	        border-radius: 5px;
@@ -104,18 +103,18 @@ input,input:focus{
 /*Signup page*/
 .signupForm{
 	width: 100%;
-	hegiht:700px;
+	hegiht:100%;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;
-	margin-top:8%;
+/*	margin-top:-1%;*/
 }
 
 .signupForm h1{
 	text-align: center;
     font-family: "Arial Rounded Mt",arial;
-	font-size: 40px;
+	font-size: 3em;
 	padding-top: 1%;
 	margin-top:2%;
 }
@@ -123,7 +122,7 @@ input,input:focus{
 .signupForm .part1{
 	background-color:rgba(255,255,255,.8);
     width:50%;
-	height: 600px;
+	height: 60%;
 	margin-top: 1%;
     margin-left: .5%;
     margin-right: .5%;
@@ -137,7 +136,7 @@ input,input:focus{
 .signupForm .part2{
 	background-color:rgba(255,255,255,.8);
     width:50%;
-	height: 250px;
+	height: 25%;
 	margin-top: 3%;
     margin-left: .5%;
     margin-right: .5%;
@@ -148,21 +147,22 @@ input,input:focus{
 	border-radius: 5px;
 }
 .signupForm .part1 input{
-	width: 300px;
+	width: 40%;
     display: block;
-    height: 40px;
-    margin:3% 20% 3% 3%; 
+    height: 13%;
+    margin:0 auto;
 	text-align: center;
 	align-items: center;
-    padding: 1%;
+    padding: 1.5%;
 	justify-content: center;
     align-content: center;
+	
 }
 
 .signupForm .part1 input[type="text"], .signupForm .part1 input[type="firstname"] {
             font-family: "Arial Rounded Mt",arial;
 			background-color: #EBEBEB;
-            font-size: 16px;
+            font-size: 1em;
             color: #787878;
 	        border-radius: 5px;
 }
@@ -170,7 +170,7 @@ input,input:focus{
 .signupForm .part1 input[type="text"], .signupForm .part1 input[type="lastname"] {
             font-family: "Arial Rounded Mt",arial;
 			background-color: #EBEBEB;
-            font-size: 16px;
+            font-size: 1em;
             color: #787878;
 	        border-radius: 5px;
 }
@@ -178,7 +178,7 @@ input,input:focus{
 .signupForm .part1 input[type="text"], .signupForm .part1 input[type="username"] {
             font-family: "Arial Rounded Mt",arial;
 			background-color: #EBEBEB;
-            font-size: 16px;
+            font-size: 1em;
             color: #787878;
 	        border-radius: 5px;
 }
@@ -186,7 +186,7 @@ input,input:focus{
 .signupForm .part1 input[type="text"], .signupForm .part1 input[type="password"] {
             font-family: "Arial Rounded Mt",arial;
 			background-color: #EBEBEB;
-            font-size: 16px;
+            font-size: 1em;
             color: #787878;
 	        border-radius: 5px;
 }
@@ -194,7 +194,7 @@ input,input:focus{
 .signupForm .part1 input[type="email"], .signupForm .part1 input[type="email"] {
             font-family: "Arial Rounded Mt",arial;
 			background-color: #EBEBEB;
-            font-size: 16px;
+            font-size: 1em;
             color: #787878;
 	        border-radius: 5px;
 }
@@ -239,20 +239,20 @@ input,input:focus{
 /*Search page*/
 .searchSec{
 	width: 100%;
-	height:700px;
+	height:110%;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;
-	margin-top:6%;
+/*	margin-top:-1%;*/
 	
 }
 
 .searchSec h1{
 	font-family: "Arial Rounded Mt",arial;
-	font-size: 40px;
+	font-size: 3em;
 	font-color:#2e2e2e;
-	padding-top: 8%;
+	padding-top: 5%;
 	padding-bottom: 1%; 
 	text-align: center;
 	margin:0 auto;
@@ -260,7 +260,7 @@ input,input:focus{
 .searchSec .search{
 	background-color:rgba(255,255,255,.8);
     width:50%;
-	height: 250px;
+	height: 25%;
 	margin-top: 3%;
     margin-left: .5%;
     margin-right: .5%;
@@ -268,16 +268,16 @@ input,input:focus{
     display:inline-block;
     vertical-align: top;
 	text-align: center;
-	border-radius: 5px;
+	border-radius: .8em;
 	
 }
 
 .searchSec .search .searchBar1{
     width:60%;
-	margin-top: 5%;
+	margin-top: 1%;
     margin-left: .5%;
     margin-right: .5%;
-    margin-bottom: 10%;
+    margin-bottom: 1%;
     display:inline-block;
     vertical-align: top;
 	text-align: center;
@@ -286,81 +286,96 @@ input,input:focus{
 }
 
  .searchBar1 input {
-			width:200px;
-			height: 30px;
-            border: 2px solid #f72e05;  
-            border-radius: 3px;  
+			width:50%;
+			height: 20%;
+            border: 1px solid #f72e05;  
+            border-radius: 5px;  
             background: #ffffff;  
             color: #d9d9d9;
 			font-family: "Arial Rounded Mt",arial;
-			font-size: 16px;
+			font-size: 2em;
 			padding-left: 5px;
+	        margin-top: -50%;
         }  
  .searchBar1 button { 
-			width:36px;
-			height:36px;
-			border-radius: 3px;
+			width:40px;
+			height:40px;
             top: 0;  
             margin-right: 15px;  
-            background: #f72e05;  
-/*          radius: 3px 3px 3px 3px;  */
+            background: #f72e05;
+	        border-radius: 5px;
         }  
+.searchBar1 button img{
+	width: 28px;
+	height: 28px;
+}
 
 .search h2{
-	font-size: 30px;
+	font-size: 1.5em;
 	font-family: "Arial Rounded Mt",arial;
 	margin-top: 5%;
 	margin-bottom: 5%;
 }
 
-.search a img{
-	width:80px;
-	height:80px;
+.search img{
+	width:10%;
+	
 }
 
 /*Search Results Page*/
 .searchRes{
 	width: 100%;
-	height: 768px;
+	height:100%;
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;
-	margin-top: 8%;
+/*	margin-top: -1%;*/
 }
 .searchRes h2{
+	font-family: "Arial Rounded Mt",arial;
+	font-size: 2.5em;
+	font-color:#2e2e2e;
+	padding-top: 5%;
+	padding-bottom: 5%; 
+	text-align: center;
+	margin:0 auto;
 	
 }
 
 .searchRes .resuInfo{
 	background-color:rgba(255,255,255,.8);
-    width:20%;
-	height: 330px;
+    width:50%;
+	height: 35%;
 	margin-top: .5%;
     margin-left: .5%;
     margin-right: .5%;
-    margin-bottom: 10%;
+    margin-bottom: 3%;
     display:inline-block;
     vertical-align: top;
 	text-align: center;
 	border-radius: 5px;
+	padding: 5%;
 }
-re
+
+.searchRes .resuInfo a{
+	color: #787878;
+}
 
 /*About page*/
 .about{
 	width: 100%;
-	height: 768px;
+	height: 110%;
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;
-	margin-top: 5%;
+/*	margin-top: -1%;*/
 }
 
 .about h1{
 	font-family: "Arial Rounded Mt",arial;
-	font-size: 40px;
+	font-size: 3em;
 	font-color:#2e2e2e;
-	padding-top: 10%;
+	padding-top: 7%;
 	padding-bottom: 3%; 
 	text-align: center;
 	margin:0 auto;
@@ -369,7 +384,7 @@ re
 .about .grid{
 	background-color:rgba(255,255,255,.8);
     width:20%;
-	height: 330px;
+	height: 35%;
 	margin-top: .5%;
     margin-left: .5%;
     margin-right: .5%;
@@ -389,15 +404,15 @@ re
 
 .about .aboutbutton{
 	display: inline-block;
-	width: 120px;
-	height: 40px;
+	width: 45%;
+	height: 13%;
 	background-color: #ffab17;
 	
 	border-radius: 5%;
 }
 
 .about .aboutbutton p{
-	font-size: 14px;
+	font-size: .8em;
 	margin-top: 8%;
 	font-color: #ffffff;
 }
@@ -406,16 +421,18 @@ re
 
 .interestSec{
 	width: 100%;
-	height: 980px;
+	height: 100%;
+	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
-	margin-top: 8%;
-	align-items: center;
+	text-align:center;
+/*	margin-top: -1%;*/
+	
 }
 
 .interestSec h1{
 	font-family: "Arial Rounded Mt",arial;
-	font-size: 40px;
+	font-size: 3em;
 	font-color:#2e2e2e;
 	padding-top: 1%;
 	padding-bottom: .5%; 
@@ -425,7 +442,7 @@ re
 
 .interestSec h2{
 	font-family: "Arial Rounded Mt",arial;
-	font-size: 40px;
+	font-size: 2em;
 	font-color:#2e2e2e;
 	padding-top: 3%;
 	padding-bottom: 1%; 
@@ -443,16 +460,17 @@ h4{
 
 .interestSec .interestForm{
 	background-color:rgba(255,255,255,.8);
-    width:90%;
-	height: 630px;
+    width:25%;
+	height: 40%;
+	margin-top:0;
     margin-left: .5%;
     margin-right: .5%;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     display:inline-block;
     vertical-align: top;
+	text-align: center;
 	border-radius: 5px;
-	padding: 5%;
-	line-height: 100%;
+	
 }
 
 .interestForm label i{
@@ -462,13 +480,12 @@ h4{
 	border-radius: 4px;
 	display: inline-block;
 	vertical-align: middle;
-	margin-right: 5px;
-	
+	margin:2%;
 }
 
 .interestForm label input{
-	margin: 3%;
-	text-align: center;
+	margin: 10%;
+	float: left;
 }
 
 label input[type="checkbox"]:checked +i{
@@ -478,10 +495,10 @@ label input[type="checkbox"]:checked +i{
 }
 
 .interestForm #submit{
-	wdith:10%;
+	wdith: 10%;
 	height: 5%;
 	background-color: #ffab17;
-	font-size: 16px;
+	font-size: 1em;
 	font-color:#ffffff;
 	text-align: center;
 	border-radius: 5px; 
@@ -489,7 +506,7 @@ label input[type="checkbox"]:checked +i{
 
 .interestForm p{
 	text-align: center;
-	font-size: 14px;
+	font-size: .9em;
 	font-family:"Arial Rounded Mt",arial;
 	margin-top: 7%;
 }
@@ -497,18 +514,18 @@ label input[type="checkbox"]:checked +i{
 /*User Profile Page*/
 .profileSec{
 	width: 100%;
-	height: 700px;
+	height: 100%;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;
-	margin-top: 8%;
+/*	margin-top: -1%;*/
 	
 }
 
 .profileSec h1{
 	font-family: "Arial Rounded Mt",arial;
-	font-size: 40px;
+	font-size: 3em;
 	font-color:#2e2e2e;
 	padding-top: 3%;
 	padding-bottom: 3%; 
@@ -519,7 +536,7 @@ label input[type="checkbox"]:checked +i{
 .profileSec .info{
 	background-color:rgba(255,255,255,.8);
     width:25%;
-	height: 350px;
+	height: 40%;
 	margin-top:0;
     margin-left: .5%;
     margin-right: .5%;
@@ -539,15 +556,15 @@ label input[type="checkbox"]:checked +i{
 
 .profileSec .info p{
 	font-family:"Arial Rounded Mt",arial;
-	font-size:16px;
+	font-size:.9em;
 	margin:0 auto;
-	line-height: -5%；
+	line-height: -10%；
 	
 }
 
 .profileSec h2{
 	font-family: "Arial Rounded Mt",arial;
-	font-size: 30px;
+	font-size: 2em;
 	font-color:#2e2e2e;
 	padding-top: -3%;
 	padding-bottom:0; 
@@ -565,17 +582,17 @@ label input[type="checkbox"]:checked +i{
 /*Edit Profile Page*/
 .proEdit{
 	width: 100%;
-	height: 1000px;
+	height: 100%;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;
-	margin-top: 8%;
+/*	margin-top: -1%;*/
 }
 
 .proEdit h1{
 	font-family: "Arial Rounded Mt",arial;
-	font-size: 40px;
+	font-size: 3em;
 	font-color:#2e2e2e;
 	padding-top: 3%;
 	padding-bottom: 3%; 
@@ -585,8 +602,8 @@ label input[type="checkbox"]:checked +i{
 
 .proEdit .editInfo{
 	background-color:rgba(255,255,255,.8);
-    width:25%;
-	height: 800px;
+    width:40%;
+	height: 100%;
 	margin-top:0;
     margin-left: .5%;
     margin-right: .5%;
@@ -604,7 +621,7 @@ label input[type="checkbox"]:checked +i{
 
 .editInfo p3{
 	font-family: "Arial Rounded Mt",arial;
-	font-size: 22px;
+	font-size: 1em;
 	font-color:#2e2e2e;
 	padding-top: 1%;
 	padding-bottom: 1%; 
@@ -613,21 +630,21 @@ label input[type="checkbox"]:checked +i{
 }
 
 .editInfo input{
-	width:200px;
-    height: 30px;
-    border: 1px #AEAEAE;  
-    border-radius: 3px;  
+	width:30%;
+    height: 10%;
+    border: 1em #AEAEAE;  
+    border-radius: 5px;  
     background: #E2E2E2;  
     color: #d9d9d9;
 	font-family: "Arial Rounded Mt",arial;
-	font-size: 16px;
-	padding-left: 5px;
+	font-size: 1em;
+	padding-left: 1%;
 	margin: 2%;
 }
 
 .proEdit .editInfo input[type='submit'] {
 	        font-family: "Arial Rounded Mt",arial;
-            font-size: 16px;
+            font-size: 1em;
             color: #ffffff;
             background-color: #ffab17;
 	        border-radius: 5px;
@@ -642,9 +659,9 @@ label input[type="checkbox"]:checked +i{
 
 .proEdit .editBadges h2{
 	font-family: "Arial Rounded Mt",arial;
-	font-size: 30px;
+	font-size: 3em;
 	font-color:#2e2e2e;
-	padding-top: -3%;
+	padding-top: 3%;
 	padding-bottom:0; 
 	text-align: center;
 	margin:0 auto;
@@ -654,17 +671,17 @@ label input[type="checkbox"]:checked +i{
 
 .location{
 	width: 100%;
-	height: 700px;
+	height: 100%;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;
-	margin-top: 8%;
+/*	margin-top: -1%;*/
 }
 
 .location h1{
 	font-family: "Arial Rounded Mt",arial;
-	   font-size: 40px;
+	   font-size: 3em;
 	   font-color:#2e2e2e;
 	   padding-top: 3%;
 	   padding-bottom: 3%; 
@@ -675,7 +692,7 @@ label input[type="checkbox"]:checked +i{
 .location .locgrid{
 	background-color:rgba(255,255,255,.8);
     width:25%;
-	height: 600px;
+	height: 60%;
 	margin-top: .5%;
     margin-left: .5%;
     margin-right: .5%;
@@ -701,11 +718,11 @@ label input[type="checkbox"]:checked +i{
 }
 
 .location .locgrid #title{
-	font-size: 28px;
+	font-size: 2.5em;
 }
 
 .location .locgrid #mv{
-	font-size:12px;
+	font-size:.8em;
 	font-color:#2d2d2d;
 }
 
@@ -728,17 +745,17 @@ label input[type="checkbox"]:checked +i{
 
 .locMap{
 	width: 100%;
-	height: 1000px;
+	height: 100%;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;	
-	margin-top: -1%;
+/*	margin-top: -1%;*/
 }
 
 .locMap h1{
 	font-family: "Arial Rounded Mt",arial;
-	font-size: 30px;
+	font-size: 3em;
 	font-color:#2e2e2e;
 	padding-top: 3%;
 	padding-bottom: 1%; 
@@ -749,7 +766,7 @@ label input[type="checkbox"]:checked +i{
 .locMap .locInfo{
 	background-color:rgba(255,255,255,.8);
     width:50%;
-	height: 800px;
+	height: 80%;
 	margin-top: 1%;
     margin-left: 3%;
     margin-right: 3%;
@@ -768,7 +785,7 @@ label input[type="checkbox"]:checked +i{
 .locTips{
 	background-color:rgba(255,255,255,.8);
     width:50%;
-	height: 400px;
+	height: 50%;
 	margin-top: 1%;
     margin-left: 3%;
     margin-right: 3%;
@@ -782,7 +799,7 @@ label input[type="checkbox"]:checked +i{
 
 .locTips h2{
 	font-family: "Arial Rounded Mt",arial;
-	font-size: 20px;
+	font-size: 2.2em;
 	font-color:#2e2e2e;
 	padding-top: -2%;
 	padding-bottom: 1%; 
@@ -805,18 +822,18 @@ label input[type="checkbox"]:checked +i{
 
 .contact{
 	width: 100%;
-	height: 768px;
+	height: 100%;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;
-	margin-top: 8%;
+/*	margin-top: -1%;*/
 }
 
 .contact #contactForm{
 	background-color:rgba(255,255,255,.8);
     width:35%;
-	height: 500px;
+	height: 60%;
 	margin-top: 5%;
     margin-left: 3%;
     margin-right: 3%;
@@ -831,7 +848,7 @@ label input[type="checkbox"]:checked +i{
 .contact #contactForm input{
 	width: 50%;
     display: block;
-    height: 40px;
+    height: 10%;
     border: 0;
     outline: 0;
     margin:3% 20% 3% 27%; 
@@ -841,11 +858,12 @@ label input[type="checkbox"]:checked +i{
 	justify-content: center;
     align-content: center;
 	background-color: #DFDFDF;
+	border-radius: 5px;
 }
 .contact #contactForm textarea{
 	width: 50%;
     display: block;
-    height: 40px;
+    height: 10%;
     border: 0;
     outline: 0;
     margin:3% 20% 3% 27%; 
@@ -855,11 +873,12 @@ label input[type="checkbox"]:checked +i{
 	justify-content: center;
     align-content: center;
 	background-color: #DFDFDF;
+	border-radius: 5px;
 }
 
 .contact #contactForm input[type='submit'] {
 	        font-family: "Arial Rounded Mt",arial;
-            font-size: 16px;
+            font-size: .9em;
             color: #ffffff;
             background-color: #ffab17;
 	        border-radius: 5px;
@@ -868,12 +887,12 @@ label input[type="checkbox"]:checked +i{
 /*My tips*/
 .tips{
 	width: 100%;
-	height: 700px;
+	height: 100%;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;
-	margin-top: 6%;
+/*	margin-top: -1%;*/
 	
 }
 
@@ -892,17 +911,17 @@ label input[type="checkbox"]:checked +i{
 
 .tipsDelete{
 	width: 100%;
-	height: 760px;
+	height: 100%;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;
-	margin-top: 6%;
+/*	margin-top: -1%;*/
 }
 
 .tipsDelete p{
 	font-family: "Arial Rounded Mt",arial;
-	font-size: 28px;
+	font-size: 2.8em;
 	font-color:#2e2e2e;
 	padding-top: 20%;
 	padding-bottom: 3%; 
@@ -914,11 +933,12 @@ label input[type="checkbox"]:checked +i{
 	text-align: center;
 	margin-left: 10%;
 	margin-right: 3%;
-	width: 150px;
+	width: 10%;
+	height: 5%;
 }
 .deleteInfo input[type='submit'] {
 	font-family: "Arial Rounded Mt",arial;
-    font-size: 16px;
+    font-size: 1em;
     color: #ffffff;
     background-color: #ffab17;
 	border-radius: 5px;
@@ -927,7 +947,7 @@ label input[type="checkbox"]:checked +i{
 }
 
 .deleteInfo a{
-	font-size: 14px;
+	font-size: .9em;
 }
 
 
