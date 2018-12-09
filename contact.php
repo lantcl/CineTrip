@@ -21,11 +21,11 @@ $pdo = new PDO($dsn, $dbusername, $dbpassword);
 		<link rel="stylesheet" type="text/css" href="css/organize.css">
 		<link rel="stylesheet" media="screen and (max-width:960px)" href="css/small.css">
 	
-        <style type="text/css">
+         <style type="text/css">
 			@media screen and (max-width:960px){
 				.contact{
 	width: 100%;
-	height: 100%;
+	height: 800px;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
@@ -37,7 +37,7 @@ $pdo = new PDO($dsn, $dbusername, $dbpassword);
 	background-color:rgba(255,255,255,.8);
     width:80%;
 	height: 50%;
-	margin-top: 35%;
+	margin-top: 20%;
     margin-left: 3%;
     margin-right: 3%;
     margin-bottom: 3%;
@@ -92,6 +92,7 @@ $pdo = new PDO($dsn, $dbusername, $dbpassword);
 	
 </head>
 <body>
+<div class="mainContainer">
 	<header>
 		
 		<div>
@@ -130,11 +131,11 @@ $pdo = new PDO($dsn, $dbusername, $dbpassword);
 			<input type="submit" value="Send" id="sendBtn">
 		</div>
 	</div>
-	
+</div>
 	  <div class="footer">
    <footer>
         <a href="homepage.php">
-          <img src="assets/footer-logo.png" />
+          <img src="assets/logo-01.png" />
         </a>               
     <ul class="bottomNav">
         <li><a href="about.php" >About CineTrip</a></li>
