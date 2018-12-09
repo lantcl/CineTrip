@@ -8,8 +8,81 @@ $_SESSION['logged-in'] == true;
   <html>
     <head>
       <title>CineTrip About</title>
-      <link rel="stylesheet" href="css/main.css" />
-	  <link rel="stylesheet" href="css/organize.css"/>
+      <meta http-equiv="Cache-Control" content="no-transform" /> 
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	    <link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/organize.css">
+	
+        <style type="text/css">
+		.aboutInner img{
+	width: 50%;
+}
+	@media screen and (max-width:960px){
+				.about{
+	width: 100%;
+	height: 1600px;
+	background-color: #EBEBEB;
+	display:block; 
+	text-align:center;
+/*	margin-top: -1%;*/
+}
+
+.about h1{
+	font-family: "Arial Rounded Mt",arial;
+	font-size: 3em;
+	font-color:#2e2e2e;
+	padding-top: 7%;
+	padding-bottom: 3%; 
+	text-align: center;
+	margin:0 auto;
+}
+
+.about .grid{
+	background-color:rgba(255,255,255,.8);
+    width:80%;
+	height: 300px;
+	margin-top: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    display:inline-block;
+    vertical-align: top;
+	text-align: center;
+	border-radius: 5px;
+	padding: 2%;
+}
+
+.aboutInner{
+  border: 2px #303030;
+  margin:5%;
+  padding:4%;
+  display: inline-block;
+}
+
+.aboutInner img{
+	width: 30%;
+}
+
+.about .aboutbutton{
+	display: inline-block;
+	width: 45%;
+	height: 15%;
+	background-color: #ffab17;
+	
+	border-radius: 5px;
+}
+
+.about .aboutbutton p{
+	font-size: 1em;
+	margin-top: 8%;
+	font-color: #ffffff;
+}
+
+}
+
+			}
+		</style>
     </head>
     <body>
 	<header>
