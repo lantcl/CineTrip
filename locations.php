@@ -140,6 +140,7 @@ $row5 = $stmt5->fetch();
 		</style>
 </head>
 <body>
+<div class="mainContainer">
 	<header>
 		
 		<div>
@@ -192,11 +193,12 @@ $row5 = $stmt5->fetch();
 			</div>
 		</div>
 		</div>
+</div>
 	
    <div class="footer">
    <footer>
         <a href="homepage.php">
-          <img src="assets/footer-logo.png" />
+          <img src="assets/logo-01.png" />
         </a>               
     <ul class="bottomNav">
         <li><a href="about.php" >About CineTrip</a></li>
