@@ -58,6 +58,7 @@ $row5 = $stmt5->fetch();
 		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 	    <link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/organize.css">
+		<link rel="stylesheet" media="screen and (max-width:960px)" href="css/small.css">
 	
         <style type="text/css">
 			@media screen and (max-width:960px){
