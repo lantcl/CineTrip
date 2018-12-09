@@ -42,7 +42,7 @@ $dbpassword = "NkXHus3h!6V";
 					}
 					.profileSec{
 							width: 100%;
-							height: 90%;
+							height: 800px;
 							overflow: auto;
 							background-color: #EBEBEB;
 							display:block; 
@@ -101,7 +101,7 @@ $dbpassword = "NkXHus3h!6V";
 					}
 
 					.badges img{
-					width:8%;
+					width:12%;
 					margin-top: 3%;
 					margin-bottom: 2%;
 	 
@@ -110,6 +110,7 @@ $dbpassword = "NkXHus3h!6V";
 			
 			
 			</style>
+	
 	
 	
        </head>
@@ -174,7 +175,7 @@ $dbpassword = "NkXHus3h!6V";
    <div class="footer">
    <footer>
         <a href="homepage.php">
-          <img src="assets/footer-logo.png" />
+          <img src="assets/logo-01.png" />
         </a>               
     <ul class="bottomNav">
         <li><a href="about.php" >About CineTrip</a></li>
