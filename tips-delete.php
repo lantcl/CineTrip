@@ -81,6 +81,7 @@ $stmt->execute();
 	
 	</head>
 	<body>
+<div class="mainContainer">
 		<header>
 		
 		<div>
@@ -118,7 +119,7 @@ $stmt->execute();
 			<a href="mytips.php">Cancel</a>
 		</div>
 		</div>
-	
+</div>
    <div class="footer">
    <footer>
         <a href="homepage.php">
