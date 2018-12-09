@@ -23,6 +23,7 @@ $dbpassword = "NkXHus3h!6V";
 		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 	    <link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/organize.css">
+<link rel="stylesheet" media="screen and (max-width:960px)" href="css/small.css">
 	
         <style type="text/css">
 			@media screen and (max-width:960px){
@@ -50,7 +51,7 @@ $dbpassword = "NkXHus3h!6V";
 .proEdit .editInfo{
 	background-color:rgba(255,255,255,.8);
     width:85%;
-	height: 90%;
+	height: 650px;
 	margin-top:0;
     margin-left: 1%;
     margin-right: 1%;
@@ -62,8 +63,8 @@ $dbpassword = "NkXHus3h!6V";
 }
 
 .proEdit .editInfo img{
-	width: 30%;
-	margin: 10%;
+	width: 25%;
+	margin: 5%;
 }
 
 .editInfo p3{
@@ -78,7 +79,7 @@ $dbpassword = "NkXHus3h!6V";
 
 .editInfo input{
 	width:40%;
-    height: 15%;
+    height: 20%;
     border: 1em #AEAEAE;  
     border-radius: 5px;  
     background: #E2E2E2;  
@@ -86,7 +87,7 @@ $dbpassword = "NkXHus3h!6V";
 	font-family: "Arial Rounded Mt",arial;
 	font-size: 1em;
 	padding-left: 1%;
-	margin: 4%;
+	margin: 2%;
 }
 
 .proEdit .editInfo input[type='submit'] {
@@ -96,10 +97,11 @@ $dbpassword = "NkXHus3h!6V";
             background-color: #ffab17;
 	        border-radius: 5px;
 	        margin:0 auto;
+	
 }
 
 .editBadges img{
-	width:15%;
+	width:12%;
 	margin-top: .5%;
 	margin-bottom: 5%;
 }
@@ -118,6 +120,7 @@ $dbpassword = "NkXHus3h!6V";
 		</style>
 </head>
 <body>
+<div class="mainContainer">
 	<header>
 		
 		<div>
@@ -190,12 +193,13 @@ $dbpassword = "NkXHus3h!6V";
 		<img src="images-profile/10_badge_director.jpg" alt="Director" />
 	</div>
 	</div>
+</div>
 
 
                 <div class="footer">
    <footer>
         <a href="homepage.php">
-          <img src="assets/footer-logo.png" />
+          <img src="assets/logo-01.png" />
         </a>               
     <ul class="bottomNav">
         <li><a href="about.php" >About CineTrip</a></li>
