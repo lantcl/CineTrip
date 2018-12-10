@@ -171,7 +171,6 @@ $dbpassword = "NkXHus3h!6V";
        		 <li class="current"><a href="homepage.php">Home</a></li>
         	 <li><a href="browse-locations.php">Locations</a></li>
         	 <li><a href="search.php">Search</a></li>
-        	 <li><a href="about.php">About</a></li>
         	 <li><a href="contact.php">Contact</a></li>
 		 <?php if($_SESSION['logged-in'] == true){?>
                  <li><a href="logout.php">Log out</a></li>
