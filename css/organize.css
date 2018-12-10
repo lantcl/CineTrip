@@ -696,12 +696,12 @@ label input[type="checkbox"]:checked +i{
 
 .location .locgrid{
 	background-color:rgba(255,255,255,.8);
-    width:25%;
-	height: 60%;
+    width:60%;
+	height: 8100px;
 	margin-top: .5%;
     margin-left: .5%;
     margin-right: .5%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     display:inline-block;
     vertical-align: top;
 	text-align: center;
@@ -710,25 +710,26 @@ label input[type="checkbox"]:checked +i{
 
 .location .locgrid .locinner{
     border: 2px #303030;
-    margin:5%;
-    padding:4%;
+    margin:3%;
+    padding:3%;
     display: block;
 }
 
 .location .locgrid .locinner img{
-	width:100%;
-	height:100%;
+	width:70%;
 	border-radius: 5px;
 	
 }
 
 .location .locgrid #title{
 	font-size: 2.5em;
+	text-align: center;
 }
 
 .location .locgrid #mv{
 	font-size:.8em;
 	font-color:#2d2d2d;
+	text-align: center;
 }
 
 .location .locgrid .locinner .buttonView {
@@ -736,7 +737,7 @@ label input[type="checkbox"]:checked +i{
 	height: 28px;
 	background: #ffab17;
 	border-radius: 5px;
-	margin-left: 5%;
+	margin-left: 10%;
 	margin-right: 10%;
 	align-items: center;
 	display: inline-block;
