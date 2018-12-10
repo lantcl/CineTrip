@@ -170,6 +170,7 @@ $row5 = $stmt5->fetch();
 			<div class="locMap">
 			<h1><?php echo($row["locationname"]); ?></h1>
 			<p><?php echo($row["address"]); ?></p>
+			<a href=""><img src="assets/grey-bookmark.png" href="#" id="bookmark"/></a>
 			<div class="locInfo">
 			
 			<img src="imageslocations/<?php echo($row5["imagename"]); ?>" />
@@ -184,12 +185,10 @@ $row5 = $stmt5->fetch();
 			<h2>Tips posted by other users</h2>
 			<div class="locInfo2">
 				<img id="comment-thumbnail" src="images-profile/<?php echo($row3["profilepic"]); ?>" />
-				<h3>Posted by<?php echo($row3["username"]); ?></h3>
+				<h3>Posted by <?php echo($row3["username"]); ?></h3>
 				<p><?php echo($row3["tip"]); ?></p>
-				<ul>
-					<a href=""><img src="assets/grey-bookmark.png" href="#" id="bookmark"/></a>
+					
 					<a href=""><img src="assets/reply.png" href="#" id="reply"/></a>
-				</ul>
 			</div>
 		</div>
 		</div>
