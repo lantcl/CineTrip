@@ -30,8 +30,9 @@ function addMsgFunction(e) {
 	contactForm.remove();
 	var newPTag = document.createElement("p");
 	var newH2Tag = document.createElement("h2");
+	var block = document.getElementById("sendSuccess");
 	newH2Tag.innerHTML = "Thank you!"
 	newPTag.innerHTML = "Your message has been sent, and we will get back to you shortly.";
-	document.getElementById("msgPg").appendChild(newH2Tag);
-	document.getElementById("msgPg").appendChild(newPTag);
+	block.appendChild(newH2Tag);
+	block.appendChild(newPTag);
 }
