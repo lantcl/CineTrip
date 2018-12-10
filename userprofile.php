@@ -164,7 +164,7 @@ $bookmarks->execute();
 	 <div class="badges">
         <?php while($row = $bookmarks->fetch()){ ?>
         <a href="locations.php?id=<?php echo($row["id"]);?>"><p><?php echo($row["locationname"]);?></p></a>
-        <img src="assets/red-bookmark.png>" alt="bookmark">
+        <img src="assets/red-bookmark.png" alt="bookmark">
        <?php } ?>
 	</div>
 	
