@@ -19,7 +19,7 @@ $row = $stmt->fetch();
 // $row2 = $stmt2->fetch();
 
 //user tips
-$stmt3 = $pdo->prepare("SELECT `users`.`username`, `users`.`profilepic`, `locations`.`locationname`, `location-user-tips`.`userid`, `location-user-tips`.`locationid`, `location-user-tips`.`tip`, `location-user-tips`.`dateadded` FROM(`users`INNER JOIN `location-user-tips`ON `location-user-tips`.`userid` = `users`.`id`) INNER JOIN `locations` ON `location-user-tips`.`locationid` = `locations`.`id` WHERE `locations`.`id` = '$id'");
+$stmt3 = $pdo->prepare("SELECT `users`.`username`, `users`.`profilepic`, `locations`.`locationname`, `location-user-tips`.`userid`, `location-user-tips`.`locationid`, `location-user-tips`.`tip`, `location-user-tips`.`dateadded` FROM(`users`INNER JOIN `location-user-tips` ON `location-user-tips`.`userid` = `users`.`id`) INNER JOIN `locations` ON `location-user-tips`.`locationid` = `locations`.`id` WHERE `locations`.`id` = '$id'");
 $stmt3->execute();
 $row3 = $stmt3->fetch();
 
@@ -184,7 +184,9 @@ $row5 = $stmt5->fetch();
 		<div class="locTips">
 			<h2>Tips posted by other users</h2>
 			<div class="locInfo2">
-				<?php while($row3->stmt3->fetch()) { ?>
+				<?php 
+				while($row3 = $stmt3->fetch()) {  
+					?>
 				<img id="comment-thumbnail" src="images-profile/<?php echo($row3["profilepic"]); ?>" />
 				<h3>Posted by <?php echo($row3["username"]); ?></h3>
 				<p><?php echo($row3["tip"]); ?></p>
