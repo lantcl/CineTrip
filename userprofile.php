@@ -157,7 +157,10 @@ $bookmarks->execute();
             <img src="images-profile/<?php echo($row["profilepic"]);?>" alt="profile pic"><br>
             <h2><?php echo($row["firstname"].' '.$row["lastname"]);?></h2>
             <p><?php echo($row["gender"]);?></p>
-            <p><?php echo($row["email"]);?></p>
+            <p>Location: <?php echo($row["location"]);?></p>
+            <p>User Type: <?php echo($row["reason"]);?></p>
+            <p><?php echo($row["email"]);?></p><br>
+            <a href="profile-edit.php"><p>Edit Profile</p></a>
        <?php } ?>
 	 </div>
 	 <h2>Bookmarked Locations</h2><br>
