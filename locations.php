@@ -21,7 +21,6 @@ $row = $stmt->fetch();
 //user tips
 $stmt3 = $pdo->prepare("SELECT `users`.`username`, `users`.`profilepic`, `locations`.`locationname`, `location-user-tips`.`userid`, `location-user-tips`.`locationid`, `location-user-tips`.`tip`, `location-user-tips`.`dateadded` FROM(`users`INNER JOIN `location-user-tips` ON `location-user-tips`.`userid` = `users`.`id`) INNER JOIN `locations` ON `location-user-tips`.`locationid` = `locations`.`id` WHERE `locations`.`id` = '$id'");
 $stmt3->execute();
-$row3 = $stmt3->fetch();
 
 //location trivia
 $stmt4 = $pdo->prepare("SELECT `locations`.`locationname`, `films-locations`.`locationid`, `films-locations`.`trivia` FROM `locations` INNER JOIN `films-locations` ON `locations`.`id` = `films-locations`.`locationid` WHERE `locations`.`id` = '$id'");
