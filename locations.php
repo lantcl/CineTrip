@@ -19,17 +19,17 @@ $row = $stmt->fetch();
 // $row2 = $stmt2->fetch();
 
 //user tips
-$stmt3 = $pdo->prepare("SELECT `users`.`id`, `users`.`username`, `users`.`profilepic`, `locations`.`id`, `locations`.`locationname`, `location-user-tips`.`userid`, `location-user-tips`.`locationid`, `location-user-tips`.`tip`, `location-user-tips`.`dateadded` FROM(`users`INNER JOIN `location-user-tips` ON `users`.`id` = `location-user-tips`.`userid`) INNER JOIN `locations`ON `location-user-tips`.`locationid` = `locations`.`id` WHERE `locations`.`id` = '$id'");
+$stmt3 = $pdo->prepare("SELECT `users`.`username`, `users`.`profilepic`, `locations`.`locationname`, `location-user-tips`.`userid`, `location-user-tips`.`locationid`, `location-user-tips`.`tip`, `location-user-tips`.`dateadded` FROM(`users`INNER JOIN `location-user-tips`ON `location-user-tips`.`userid` = `users`.`id`) INNER JOIN `locations` ON `location-user-tips`.`locationid` = `locations`.`id` WHERE `locations`.`id` = '$id'");
 $stmt3->execute();
 $row3 = $stmt3->fetch();
 
 //location trivia
-$stmt4 = $pdo->prepare("SELECT `locations`.`id`, `locations`.`locationname`, `films`.`id`, `films`.`title`, `films-locations`.`locationid`, `films-locations`.`filmid`, `films-locations`.`trivia` FROM (`locations` INNER JOIN `films-locations` ON `locations`.`id` = `films-locations`.`id`) INNER JOIN `films`ON `films-locations`.`filmid` = `films`.`id` WHERE `locations`.`id` = '$id'");
+$stmt4 = $pdo->prepare("SELECT `locations`.`locationname`, `films-locations`.`locationid`, `films-locations`.`trivia` FROM `locations` INNER JOIN `films-locations` ON `locations`.`id` = `films-locations`.`locationid` WHERE `locations`.`id` = '$id'");
 $stmt4->execute();
 $row4 = $stmt4->fetch();
 
 //location images
-$stmt5 = $pdo->prepare("SELECT `locations`.`id`, `locations`.`locationname`, `films`.`id`, `films`.`title`, `location-photos`.`filmid`, `location-photos`.`locationid`, `location-photos`.`imagename` FROM (`locations` INNER JOIN `location-photos` ON `locations`.`id` = `location-photos`.`locationid`) INNER JOIN `films` ON `location-photos`.`filmid` = `films`.`id` WHERE `locations`.`id` = '$id'");
+$stmt5 = $pdo->prepare("SELECT `locations`.`locationname`, `location-photos`.`locationid`, `location-photos`.`imagename` FROM `locations`INNER JOIN `location-photos` ON `locations`.`id` = `location-photos`.`locationid` WHERE `locations`.`id` = '$id'");
 $stmt5->execute();
 $row5 = $stmt5->fetch();
 
