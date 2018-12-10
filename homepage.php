@@ -32,7 +32,7 @@ $stmt2->execute();
 	<header>
 		
 		<div>
-			<img src="assets/logo-01.png" href="homepage.php" class="logo"/>
+			<a href="homepage.php"><img src="assets/logo-01.png" href="homepage.php" class="logo"/></a>
 		</div>
 		
     	<nav>
