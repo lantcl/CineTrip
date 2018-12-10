@@ -170,7 +170,7 @@ $director->execute();
         </div>
 			
         </div>
-		    </div>
+		    
    <div class="footer">
    <footer>
         <a href="homepage.php">
@@ -182,7 +182,8 @@ $director->execute();
         <li><a href="#">Privacy policy</a></li>
     </ul>
     </footer>
-	</div>   
+	</div>
+		</div>   
     <script type="text/javascript" src="javascript/script.js"></script>
     </body>
 </html>
