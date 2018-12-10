@@ -184,9 +184,11 @@ $row5 = $stmt5->fetch();
 		<div class="locTips">
 			<h2>Tips posted by other users</h2>
 			<div class="locInfo2">
+				<?php while($row3->stmt3->fetch()) { ?>
 				<img id="comment-thumbnail" src="images-profile/<?php echo($row3["profilepic"]); ?>" />
 				<h3>Posted by <?php echo($row3["username"]); ?></h3>
 				<p><?php echo($row3["tip"]); ?></p>
+				<?php } ?>	
 					<!-- 
 					<a href=""><img src="assets/reply.png" href="#" id="reply"/></a> -->
 			</div>
