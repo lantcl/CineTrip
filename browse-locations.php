@@ -8,7 +8,7 @@ $dbpassword = "NkXHus3h!6V";
 
 $pdo = new PDO($dsn, $dbusername, $dbpassword);
 
-$stmt = $pdo->prepare("SELECT `locations`.`id`, `locations`.`locationname`, `locations`.`address`, `locations`.`featuredimg`, `films`.`id`, `films`.`title` FROM (`films` INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id`) INNER JOIN `locations`ON `films-locations`.`locationid` = `locations`.`id`");
+$stmt = $pdo->prepare("SELECT `films-locations`.`locationid`, `locations`.`locationname`, `locations`.`address`, `locations`.`featuredimg`, `films-locations`.`filmid`, `films`.`title` FROM (`films` INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id`) INNER JOIN `locations`ON `films-locations`.`locationid` = `locations`.`id`");
 $stmt->execute();
 
 ?>
@@ -61,7 +61,7 @@ $stmt->execute();
 			<p id="title"><?php echo($row["locationname"]); ?></p>
 	    	<p id="mv">Related movie:<?php echo($row["title"]); ?></p>
 	   		<p><?php echo($row["address"]); ?></p>
-			<a href="locations.php?id=<?php echo($row["id"]);?>">
+			<a href="locations.php?id=<?php echo($row["locationid"]);?>">
 			<button type="button" class="buttonView">
 		   	 View More
 			</button>
