@@ -181,10 +181,10 @@ $row5 = $stmt5->fetch();
 				
 	
 		<div class="locTips">
-			<h2>Tips</h2>
+			<h2>Tips posted by other users</h2>
 			<div class="locInfo2">
 				<img id="comment-thumbnail" src="images-profile/<?php echo($row3["profilepic"]); ?>" />
-				<h3><?php echo($row3["username"]); ?></h3>
+				<h3>Posted by<?php echo($row3["username"]); ?></h3>
 				<p><?php echo($row3["tip"]); ?></p>
 				<ul>
 					<a href=""><img src="assets/grey-bookmark.png" href="#" id="bookmark"/></a>
