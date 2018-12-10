@@ -12,7 +12,7 @@ $stmt = $pdo->prepare("SELECT * FROM `locations` WHERE `featured` = '1'");
 $stmt->execute();
 $row = $stmt->fetch();
 
-$stmt2 = $pdo->prepare("SELECT `locations`.`id`, `locations`.`locationname`, `locations`.`address`, `locations`.`featuredimg`, `films`.`id`, `films`.`title`, `films-locations`.`locationid`, `films-locations`.`filmid` FROM (`locations` INNER JOIN `films-locations` ON `locations`.`id` = `films-locations`.`id`) INNER JOIN `films`ON `films-locations`.`filmid` = `films`.`id` LIMIT 3;");
+$stmt2 = $pdo->prepare("SELECT `locations`.`id`, `locations`.`locationname`, `locations`.`address`, `locations`.`featuredimg`, `films`.`id`, `films`.`title` FROM (`films` INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id`) INNER JOIN `locations`ON `films-locations`.`locationid` = `locations`.`id` LIMIT 3;");
 $stmt2->execute();
 
 ?>
@@ -71,65 +71,24 @@ $stmt2->execute();
    </section>
 	
 <!--Recommend Locations-->
-	<div class="rls">
-		
-		<h1>Popular Locations</h1>
-		<div id="box1" class="grid">
-		<?php while($row = $stmt1->fetch()) {
-                   //echo($row["email"]); //or $row[0];
-        ?>
-		<div class="inner">
-		<img src="imageslocations/elginoutside.jpg" />
-		<p id="title"><?php echo($row["locationname"]); ?></p>
-        <p id="mv">related movie:The Shape Of Water</p>
-        <p><?php echo($row["address"]); ?></p>
-			<a href="locations.php">
-			<button type="button" class="buttonView">
-		    View More
-		</button>
-		</a>
+  <div class="rls">  
+    <h1>Popular Locations</h1>
+    <div class="grid">
+    <?php while($row2 = $stmt2->fetch()){ ?>
+        <div class="inner">
+          <img src="imageslocations/<?php echo($row2["featuredimg"]); ?>" />
+          <p id="title"><?php echo($row2["locationname"]); ?></p>
+          <p id="mv">Related movie:<?php echo($row2["title"]); ?></p>
+          <p><?php echo($row2["address"]); ?></p>
+          <a href="locations.php?id=<?php echo($row2["id"]);?>">
+          <button type="button" class="buttonView">
+             View More
+          </button>
+          </a>
         </div>
-        <?php }?>
-		</div>
-		
-		<div id="box2" class="grid">
-		<?php while($row = $stmt2->fetch()) {
-                   //echo($row["email"]); //or $row[0];
-        ?>
-		<div class="inner">
-		<img src="imageslocations/graffiti.jpg" />
-		<p id="title"><?php echo($row["locationname"]); ?></p>
-        <p id="mv">related movie:The Shape Of Water</p>
-        <p><?php echo($row["address"]); ?></p>
-		<a href="locations.php">
-			<button type="button" class="buttonView">
-		    View More
-		</button>
-		</a>
-        </div>
-        <?php }?>
-		</div>
-		
-		<div id="box3" class="grid">
-		<?php while($row = $stmt3->fetch()) {
-                   //echo($row["email"]); //or $row[0];
-        ?>
-		<div class="inner">
-		<img src="imageslocations/dunlap3.jpg" />
-		<p id="title"><?php echo($row["locationname"]); ?></p>
-        <p id="mv">related TV show:NBC Television series Hannibal</p>
-        <p><?php echo($row["address"]); ?></p>
-		<a href="locations.php">
-			<button type="button" class="buttonView">
-		    View More
-		</button>
-		</a>
-        </div>
-        <?php }?>
-		</div>
-		
-	</div>
-
+        <?php } ?>
+      </div>
+  </div>
    <div class="footer">
    <footer>
         <a href="homepage.php">
