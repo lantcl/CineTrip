@@ -1,16 +1,11 @@
 <?php
-
 session_start(); 
-
 $dsn = "mysql:host=localhost;dbname=lantc_cinetrip;charset=utf8mb4";
 $dbusername = "lantc";
 $dbpassword = "NkXHus3h!6V";
-
 $pdo = new PDO($dsn, $dbusername, $dbpassword);
-
 $stmt = $pdo->prepare("SELECT `films-locations`.`locationid`, `locations`.`locationname`, `locations`.`address`, `locations`.`featuredimg`, `films-locations`.`filmid`, `films`.`title` FROM (`films` INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id`) INNER JOIN `locations`ON `films-locations`.`locationid` = `locations`.`id`");
 $stmt->execute();
-
 ?>
 
 
@@ -24,9 +19,88 @@ $stmt->execute();
 	    <link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/organize.css">
 		<link rel="stylesheet" media="screen and (max-width:960px)" href="css/small.css">
+	    <style type="text/css">
+			@media screen and (max-width:960px){
+				.location{
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: #EBEBEB;
+	display:block; 
+	text-align:center;
+/*	margin-top: -1%;*/
+}
+
+.location h1{
+	font-family: "Arial Rounded Mt",arial;
+	   font-size: 3em;
+	   font-color:#2e2e2e;
+	   padding-top: 3%;
+	   padding-bottom: 3%; 
+	   text-align: center;
+	   margin:0 auto;
+}
+
+.location .locgrid{
+	background-color:rgba(255,255,255,.8);
+    width:80%;
+	height: 4100px;
+	margin-top: .5%;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-bottom: 5%;
+    display:inline-block;
+    vertical-align: top;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.location .locgrid .locinner{
+    border: 2px #303030;
+    margin:3%;
+    padding:3%;
+    display: block;
+}
+
+.location .locgrid .locinner img{
+	width:70%;
+	border-radius: 5px;
+	
+}
+
+.location .locgrid #title{
+	font-size: 2.5em;
+	text-align: center;
+}
+
+.location .locgrid #mv{
+	font-size:.8em;
+	font-color:#2d2d2d;
+	text-align: center;
+}
+
+.location .locgrid .locinner .buttonView {
+	width: 109px;
+	height: 28px;
+	background: #ffab17;
+	border-radius: 5px;
+	margin-left: 10%;
+	margin-right: 10%;
+	align-items: center;
+	display: inline-block;
+	text-align: center;
+	font-family: "Arial Rounded Mt",arial;
+	color: #ffffff;
+	overflow: hidden;
+}
+
+			}
+			
+	</style>
 	
 </head>
 <body>
+	<div class="mainContainer">
 	<header>
 		
 		<div>
@@ -70,11 +144,12 @@ $stmt->execute();
 		<?php } ?>
 			</div>
 	</main>
+		</div>
 	
 	 <div class="footer">
    <footer>
         <a href="homepage.php">
-          <img src="assets/footer-logo.png" />
+          <img src="assets/logo-01.png" />
         </a>               
     <ul class="bottomNav">
         <li><a href="about.php" >About CineTrip</a></li>
