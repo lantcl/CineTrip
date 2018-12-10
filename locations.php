@@ -170,7 +170,8 @@ $row5 = $stmt5->fetch();
 			<div class="locMap">
 			<h1><?php echo($row["locationname"]); ?></h1>
 			<p><?php echo($row["address"]); ?></p>
-			<a href=""><img src="assets/grey-bookmark.png" href="#" id="bookmark"/></a>
+			<img src="assets/grey-bookmark.png" id="pic"/>
+			<!-- <a href=""><img src="assets/grey-bookmark.png" id="pic"/></a> -->
 			<div class="locInfo">
 			
 			<img src="imageslocations/<?php echo($row5["imagename"]); ?>" />
@@ -206,5 +207,6 @@ $row5 = $stmt5->fetch();
     </ul>
     </footer>
 	</div>
+	<script src="javascript/add_bookmark.js"></script>
 	</body>
 </html>
