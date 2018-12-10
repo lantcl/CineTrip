@@ -6,7 +6,6 @@ $lastname = $_POST['lastname'];
 $username = $_POST['username'];
 $password = $_POST['password'];
 $email = $_POST['email'];
-$birthday = $_POST['birthday'];
 $gender = $_POST['gender'];
 $location = $_POST['location'];
 $reason = $_POST['reason'];
@@ -28,7 +27,7 @@ $dbpassword = "NkXHus3h!6V";
 $pdo = new PDO($dsn, $dbusername, $dbpassword); 
 
 //submit data to users table
-$stmt = $pdo->prepare("INSERT INTO `users` (`id`, `firstname`, `lastname`, `username`, `password`, `email`, `birthday`, `gender`, `profilepic`, `location`, `reason`) VALUES (NULL, '$firstname', '$lastname', '$username', '$password', '$email', '$birthday', '$gender', '$filename', '$location', '$reason');");
+$stmt = $pdo->prepare("INSERT INTO `users` (`id`, `firstname`, `lastname`, `username`, `password`, `email`, `gender`, `profilepic`, `location`, `reason`) VALUES (NULL, '$firstname', '$lastname', '$username', '$password', '$email', '$gender', '$filename', '$location', '$reason');");
 
 $stmt->execute();
 

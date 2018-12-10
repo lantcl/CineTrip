@@ -6,9 +6,20 @@ if($_SESSION['logged-in'] == false){
 	?><a href="login.php">Go to login</a><?php
 }else{
 
+$id = $_SESSION['id'];
+
 $dsn = "mysql:host=localhost;dbname=lantc_cinetrip;charset=utf8mb4";
 $dbusername = "lantc";
 $dbpassword = "NkXHus3h!6V";
+
+$pdo = new PDO($dsn, $dbusername, $dbpassword);
+
+$userInfo = $pdo->prepare("SELECT * FROM `users` WHERE `id` = $id");
+$userInfo->execute();
+
+
+$bookmarks = $pdo->prepare("SELECT `users-savedlocations`.`userid`, `locations`.`id`, `locations`.`locationname` FROM  `users-savedlocations` INNER JOIN `locations` ON `users-savedlocations`.`locationid` = `locations`.`id` WHERE `userid` = $id");
+$bookmarks->execute();
 
 ?>
 
@@ -28,8 +39,6 @@ $dbpassword = "NkXHus3h!6V";
 			<style type="text/css">
 			@media screen and (max-width:960px){
 
-
-					
 					
 					body{
 						font-size: .9em;
@@ -141,32 +150,22 @@ $dbpassword = "NkXHus3h!6V";
 	</header>
 	
 	<div class="profileSec">
-	<h1> User Profile</h1>
-	
+	<h1>My Profile</h1>
 
      <div class="info">
-	 <a href="images-profile/profile_01.png"/>
-		<img src="images-profile/profile_01.png" alt="Profile Photo">
-	 </a><br>
-	 
-     <p>Username<br><br>Age<br><br>Favourite Genres</p>
-	
-	 
-	 </div><br>
-
-	 <h2>Badges earned</h2><br>
+        <?php while($row = $userInfo->fetch()){ ?>
+            <img src="images-profile/<?php echo($row["profilepic"]);?>" alt="profile pic"><br>
+            <h2><?php echo($row["firstname"].' '.$row["lastname"]);?></h2>
+            <p><?php echo($row["gender"]);?></p>
+            <p><?php echo($row["email"]);?></p>
+       <?php } ?>
+	 </div>
+	 <h2>Bookmarked Locations</h2><br>
 	 <div class="badges">
-
-		<img src="images-profile/01_badge_horror.jpg" alt="Horror" >
-		<img src="images-profile/02_badge_scifi.jpg" alt="Sci-Fi" />
-		<img src="images-profile/03_badge_romance.jpg" alt="Romance" />
-		<img src="images-profile/04_badge_comedy.jpg" alt="Comedy" />
-		<img src="images-profile/05_badge_drama.jpg" alt="Drama" />
-		<img src="images-profile/06_badge_fan.jpg" alt="Fan" />
-		<img src="images-profile/07_badge_superfan.jpg" alt="Superfan" />
-		<img src="images-profile/08_badge_filmbuff.jpg" alt="Film Buff" />
-		<img src="images-profile/09_badge_expert.jpg" alt="Expert" />
-		<img src="images-profile/10_badge_director.jpg" alt="Director" />
+        <?php while($row = $bookmarks->fetch()){ ?>
+        <a href="locations.php?id=<?php echo($row["id"]);?>"><p><?php echo($row["locationname"]);?></p></a>
+        <img src="assets/red-bookmark.png>" alt="bookmark">
+       <?php } ?>
 	</div>
 	
   </div>

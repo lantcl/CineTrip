@@ -188,13 +188,12 @@ $dbpassword = "NkXHus3h!6V";
 		<div class="part1">
         <form action="signup-process.php" method="POST" enctype="multipart/form-data"> 
         <h2>Make an Account</h2>
-        <input type="text" placeholer="First Name" name="firstname" />
-        <input type="text" placeholer="Last Name" name="lastname" />
-        <input type="email" placeholer="Email" name="email" />
-        <input type="text" placeholer="Username" name="username" />
-        <input type="text" placeholer="Password" name="password" />
-        Birthday:<input type="date" name="birthday" min="1909-12-31" max="2018-12-31" />
-        Gender:<select name="gender">
+        First Name <input type="text" placeholer="First Name" name="firstname" />
+        Last Name <input type="text" placeholer="Last Name" name="lastname" />
+        Email <input type="email" placeholer="Email" name="email" />
+        Username <input type="text" placeholer="Username" name="username" />
+        Password <input type="text" placeholer="Password" name="password" />
+        Gender <select name="gender">
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                         <option value="nonbinary">Non-Binary</option>
@@ -225,7 +224,7 @@ $dbpassword = "NkXHus3h!6V";
                         <option value="none">Prefer not to say</option>
                     </select></br>                                                            
 
-                <input type="submit" />
+                <input type="submit" value="submit"/>
                 </form>
         
 		</div>
