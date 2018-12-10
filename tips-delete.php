@@ -34,7 +34,7 @@ $stmt->execute();
 			@media screen and (max-width:960px){
 				.tipsDelete{
 	width: 100%;
-	height: 100%;
+	height: 1100px;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
@@ -46,7 +46,7 @@ $stmt->execute();
 	font-family: "Arial Rounded Mt",arial;
 	font-size: 2.8em;
 	font-color:#2e2e2e;
-	padding-top: 50%;
+	padding-top: 70%;
 	padding-bottom: 3%; 
 	text-align: center;
 	margin:0 auto;
@@ -118,7 +118,7 @@ $stmt->execute();
 			<a href="mytips.php">Cancel</a>
 		</div>
 		</div>
-</div>
+
    <div class="footer">
    <footer>
         <a href="homepage.php">
@@ -130,6 +130,7 @@ $stmt->execute();
         <li><a href="#">Privacy policy</a></li>
     </ul>
     </footer>
+	</div>
 	</div>
 	</body>
 </html>

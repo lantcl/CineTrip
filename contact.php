@@ -25,7 +25,7 @@ $pdo = new PDO($dsn, $dbusername, $dbpassword);
 			@media screen and (max-width:960px){
 				.contact{
 	width: 100%;
-	height: 800px;
+	height: 1000px;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
@@ -96,7 +96,7 @@ $pdo = new PDO($dsn, $dbusername, $dbpassword);
 	<header>
 		
 		<div>
-			<a href="homepage.php"><img src="assets/logo-01.png" href="homepage.php" class="logo"/></a>
+			<img src="assets/logo-01.png" href="homepage.php" class="logo"/>
 		</div>
 		
     	<nav>
@@ -105,6 +105,7 @@ $pdo = new PDO($dsn, $dbusername, $dbpassword);
        		 <li class="current"><a href="homepage.php">Home</a></li>
         	 <li><a href="browse-locations.php">Locations</a></li>
         	 <li><a href="search.php">Search</a></li>
+        	 <li><a href="about.php">About</a></li>
         	 <li><a href="contact.php">Contact</a></li>
 		 <?php if($_SESSION['logged-in'] == true){?>
                  <li><a href="logout.php">Log out</a></li>

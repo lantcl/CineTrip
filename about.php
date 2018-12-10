@@ -22,7 +22,7 @@ $_SESSION['logged-in'] == true;
 	@media screen and (max-width:960px){
 				.about{
 	width: 100%;
-	height: 1600px;
+	height: 2800px;
 	background-color: #EBEBEB;
 	display:block; 
 	text-align:center;
@@ -42,7 +42,7 @@ $_SESSION['logged-in'] == true;
 .about .grid{
 	background-color:rgba(255,255,255,.8);
     width:80%;
-	height: 300px;
+	height: 550px;
 	margin-top: 3%;
     margin-left: 3%;
     margin-right: 3%;
@@ -62,7 +62,7 @@ $_SESSION['logged-in'] == true;
 }
 
 .aboutInner img{
-	width: 30%;
+	width: 40%;
 }
 
 .about .aboutbutton{
@@ -98,6 +98,7 @@ $_SESSION['logged-in'] == true;
        		 <li class="current"><a href="homepage.php">Home</a></li>
         	 <li><a href="browse-locations.php">Locations</a></li>
         	 <li><a href="search.php">Search</a></li>
+        	 <li><a href="about.php">About</a></li>
         	 <li><a href="contact.php">Contact</a></li>
 		 <?php if($_SESSION['logged-in'] == true){?>
                  <li><a href="logout.php">Log out</a></li>
@@ -114,7 +115,7 @@ $_SESSION['logged-in'] == true;
     <h1>Our Team: Accidental Admins</h1>
     <div class="grid">
 		<div class="aboutInner">
-      <a><img src="assets/cleo.jpg" alt="Cleo" width="120" height="120" border="1"></a><br>
+      <a><img src="assets/cleo.jpg" alt="Cleo"></a><br>
         <h2>Cleo Lant</h2>
         <p>Project Mom</p>
         <p>Since graduating from Sheridan College with an Illustration degree, Cleo has followed the urge to create through motion graphics, fine art, and most recently, interactive media. Her favourite show filmed in Toronto is NBC’s Hannibal.</p>
@@ -127,7 +128,7 @@ $_SESSION['logged-in'] == true;
     
     <div class="grid">
 		<div class="aboutInner">
-      <a><img src="assets/carly.jpg" alt="Carly" width="120" height="120" border="1"></a><br>
+      <a><img src="assets/carly.jpg" alt="Carly"></a><br>
         <h2>Carly Wysocki</h2>
         <p>Location Guru</p>
         <p>Carly is a Media Studies graduate from the University of Guelph-Humber specializing in communications, front-end development and UX design. Her favourite movie filmed in Toronto is Scott Pilgrim vs. the World.</p>
@@ -139,7 +140,7 @@ $_SESSION['logged-in'] == true;
 
       <div class="grid">
 		  <div class="aboutInner">
-      <a><img src="assets/renjing.jpg" alt="Renjing" width="120" height="120" border="1"></a><br>
+      <a><img src="assets/renjing.jpg" alt="Renjing" ></a><br>
         <h2>Renjing Hu</h2>
         <p>CSS Wizard</p>
         <p>Renjing graduated from Visual Communication Design Program in Hubei Institute of Fine Arts. She has worked as a web visual designer in last 4 years. Her favourite movie filmed in Toronto is The Shape of Water.</p>
@@ -151,7 +152,7 @@ $_SESSION['logged-in'] == true;
 
       <div class="grid">
 		  <div class="aboutInner">
-      <a><img src="assets/vinay.jpg" alt="vinay" width="120" height="120" border="1"></a><br>
+      <a><img src="assets/vinay.jpg" alt="vinay" ></a><br>
         <h2>B. Vinay Kumar</h2>
         <p>User Specialist</p>
         <p>Vinay has over 15 years of experience in Graphic Design, particularly Realtime 3D, Rendering and Visualisation. He is passionate about Travel, Photography, & Food. His favourite movie shot in Toronto are The Boondock Saints.</p> 
@@ -165,7 +166,7 @@ $_SESSION['logged-in'] == true;
    <div class="footer">
    <footer>
         <a href="homepage.php">
-          <img src="assets/footer-logo.png" />
+          <img src="assets/logo-01.png" />
         </a>               
     <ul class="bottomNav">
         <li><a href="about.php" >About CineTrip</a></li>

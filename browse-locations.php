@@ -23,7 +23,7 @@ $stmt->execute();
 			@media screen and (max-width:960px){
 				.location{
 	width: 100%;
-	height: 100%;
+	height: 4200px;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
@@ -44,11 +44,11 @@ $stmt->execute();
 .location .locgrid{
 	background-color:rgba(255,255,255,.8);
     width:80%;
-	height: 4100px;
+	height: 4000px;
 	margin-top: .5%;
     margin-left: .5%;
     margin-right: .5%;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
     display:inline-block;
     vertical-align: top;
 	text-align: center;

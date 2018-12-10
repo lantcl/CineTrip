@@ -22,7 +22,7 @@ $dbpassword = "NkXHus3h!6V";
 				
 				.signupForm{
 	width: 100%;
-	hegiht:1200px;
+	hegiht:768px;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
@@ -35,14 +35,14 @@ $dbpassword = "NkXHus3h!6V";
     font-family: "Arial Rounded Mt",arial;
 	font-size: 2.8em;
 	padding-top: 1%;
-	margin-top:2%;
+	margin-top:10%;
 }
 
 .signupForm .part1{
 	background-color:rgba(255,255,255,.8);
     width:80%;
-	height: 60%;
-	margin-top: 1%;
+	height: 40%;
+	margin-top: 5%;
     margin-left: .5%;
     margin-right: .5%;
     margin-bottom: 3%;
@@ -56,7 +56,7 @@ $dbpassword = "NkXHus3h!6V";
 	background-color:rgba(255,255,255,.8);
     width: 80%;
 	height: 25%;
-	margin-top: 3%;
+	margin-top: 5%;
     margin-left: .5%;
     margin-right: .5%;
     margin-bottom: 3%;
@@ -229,7 +229,7 @@ $dbpassword = "NkXHus3h!6V";
         
 		</div>
 		</div>
-                </div>
+                
 		
                <div class="footer">
    <footer>
@@ -242,6 +242,7 @@ $dbpassword = "NkXHus3h!6V";
         <li><a href="#">Privacy policy</a></li>
     </ul>
     </footer>
-	</div>   
+	</div> 
+</div>
     </body>
 </html>
