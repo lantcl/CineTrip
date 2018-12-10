@@ -153,7 +153,6 @@ $row5 = $stmt5->fetch();
        		 <li class="current"><a href="homepage.php">Home</a></li>
         	 <li><a href="browse-locations.php">Locations</a></li>
         	 <li><a href="search.php">Search</a></li>
-        	 <li><a href="about.php">About</a></li>
         	 <li><a href="contact.php">Contact</a></li>
 		 <?php if($_SESSION['logged-in'] == true){?>
                  <li><a href="logout.php">Log out</a></li>
@@ -188,8 +187,8 @@ $row5 = $stmt5->fetch();
 				<img id="comment-thumbnail" src="images-profile/<?php echo($row3["profilepic"]); ?>" />
 				<h3>Posted by <?php echo($row3["username"]); ?></h3>
 				<p><?php echo($row3["tip"]); ?></p>
-					
-					<a href=""><img src="assets/reply.png" href="#" id="reply"/></a>
+					<!-- 
+					<a href=""><img src="assets/reply.png" href="#" id="reply"/></a> -->
 			</div>
 		</div>
 		</div>
