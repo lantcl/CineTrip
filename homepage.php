@@ -79,7 +79,7 @@ $stmt2->execute();
           <p id="title"><?php echo($row2["locationname"]); ?></p>
           <p id="mv">Related movie:<?php echo($row2["title"]); ?></p>
           <p><?php echo($row2["address"]); ?></p>
-          <a href="locations.php?id=<?php echo($row2["id"]);?>">
+          <a href="locations.php?id=<?php echo($row2["locationid"]);?>">
           <button type="button" class="buttonView">
              View More
           </button>
