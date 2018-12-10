@@ -12,7 +12,7 @@ $stmt = $pdo->prepare("SELECT * FROM `locations` WHERE `featured` = '1'");
 $stmt->execute();
 $row = $stmt->fetch();
 
-$stmt2 = $pdo->prepare("SELECT `locations`.`id`, `locations`.`locationname`, `locations`.`address`, `locations`.`featuredimg`, `films`.`id`, `films`.`title` FROM (`films` INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id`) INNER JOIN `locations`ON `films-locations`.`locationid` = `locations`.`id` LIMIT 3;");
+$stmt2 = $pdo->prepare("SELECT `films-locations`.`locationid`, `locations`.`locationname`, `locations`.`address`, `locations`.`featuredimg`, `films-locations`.`filmid`, `films`.`title` FROM (`films` INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id`) INNER JOIN `locations`ON `films-locations`.`locationid` = `locations`.`id` LIMIT 3;");
 $stmt2->execute();
 
 ?>
@@ -161,7 +161,7 @@ $stmt2->execute();
           <p id="title"><?php echo($row2["locationname"]); ?></p>
           <p id="mv">Related movie:<?php echo($row2["title"]); ?></p>
           <p><?php echo($row2["address"]); ?></p>
-          <a href="locations.php?id=<?php echo($row2["id"]);?>">
+          <a href="locations.php?id=<?php echo($row2["locationid"]);?>">
           <button type="button" class="buttonView">
              View More
           </button>
