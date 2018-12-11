@@ -50,8 +50,8 @@ input,input:focus{
 		}
 
 		header .logo {
-			width:5%;
-            margin-top: 1.3%;
+			width:6%;
+            margin-top: 1.7%;
 			margin-left: 5%;
 	
 		}
@@ -103,13 +103,13 @@ input,input:focus{
 		}
 
 		.container{
-		   width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: #EBEBEB;
-	display:block; 
-	text-align:center;
-/*	margin-top: -1%;*/
+		    padding-bottom: 30px;
+			height:1100px;
+			overflow: hidden;
+			background-color: #EBEBEB;
+			display:block; 
+			text-align:center;
+			position: absolute;
 		}
 
 
@@ -126,13 +126,13 @@ input,input:focus{
 
 
 .container .grid{
-   background-color:rgba(255,255,255,.8);
-    width:60%;
-	height: 3000px;
+    background-color:rgba(255,255,255,.8);
+    width:25%;
+	height: 65%;
 	margin-top: .5%;
     margin-left: .5%;
     margin-right: .5%;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
     display:inline-block;
     vertical-align: top;
 	text-align: center;
@@ -140,40 +140,40 @@ input,input:focus{
 	
 }
 
-.container .grid #title{
+.rls .grid #title{
 	font-size: 28px;
 }
 
-.container .grid #mv{
+.rls .grid #mv{
 	font-size:12px;
 	font-color:#2d2d2d;
 }
 .inner{
-  border: 2px #303030;
-    margin:3%;
-    padding:3%;
-    display: block;
+  margin:5%;
+  padding:4%;
+  display: block;
 }
 
 .inner img{
-	width:70%;
-	border-radius: 5px;
+	width:100%;
+	height:100%;
+	border-radius: .5em;
 	
 }
 
-.container .inner .buttonView {
-	width: 109px;
-	height: 28px;
+.inner .buttonView {
+	width: 50%;
+	height: 20%;
 	background: #ffab17;
-	border-radius: 5px;
-	margin-left: 10%;
-	margin-right: 10%;
+	border-radius: .3em;
+	margin-left: -3%;
+	margin-bottom: 1%;
 	align-items: center;
-	display: inline-block;
+	display:inline-block;
 	text-align: center;
 	font-family: "Arial Rounded Mt",arial;
-	color: #ffffff;
-	overflow: hidden;
+	font-size: 1em;
+	color:#ffffff;
 }
 
 .footer{
@@ -181,19 +181,19 @@ input,input:focus{
     height: 70px;
 	background-color: #1035D4;
 /*	overflow: hidden;*/
-/*	margin-top:-50px;*/
+	margin-top:-50px;
 }
 
 .footer img{
-	width:4%;
+	width:5%;
     margin-left: 5%;
     display: inline-block;
-	margin-top:1%;
+	margin-top:1.4%;
 }
 
 .footer .bottomNav{
 	float: right;
-    margin-top: 1.2%;
+    margin-top: 1.5%;
     margin-right: 5%;
     font-family: 'Arial Rounded Mt',arial;	
 }

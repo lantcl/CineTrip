@@ -34,11 +34,10 @@ input,input:focus{
 /*login page*/
 .logForm{
 	width: 100%;
-	height: 1200px;
+	height: 100%;
 	background-color: #EBEBEB;
 	text-align:center;
 	margin-top: -2%;
-	margin-bottom: -2%;
     justify-content: center;
     align-content: center;
 	
@@ -104,7 +103,7 @@ input,input:focus{
 /*Signup page*/
 .signupForm{
 	width: 100%;
-	height: 1200px;
+	hegiht:100%;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
@@ -123,11 +122,11 @@ input,input:focus{
 .signupForm .part1{
 	background-color:rgba(255,255,255,.8);
     width:50%;
-	height: 50%;
+	height: 60%;
 	margin-top: 1%;
     margin-left: .5%;
     margin-right: .5%;
-    margin-bottom: 1%;
+    margin-bottom: 3%;
     display:inline-block;
     vertical-align: top;
 	text-align: center;
@@ -137,7 +136,7 @@ input,input:focus{
 .signupForm .part2{
 	background-color:rgba(255,255,255,.8);
     width:50%;
-	height: 350px;
+	height: 25%;
 	margin-top: 3%;
     margin-left: .5%;
     margin-right: .5%;
@@ -200,9 +199,22 @@ input,input:focus{
 	        border-radius: 5px;
 }
 
+.signupForm .part2 {
+	background-color:rgba(255,255,255,.8);
+    width:50%;
+	height: 340px;
+	margin-top: 1%;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-bottom: 3%;
+    display:inline-block;
+    vertical-align: top;
+	border-radius: 5px;
+	
+}
 
 .signupForm .part2 select{
-	margin:1% 1% 1% 1%; 
+	margin:3% 3% 3% 3%; 
     padding: 1%;
 }
 
@@ -227,7 +239,7 @@ input,input:focus{
 /*Search page*/
 .searchSec{
 	width: 100%;
-	height:1300px ;
+	height:110%;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
@@ -249,10 +261,10 @@ input,input:focus{
 	background-color:rgba(255,255,255,.8);
     width:50%;
 	height: 25%;
-	margin-top: 2%;
+	margin-top: 3%;
     margin-left: .5%;
     margin-right: .5%;
-    margin-bottom: 2%;
+    margin-bottom: 3%;
     display:inline-block;
     vertical-align: top;
 	text-align: center;
@@ -283,7 +295,7 @@ input,input:focus{
 			font-family: "Arial Rounded Mt",arial;
 			font-size: 2em;
 			padding-left: 5px;
-	        margin-top: -80%;
+	        margin-top: -50%;
         }  
  .searchBar1 button { 
 			width:40px;
@@ -306,7 +318,7 @@ input,input:focus{
 }
 
 .search img{
-	width:5%;
+	width:10%;
 	
 }
 
@@ -333,7 +345,7 @@ input,input:focus{
 .searchRes .resuInfo{
 	background-color:rgba(255,255,255,.8);
     width:50%;
-	height: 70%;
+	height: 35%;
 	margin-top: .5%;
     margin-left: .5%;
     margin-right: .5%;
@@ -352,9 +364,9 @@ input,input:focus{
 /*About page*/
 .about{
 	width: 100%;
-	height: 1200px;
+	height: 800px;
 	background-color: #EBEBEB;
-	display:block; 
+	display:inline-block; 
 	text-align:center;
 /*	margin-top: -1%;*/
 }
@@ -372,7 +384,7 @@ input,input:focus{
 .about .grid{
 	background-color:rgba(255,255,255,.8);
     width:20%;
-	height: 600px;
+	height: 400px;
 	margin-top: .5%;
     margin-left: .5%;
     margin-right: .5%;
@@ -400,7 +412,7 @@ input,input:focus{
 	height: 10%;
 	background-color: #ffab17;
 	
-	border-radius: 5px;
+	border-radius: 5%;
 }
 
 .about .aboutbutton p{
@@ -507,7 +519,7 @@ label input[type="checkbox"]:checked +i{
 /*User Profile Page*/
 .profileSec{
 	width: 100%;
-	height: 1150px;
+	height: 100%;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
@@ -528,8 +540,8 @@ label input[type="checkbox"]:checked +i{
 
 .profileSec .info{
 	background-color:rgba(255,255,255,.8);
-    width:30%;
-	height: 45%;
+    width:25%;
+	height: 40%;
 	margin-top:0;
     margin-left: .5%;
     margin-right: .5%;
@@ -551,7 +563,7 @@ label input[type="checkbox"]:checked +i{
 	font-family:"Arial Rounded Mt",arial;
 	font-size:.9em;
 	margin:0 auto;
-    padding: 1%;
+	line-height: -10%；
 	
 }
 
@@ -565,10 +577,10 @@ label input[type="checkbox"]:checked +i{
 	margin:0 auto;
 }
 
-.profileSec .badges img{
-	width:1%;
-	margin-top: .5%;
-	margin-bottom: .5%;
+.badges img{
+	width:5%;
+	margin-top: 3%;
+	margin-bottom: 3%;
 	 
 }
 
@@ -596,7 +608,7 @@ label input[type="checkbox"]:checked +i{
 .proEdit .editInfo{
 	background-color:rgba(255,255,255,.8);
     width:40%;
-	height: 800px;
+	height: 100%;
 	margin-top:0;
     margin-left: .5%;
     margin-right: .5%;
@@ -684,12 +696,12 @@ label input[type="checkbox"]:checked +i{
 
 .location .locgrid{
 	background-color:rgba(255,255,255,.8);
-    width:60%;
-	height: 8100px;
+    width:25%;
+	height: 60%;
 	margin-top: .5%;
     margin-left: .5%;
     margin-right: .5%;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
     display:inline-block;
     vertical-align: top;
 	text-align: center;
@@ -698,26 +710,25 @@ label input[type="checkbox"]:checked +i{
 
 .location .locgrid .locinner{
     border: 2px #303030;
-    margin:3%;
-    padding:3%;
+    margin:5%;
+    padding:4%;
     display: block;
 }
 
 .location .locgrid .locinner img{
-	width:70%;
+	width:100%;
+	height:100%;
 	border-radius: 5px;
 	
 }
 
 .location .locgrid #title{
 	font-size: 2.5em;
-	text-align: center;
 }
 
 .location .locgrid #mv{
 	font-size:.8em;
 	font-color:#2d2d2d;
-	text-align: center;
 }
 
 .location .locgrid .locinner .buttonView {
@@ -725,7 +736,7 @@ label input[type="checkbox"]:checked +i{
 	height: 28px;
 	background: #ffab17;
 	border-radius: 5px;
-	margin-left: 10%;
+	margin-left: 5%;
 	margin-right: 10%;
 	align-items: center;
 	display: inline-block;
@@ -776,11 +787,6 @@ label input[type="checkbox"]:checked +i{
 	width:100%;
 }
 
-.locMap .locInfo #pic{
-	width:2%;
-	
-	
-}
 .locTips{
 	background-color:rgba(255,255,255,.8);
     width:50%;
@@ -806,16 +812,22 @@ label input[type="checkbox"]:checked +i{
 	margin:0 auto;
 }
 
-.locTips .locInfo2 img{
-	width: 20%;
+.locTips img{
+	width:30%;
+}
+.locTips ul #reply{
+	width: 3%;
 }
 
+.locInfo2 ul #bookmark{
+	width:2%;
+}
  
 /*Contact page*/
 
 .contact{
 	width: 100%;
-	height: 1200px;
+	height: 100%;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
@@ -825,7 +837,7 @@ label input[type="checkbox"]:checked +i{
 
 .contact #contactForm{
 	background-color:rgba(255,255,255,.8);
-    width:50%;
+    width:35%;
 	height: 60%;
 	margin-top: 5%;
     margin-left: 3%;
@@ -841,7 +853,7 @@ label input[type="checkbox"]:checked +i{
 .contact #contactForm input{
 	width: 50%;
     display: block;
-    height: 8%;
+    height: 10%;
     border: 0;
     outline: 0;
     margin:3% 20% 3% 27%; 
@@ -856,7 +868,7 @@ label input[type="checkbox"]:checked +i{
 .contact #contactForm textarea{
 	width: 50%;
     display: block;
-    height: 8%;
+    height: 10%;
     border: 0;
     outline: 0;
     margin:3% 20% 3% 27%; 
@@ -873,7 +885,6 @@ label input[type="checkbox"]:checked +i{
 	        font-family: "Arial Rounded Mt",arial;
             font-size: .9em;
             color: #ffffff;
-	        width: 50%;
             background-color: #ffab17;
 	        border-radius: 5px;
 }
@@ -881,7 +892,7 @@ label input[type="checkbox"]:checked +i{
 /*My tips*/
 .tips{
 	width: 100%;
-	height: 1500px;
+	height: 100%;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
@@ -890,37 +901,22 @@ label input[type="checkbox"]:checked +i{
 	
 }
 
-.tips .tipsInfo{
-	background-color:rgba(255,255,255,.8);
-    width:50%;
-	height: 10%;
-	margin-top: 1%;
-    margin-left: 3%;
-    margin-right: 3%;
-    margin-bottom: 1%;
-    display:inline-block;
-    vertical-align: top;
-	text-align: center;
-	border-radius: 5px;
-	padding: 1%;
-}
 .tips h1{
 	font-family: "Arial Rounded Mt",arial;
-	font-size: 2.8em;
+	font-size: 40px;
 	font-color:#2e2e2e;
-	padding-top: 1%;
-	padding-bottom: .5%; 
+	padding-top: 10%;
+	padding-bottom: 3%; 
 	text-align: center;
 	margin:0 auto;
 }
-
 
 
 /*Tips Delete Page*/
 
 .tipsDelete{
 	width: 100%;
-	height: 1200px;
+	height: 100%;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 

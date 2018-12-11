@@ -19,16 +19,17 @@ $row = $stmt->fetch();
 // $row2 = $stmt2->fetch();
 
 //user tips
-$stmt3 = $pdo->prepare("SELECT `users`.`username`, `users`.`profilepic`, `locations`.`locationname`, `location-user-tips`.`userid`, `location-user-tips`.`locationid`, `location-user-tips`.`tip`, `location-user-tips`.`dateadded` FROM(`users`INNER JOIN `location-user-tips` ON `location-user-tips`.`userid` = `users`.`id`) INNER JOIN `locations` ON `location-user-tips`.`locationid` = `locations`.`id` WHERE `locations`.`id` = '$id'");
+$stmt3 = $pdo->prepare("SELECT `users`.`id`, `users`.`username`, `users`.`profilepic`, `locations`.`id`, `locations`.`locationname`, `location-user-tips`.`userid`, `location-user-tips`.`locationid`, `location-user-tips`.`tip`, `location-user-tips`.`dateadded` FROM(`users`INNER JOIN `location-user-tips` ON `users`.`id` = `location-user-tips`.`userid`) INNER JOIN `locations`ON `location-user-tips`.`locationid` = `locations`.`id` WHERE `locations`.`id` = '$id'");
 $stmt3->execute();
+$row3 = $stmt3->fetch();
 
 //location trivia
-$stmt4 = $pdo->prepare("SELECT `locations`.`locationname`, `films-locations`.`locationid`, `films-locations`.`trivia` FROM `locations` INNER JOIN `films-locations` ON `locations`.`id` = `films-locations`.`locationid` WHERE `locations`.`id` = '$id'");
+$stmt4 = $pdo->prepare("SELECT `locations`.`id`, `locations`.`locationname`, `films`.`id`, `films`.`title`, `films-locations`.`locationid`, `films-locations`.`filmid`, `films-locations`.`trivia` FROM (`locations` INNER JOIN `films-locations` ON `locations`.`id` = `films-locations`.`id`) INNER JOIN `films`ON `films-locations`.`filmid` = `films`.`id` WHERE `locations`.`id` = '$id'");
 $stmt4->execute();
 $row4 = $stmt4->fetch();
 
 //location images
-$stmt5 = $pdo->prepare("SELECT `locations`.`locationname`, `location-photos`.`locationid`, `location-photos`.`imagename` FROM `locations`INNER JOIN `location-photos` ON `locations`.`id` = `location-photos`.`locationid` WHERE `locations`.`id` = '$id'");
+$stmt5 = $pdo->prepare("SELECT `locations`.`id`, `locations`.`locationname`, `films`.`id`, `films`.`title`, `location-photos`.`filmid`, `location-photos`.`locationid`, `location-photos`.`imagename` FROM (`locations` INNER JOIN `location-photos` ON `locations`.`id` = `location-photos`.`locationid`) INNER JOIN `films` ON `location-photos`.`filmid` = `films`.`id` WHERE `locations`.`id` = '$id'");
 $stmt5->execute();
 $row5 = $stmt5->fetch();
 
@@ -63,7 +64,7 @@ $row5 = $stmt5->fetch();
 			@media screen and (max-width:960px){
 				.locMap{
 	width: 100%;
-	height: 800px;
+	height: 900px;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
@@ -73,9 +74,9 @@ $row5 = $stmt5->fetch();
 
 .locMap h1{
 	font-family: "Arial Rounded Mt",arial;
-	font-size: 3em;
+	font-size: 2.8em;
 	font-color:#2e2e2e;
-	padding-top: 5%;
+	padding-top: 3%;
 	padding-bottom: 1%; 
 	text-align: center;
 	margin:0 auto;
@@ -84,11 +85,11 @@ $row5 = $stmt5->fetch();
 .locMap .locInfo{
 	background-color:rgba(255,255,255,.8);
     width:80%;
-	height: 90%;
+	height: 70%;
 	margin-top: 1%;
     margin-left: 3%;
     margin-right: 3%;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     display:inline-block;
     vertical-align: top;
 	text-align: center;
@@ -100,15 +101,10 @@ $row5 = $stmt5->fetch();
 	width:100%;
 }
 
-.locMap .locInfo #pic{
-	width:3%;
-	
-	
-}
 .locTips{
 	background-color:rgba(255,255,255,.8);
     width:80%;
-	height: 80%;
+	height: 50%;
 	margin-top: 1%;
     margin-left: 3%;
     margin-right: 3%;
@@ -125,15 +121,21 @@ $row5 = $stmt5->fetch();
 	font-size: 2.2em;
 	font-color:#2e2e2e;
 	padding-top: -2%;
-	padding-bottom: 1%; 
+	padding-bottom: 3%; 
 	text-align: center;
 	margin:0 auto;
 }
 
-.locTips .locInfo2 img{
-	width: 30%;
+.locTips img{
+	width:30%;
+}
+.locTips ul #reply{
+	width: 5%;
 }
 
+.locInfo2 ul #bookmark{
+	width:3%;
+}
 			}
 		</style>
 </head>
@@ -151,6 +153,7 @@ $row5 = $stmt5->fetch();
        		 <li class="current"><a href="homepage.php">Home</a></li>
         	 <li><a href="browse-locations.php">Locations</a></li>
         	 <li><a href="search.php">Search</a></li>
+        	 <li><a href="about.php">About</a></li>
         	 <li><a href="contact.php">Contact</a></li>
 		 <?php if($_SESSION['logged-in'] == true){?>
                  <li><a href="logout.php">Log out</a></li>
@@ -167,7 +170,7 @@ $row5 = $stmt5->fetch();
 			<div class="locMap">
 			<h1><?php echo($row["locationname"]); ?></h1>
 			<p><?php echo($row["address"]); ?></p>
-			
+			<img src="assets/grey-bookmark.png" id="pic"/>
 			<!-- <a href=""><img src="assets/grey-bookmark.png" id="pic"/></a> -->
 			<div class="locInfo">
 			
@@ -176,26 +179,21 @@ $row5 = $stmt5->fetch();
 			<p><?php echo($row["description"]); ?></p>
 			<h2>Trivia</h2>
 				<p><?php echo($row4["trivia"]); ?></p>
-			<img src="assets/grey-bookmark.png" id="pic"/>
 	         </div>
 				
 	
 		<div class="locTips">
 			<h2>Tips posted by other users</h2>
 			<div class="locInfo2">
-				<?php 
-				while($row3 = $stmt3->fetch()) {  
-					?>
 				<img id="comment-thumbnail" src="images-profile/<?php echo($row3["profilepic"]); ?>" />
 				<h3>Posted by <?php echo($row3["username"]); ?></h3>
 				<p><?php echo($row3["tip"]); ?></p>
-				<?php } ?>	
-					<!-- 
-					<a href=""><img src="assets/reply.png" href="#" id="reply"/></a> -->
+					
+					<a href=""><img src="assets/reply.png" href="#" id="reply"/></a>
 			</div>
 		</div>
 		</div>
-
+</div>
 	
    <div class="footer">
    <footer>
@@ -208,7 +206,6 @@ $row5 = $stmt5->fetch();
         <li><a href="#">Privacy policy</a></li>
     </ul>
     </footer>
-	</div>
 	</div>
 	<script src="javascript/add_bookmark.js"></script>
 	</body>

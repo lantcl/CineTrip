@@ -33,20 +33,20 @@ $stmt->execute();
 
 //not sure if the below will work yet (starting the session on signup)
 
-$stmt1 = $pdo->prepare("SELECT * FROM `users` WHERE `username` = '$username' AND `password` = '$password'");
+// $stmt1 = $pdo->prepare("SELECT * FROM `users` WHERE `username` = '$username' AND `userpassword` = '$password'");
 
-$stmt1->execute();
-if($row = $stmt1->fetch()){
+// $stmt1->execute();
+// if($row = $stmt1->fetch()){
 
-	$_SESSION['logged-in'] = true;
-	$_SESSION['username'] = $row['username'];
-	$_SESSION['password'] = $row['password'];
-	$_SESSION['id'] = $row['id'];
+// 	$_SESSION['logged-in'] = true;
+// 	$_SESSION['username'] = $row['username'];
+// 	$_SESSION['userpassword'] = $row['userpassword'];
+// 	$_SESSION['userid'] = $row['userid'];
 
 
 header("Location: user-interests.php");
 
-}
+//}
 
 ?>
 

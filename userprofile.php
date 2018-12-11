@@ -1,18 +1,26 @@
 <?php
 session_start();
+
 if($_SESSION['logged-in'] == false){
 	echo("You are not allowed to view this page");
 	?><a href="login.php">Go to login</a><?php
 }else{
+
 $id = $_SESSION['id'];
+
 $dsn = "mysql:host=localhost;dbname=lantc_cinetrip;charset=utf8mb4";
 $dbusername = "lantc";
 $dbpassword = "NkXHus3h!6V";
+
 $pdo = new PDO($dsn, $dbusername, $dbpassword);
+
 $userInfo = $pdo->prepare("SELECT * FROM `users` WHERE `id` = $id");
 $userInfo->execute();
+
+
 $bookmarks = $pdo->prepare("SELECT `users-savedlocations`.`userid`, `locations`.`id`, `locations`.`locationname` FROM  `users-savedlocations` INNER JOIN `locations` ON `users-savedlocations`.`locationid` = `locations`.`id` WHERE `userid` = $id");
 $bookmarks->execute();
+
 ?>
 
 <!DOCTYPE html>
@@ -30,6 +38,7 @@ $bookmarks->execute();
 			
 			<style type="text/css">
 			@media screen and (max-width:960px){
+
 					
 					body{
 						font-size: .9em;
@@ -42,7 +51,7 @@ $bookmarks->execute();
 					}
 					.profileSec{
 							width: 100%;
-							height: 1150px;
+							height: 800px;
 							overflow: auto;
 							background-color: #EBEBEB;
 							display:block; 
@@ -50,15 +59,17 @@ $bookmarks->execute();
 							/*	margin-top: -1%;*/
 	
 					}
+
 					.profileSec h1{
 					font-family: "Arial Rounded Mt",arial;
 					font-size: 2.8em;
 					font-color:#2e2e2e;
-					padding-top: 10%;
-					padding-bottom: 4%; 
+					padding-top: 2%;
+					padding-bottom: 2%; 
 					text-align: center;
 					margin:0 auto;
 					}
+
     				.profileSec .info{
 					background-color:rgba(255,255,255,.8);
     				width:80%;
@@ -73,29 +84,33 @@ $bookmarks->execute();
 					border-radius: 5px;
 	
 					}
+
 					.profileSec .info img{
 					width: 30%;
 					margin: 5%;
 	
 					}
+
 					.profileSec .info p{
 					font-family:"Arial Rounded Mt",arial;
-					font-size:1em;
+					font-size:1.5em;
 					margin:0 auto;
-					padding: 1%;
+					line-height: -20%；
 	
 					}
+
 					.profileSec h2{
 					font-family: "Arial Rounded Mt",arial;
-					font-size: 2em;
+					font-size: 2.8em;
 					font-color:#2e2e2e;
 					padding-top: -2%;
 					padding-bottom:0; 
 					text-align: center;
 					margin:0 auto;
 					}
-					.profileSec .badges img{
-					width:3%;
+
+					.badges img{
+					width:12%;
 					margin-top: 3%;
 					margin-bottom: 2%;
 	 

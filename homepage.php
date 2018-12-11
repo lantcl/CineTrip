@@ -12,7 +12,7 @@ $stmt = $pdo->prepare("SELECT * FROM `locations` WHERE `featured` = '1'");
 $stmt->execute();
 $row = $stmt->fetch();
 
-$stmt2 = $pdo->prepare("SELECT `films-locations`.`locationid`, `locations`.`locationname`, `locations`.`address`, `locations`.`featuredimg`, `films-locations`.`filmid`, `films`.`title` FROM (`films` INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id`) INNER JOIN `locations`ON `films-locations`.`locationid` = `locations`.`id` LIMIT 3;");
+$stmt2 = $pdo->prepare("SELECT `locations`.`id`, `locations`.`locationname`, `locations`.`address`, `locations`.`featuredimg`, `films`.`id`, `films`.`title` FROM (`films` INNER JOIN `films-locations` ON `films-locations`.`filmid` = `films`.`id`) INNER JOIN `locations`ON `films-locations`.`locationid` = `locations`.`id` LIMIT 3;");
 $stmt2->execute();
 
 ?>
@@ -26,89 +26,9 @@ $stmt2->execute();
 		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 	    <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" media="screen and (max-width:960px)" href="css/small.css">
-	    <style type="text/css">
-			@media screen and (max-width:960px){
-				.container{
-		   width: 100%;
-	height: 1800px;
-	overflow: auto;
-	background-color: #EBEBEB;
-	display:block; 
-	text-align:center;
-/*	margin-top: -1%;*/
-		}
-
-
-.container h1{
-	   
-	   font-family: "Arial Rounded Mt",arial;
-	   font-size: 2.5em;
-	   font-color:#2e2e2e;
-	   padding-top: 3%;
-	   padding-bottom: 3%; 
-	   text-align: center;
-	   margin:0 auto;
-}
-
-
-.container .grid{
-   background-color:rgba(255,255,255,.8);
-    width:80%;
-	height: 1600px;
-	margin-top: .5%;
-    margin-left: .5%;
-    margin-right: .5%;
-    margin-bottom: 5%;
-    display:inline-block;
-    vertical-align: top;
-	text-align: center;
-	border-radius: 5px;
-	
-}
-
-.container .grid #title{
-	font-size: 28px;
-}
-
-.container .grid #mv{
-	font-size:12px;
-	font-color:#2d2d2d;
-}
-.inner{
-  border: 2px #303030;
-    margin:3%;
-    padding:3%;
-    display: block;
-}
-
-.inner img{
-	width:90%;
-	border-radius: 5px;
-	
-}
-
-.container .inner .buttonView {
-	width: 109px;
-	height: 28px;
-	background: #ffab17;
-	border-radius: 5px;
-	margin-left: 10%;
-	margin-right: 10%;
-	align-items: center;
-	display: inline-block;
-	text-align: center;
-	font-family: "Arial Rounded Mt",arial;
-	color: #ffffff;
-	overflow: hidden;
-}
-
-			}
-	
-	    </style>
 	
 </head>
 <body>
-	<div class="mainContainer">
 	<header>
 		
 		<div>
@@ -134,9 +54,8 @@ $stmt2->execute();
 	</header>
 
    <section>
-	   
       <div id="map">
-         <iframe width="100%" height="680px" src="<?php echo($row["mapurl"]); ?>" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
+         <iframe width="100%" height="680px" src="<?php echo($row["mapurl"]); ?>" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0""></iframe>
       </div>
       <style type="text/css">
       #map{
@@ -150,9 +69,8 @@ $stmt2->execute();
       
    </section>
 	
-		
 <!--Recommend Locations-->
-  <div class="container">  
+  <div class="rls">  
     <h1>Popular Locations</h1>
     <div class="grid">
     <?php while($row2 = $stmt2->fetch()){ ?>
@@ -161,7 +79,7 @@ $stmt2->execute();
           <p id="title"><?php echo($row2["locationname"]); ?></p>
           <p id="mv">Related movie:<?php echo($row2["title"]); ?></p>
           <p><?php echo($row2["address"]); ?></p>
-          <a href="locations.php?id=<?php echo($row2["locationid"]);?>">
+          <a href="locations.php?id=<?php echo($row2["id"]);?>">
           <button type="button" class="buttonView">
              View More
           </button>
@@ -170,11 +88,10 @@ $stmt2->execute();
         <?php } ?>
       </div>
   </div>
-		
    <div class="footer">
    <footer>
         <a href="homepage.php">
-          <img src="assets/logo-01.png" />
+          <img src="assets/footer-logo.png" />
         </a>               
     <ul class="bottomNav">
         <li><a href="about.php" >About CineTrip</a></li>
@@ -182,8 +99,6 @@ $stmt2->execute();
         <li><a href="#">Privacy policy</a></li>
     </ul>
     </footer>
-	   
-	</div>
 	</div>
    
 </body>

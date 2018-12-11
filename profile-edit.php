@@ -30,7 +30,7 @@ $dbpassword = "NkXHus3h!6V";
 				
 				.proEdit{
 	width: 100%;
-	height: 1200px;
+	height: 100%;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
@@ -42,7 +42,7 @@ $dbpassword = "NkXHus3h!6V";
 	font-family: "Arial Rounded Mt",arial;
 	font-size: 2.8em;
 	font-color:#2e2e2e;
-	padding-top: 15%;
+	padding-top: 3%;
 	padding-bottom: 3%; 
 	text-align: center;
 	margin:0 auto;
@@ -51,7 +51,7 @@ $dbpassword = "NkXHus3h!6V";
 .proEdit .editInfo{
 	background-color:rgba(255,255,255,.8);
     width:85%;
-	height: 500px;
+	height: 650px;
 	margin-top:0;
     margin-left: 1%;
     margin-right: 1%;
@@ -192,7 +192,7 @@ $dbpassword = "NkXHus3h!6V";
 		<img src="images-profile/10_badge_director.jpg" alt="Director" />
 	</div>
 	</div>
-
+</div>
 
 
                 <div class="footer">
@@ -206,7 +206,6 @@ $dbpassword = "NkXHus3h!6V";
         <li><a href="#">Privacy policy</a></li>
     </ul>
     </footer>
-	</div>
 	</div>
 	</body>
 </html>
