@@ -2,7 +2,7 @@
 
 session_start(); 
 
-$userid = $_SESSION['userid'];
+$userid = $_SESSION['id'];
 $genreid = $_POST['genreid'];
 
 $dsn = "mysql:host=localhost;dbname=lantc_cinetrip;charset=utf8mb4";

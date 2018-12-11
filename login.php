@@ -21,7 +21,7 @@ $dbpassword = "NkXHus3h!6V";
 			@media screen and (max-width:960px){
 				.logForm{
 	width: 100%;
-	height: 100%;
+	height: 1000px;
 	background-color: #EBEBEB;
 	text-align:center;
 	margin-top: -6%;
@@ -121,10 +121,10 @@ $dbpassword = "NkXHus3h!6V";
                 <form action="login-process.php" method="POST"> 
                 <input type="text" placeholder="username" name="username" />
                 <input type="text" placeholder="password" name="password" />
-                <input type="submit" value="submit"/>
+                <input type="submit" />
             	</form>
         </div>
-</div>
+
 	
                 <div class="footer">
    <footer>
@@ -137,6 +137,7 @@ $dbpassword = "NkXHus3h!6V";
         <li><a href="#">Privacy policy</a></li>
     </ul>
     </footer>
-	</div>       
+	</div> 
+	</div>
     </body>
 </html>

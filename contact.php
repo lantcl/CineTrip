@@ -25,7 +25,7 @@ $pdo = new PDO($dsn, $dbusername, $dbpassword);
 			@media screen and (max-width:960px){
 				.contact{
 	width: 100%;
-	height: 800px;
+	height: 1000px;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 

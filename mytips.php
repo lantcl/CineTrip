@@ -38,7 +38,7 @@ $row2 = $stmt2->fetch();
 			@media screen and (max-width:960px){
 			.tips{
 	width: 100%;
-	height: 100%;
+	height: 1700px;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
@@ -47,15 +47,30 @@ $row2 = $stmt2->fetch();
 	
 }
 
+.tips .tipsInfo{
+	background-color:rgba(255,255,255,.8);
+    width:80%;
+	height: 15%;
+	margin-top: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    display:inline-block;
+    vertical-align: top;
+	text-align: center;
+	border-radius: 5px;
+	padding: .5%;
+}
 .tips h1{
 	font-family: "Arial Rounded Mt",arial;
 	font-size: 2.8em;
 	font-color:#2e2e2e;
-	padding-top: 30%;
-	padding-bottom: 3%; 
+	padding-top: 5%;
+	padding-bottom: 5%; 
 	text-align: center;
 	margin:0 auto;
 }
+
 	
 				
 			}
@@ -100,7 +115,7 @@ $row2 = $stmt2->fetch();
 			<?php }
 			?>
 		</div>
-</div>
+
                 <div class="footer">
    <footer>
         <a href="homepage.php">
@@ -112,6 +127,7 @@ $row2 = $stmt2->fetch();
         <li><a href="#">Privacy policy</a></li>
     </ul>
     </footer>
+	</div>
 	</div>
 	</body>
 </html>

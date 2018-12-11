@@ -30,7 +30,7 @@ $director->execute();
 			@media screen and (max-width:960px){
 				.searchSec{
 	width: 100%;
-	height:800px;
+	height:1000px;
 	overflow: auto;
 	background-color: #EBEBEB;
 	display:block; 
@@ -44,7 +44,7 @@ $director->execute();
 	font-family: "Arial Rounded Mt",arial;
 	font-size: 2.8em;
 	font-color:#2e2e2e;
-	padding-top: 5%;
+	padding-top: 20%;
 	padding-bottom: 1%; 
 	text-align: center;
 	margin:0 auto;
@@ -170,7 +170,7 @@ $director->execute();
         </div>
 			
         </div>
-		    </div>
+		    
    <div class="footer">
    <footer>
         <a href="homepage.php">
@@ -182,7 +182,8 @@ $director->execute();
         <li><a href="#">Privacy policy</a></li>
     </ul>
     </footer>
-	</div>   
+	</div>
+		</div>   
     <script type="text/javascript" src="javascript/script.js"></script>
     </body>
 </html>

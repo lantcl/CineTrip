@@ -22,75 +22,97 @@ $dbpassword = "NkXHus3h!6V";
 		
 		<style type="text/css">
 			@media screen and (max-width:960px){
-				.logForm{
+				.interestSec{
 	width: 100%;
-	height: 100%;
+	height: 1100px;
+	overflow: auto;
 	background-color: #EBEBEB;
+	display:block; 
 	text-align:center;
-	margin-top: -4.5%;
-    justify-content: center;
-    align-content: center;
+/*	margin-top: -1%;*/
 	
 }
 
-.logForm h1{
+.interestSec h1{
 	font-family: "Arial Rounded Mt",arial;
-	font-size: 2.8em;
-	padding-top: 40%;
-	padding-bottom: 1%;
+	font-size: 3em;
+	font-color:#2e2e2e;
+	padding-top: 1%;
+	padding-bottom: .5%; 
+	text-align: center;
+	margin:0 auto;
 }
 
-.logForm form{
-	width: 80%;
-	height:25%;
-    margin: 0 auto;
-	background-color:#ffffff;
-	border-radius:10px;
+.interestSec h2{
+	font-family: "Arial Rounded Mt",arial;
+	font-size: 2em;
+	font-color:#2e2e2e;
+	padding-top: 10%;
+	padding-bottom: 1%; 
 	text-align: center;
-	padding: 2%;
+	margin:0 auto;
+}
+
+h4{
+	font-family: "Arial Rounded Mt",arial;
+	font-color:#2e2e2e;
+	padding-top: 2%;
+	padding-bottom: 1%; 
 	
 }
 
-.logForm form input{
-	width: 70%;
-    display: block;
-    height: 14%;
-    border: 0;
-    outline: 0;
-    margin:0 auto;
+.interestSec .interestForm{
+	background-color:rgba(255,255,255,.8);
+    width:80%;
+	height: 40%;
+	margin-top:0;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-bottom: 5%;
+    display:inline-block;
+    vertical-align: top;
 	text-align: center;
-	align-items: center;
-    padding: 2%;
-	justify-content: center;
-    align-content: center;
+	border-radius: 5px;
+	
 }
 
-.logForm input[type="text"] , .logForm input[type="password"]  {
-            font-family: "Arial Rounded Mt",arial;
-			background-color: #EBEBEB;
-            font-size: 1em;
-            color: #787878;
-	        border-radius: 5px;
-	        margin-bottom: 2%;
-        }
- .logForm input[type='submit'] {
-	        font-family: "Arial Rounded Mt",arial;
-            font-size: 1em;
-            color: #ffffff;
-            background-color: #ffab17;
-	        border-radius: 5px;
-	        margin: 0 auto;
-	        height: 50px;
-        }
+.interestForm label i{
+	width: 20px;
+	height: 20px;
+	border:1px solid #999;
+	border-radius: 4px;
+	display: inline-block;
+	vertical-align: middle;
+	margin:2%;
+}
 
-.logFrom input:focus {
-            width: 300px;
-        }
-.logForm input[type='submit']:hover {
-            cursor: pointer;
-            width: 300px;
-	        
-        }
+.interestForm label input{
+	margin: 10%;
+	float: left;
+}
+
+label input[type="checkbox"]:checked +i{
+	background-color:#ffab17;
+	background-size: 15px 15px;
+	border:3px #BBA354;
+}
+
+.interestForm #submit{
+	wdith: 10%;
+	height: 5%;
+	background-color: #ffab17;
+	font-size: 1em;
+	font-color:#ffffff;
+	text-align: center;
+	border-radius: 5px; 
+}
+
+.interestForm p{
+	text-align: center;
+	font-size: .9em;
+	font-family:"Arial Rounded Mt",arial;
+	margin-top: 7%;
+}
 
 			}
 	</style>
@@ -151,7 +173,7 @@ $dbpassword = "NkXHus3h!6V";
 
                 
         </div>
-</div>
+
    <div class="footer">
    <footer>
         <a href="homepage.php">
@@ -163,6 +185,7 @@ $dbpassword = "NkXHus3h!6V";
         <li><a href="#">Privacy policy</a></li>
     </ul>
     </footer>
-	</div>        
+	</div>
+</div>
     </body>
 </html>
